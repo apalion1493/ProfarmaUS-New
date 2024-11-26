@@ -27,7 +27,7 @@ module.exports = {
             '100-auto': '100% auto',
         },
         fontFamily: {
-            sans: ['Montserrat', 'sans-serif'],
+            sans: ['Outfit', 'sans-serif'],
         },
         fontSize: {
             none: ['0px', '0px'],

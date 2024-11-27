@@ -19,6 +19,32 @@
     </div>
   </section>
 
+
+  <section class="my-20">
+    <div class="container">
+      <div class="row">
+        <div class="col-span-12">
+          <div class="flex flex-col gap-y-5">
+            @@include('components/button.html', {
+            'style': '',
+            'type': 'button',
+            'ariaLabel': 'Button',
+            'title': 'Button',
+            })
+
+            @@include('components/button.html', {
+            'style': 'btn-medium',
+            'type': 'button',
+            'ariaLabel': 'Button',
+            'title': 'Button',
+            })
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
   @@include('components/Footer.html')
 </main>
 

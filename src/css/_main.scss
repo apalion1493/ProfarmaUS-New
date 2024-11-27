@@ -17,11 +17,11 @@
   }
 
   &.btn-small {
-    @apply h-[33px] min-h-[33px] text-body2 min-w-[0] px-5 md:px-3
+    @apply h-[33px] min-h-[33px] text-body2 min-w-[0] px-6 md:px-3
   }
 
   &.btn-medium {
-    @apply h-10 min-h-10 text-body min-w-[98px] px-5
+    @apply h-10 min-h-10 text-body min-w-[96px] px-5
   }
 
   &.hoverColor {
@@ -52,7 +52,7 @@
     @apply max-w-[475px] w-full
   }
 
-  @apply h-14 min-h-14 px-8 min-w-[129px] w-fit flex items-center justify-center rounded-4xl text-white text-base text-center font-semibold bg-DarkBlue100 border border-DarkBlue100 transition-all hover:bg-transparent hover:text-DarkBlue100;
+  @apply h-12 min-h-12 px-6 min-w-[102px] w-fit flex items-center justify-center rounded-lg text-white text-base text-center font-semibold bg-LightBlue100 border border-LightBlue100 transition-all hover:bg-DarkBlue100 hover:text-white hover:border-DarkBlue100 focus:ring-0 outline-0 focus:outline-0 focus:outline-inherit;
 }
 
 // Button with arrow Style End
@@ -208,7 +208,7 @@
     @apply bg-transparent
   }
 
-  @apply w-12 h-12 min-w-12 flex items-center justify-center rounded-full overflow-hidden border border-Text text-none bg-DarkBlue100 disabled:bg-transparent hover:cursor-pointer
+  @apply w-12 h-12 min-w-12 flex items-center justify-center rounded-full overflow-hidden border border-Text-color text-none bg-DarkBlue100 disabled:bg-transparent hover:cursor-pointer
 }
 
 // Pagination End
@@ -257,7 +257,7 @@
       height: auto;
     }
 
-    .swiper-button-icon--Text {
+    .swiper-button-icon--Text-color {
       @apply hidden
     }
 
@@ -266,14 +266,14 @@
     }
 
     &.swiper-button-disabled {
-      @apply opacity-100 border border-Text bg-transparent
+      @apply opacity-100 border border-Text-color bg-transparent
     }
 
     @apply w-12 h-12 rounded-full flex justify-center items-center overflow-hidden bg-DarkBlue100
   }
 
   .swiper-button-arrow.swiper-button-disabled {
-    .swiper-button-icon--Text {
+    .swiper-button-icon--Text-color {
       @apply block
     }
 
@@ -382,7 +382,7 @@
   @apply lg:-right-2
 }
 
-.w-text {
+.w-Text-color {
   max-width: calc(100% - 40px);
 }
 

@@ -32,8 +32,8 @@ module.exports = {
     fontSize: {
       none: ['0px', '0px'],
       base: ['18px', '130%'],
-      h1: ['70px', '100%'],
-      h2: ['48px', '120%'],
+      h1: ['72px', '100%'],
+      h2: ['52px', '120%'],
       h3: ['40px', '130%'],
       h4: ['32px', '130%'],
       h1Mob: ['56px', '120%'],
@@ -76,11 +76,7 @@ module.exports = {
         '100': '100%',
       },
       boxShadow: {
-        '3xl': '0px 1px 5px 1px rgba(61, 101, 255, 0.12)',
-        '4xl': '0px 1px 8px 1px rgba(5, 9, 62, 0.09)',
-        '5xl': '0px 1px 9px 2px rgba(61, 101, 255, 0.12)',
-        '6xl': '0px 1px 5px 1px rgba(61, 101, 255, 0.12)',
-        '7xl': '0px 1px 18px 1px rgba(5, 9, 62, 0.07);',
+        '3xl': '0px 2px 12px 0px rgba(27, 60, 116, 0.08)',
       },
       borderRadius: {
         '4xl': '32px',
@@ -96,7 +92,8 @@ module.exports = {
         DarkBlue30: '#1B3C744D',
         DarkBlue100: '#1B3C74',
         DarkBlue50: '#05093E80',
-        Text: '#646E8C',
+        LightBlue100: '#2490EB',
+        'Text-color': '#646E8C',
         Yellow: '#FFA729',
       },
       letterSpacing: {

@@ -32,7 +32,8 @@
 	"scripts": {
 		"dev": "gulp",
 		"build": "gulp prod",
-		"prod": "gulp prod"
+		"prod": "gulp prod",
+		"format": "prettier --write ."
 	},
 	"repository": {
 		"type": "git",

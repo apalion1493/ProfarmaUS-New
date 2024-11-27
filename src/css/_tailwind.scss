@@ -52,17 +52,17 @@ section {
 }
 
 .input::placeholder {
-	@apply text-DarkBlue50 md:text-body2
+  @apply text-DarkBlue50 md:text-body2
 }
 
 .input {
-	&.active {
-		@apply border-DarkBlue100
-	}
+  &.active {
+    @apply border-DarkBlue100
+  }
 
-    &.input-icon {
-      @apply pl-[44px]
-    }
+  &.input-icon {
+    @apply pl-[44px]
+  }
 
   &--radio {
     label {
@@ -105,7 +105,7 @@ select.select {
   @apply text-DarkBlue50
 }
 
-.select option:first-child{
+.select option:first-child {
   color: red;
 }
 

@@ -29,6 +29,10 @@ p {
 .text-block {
 
   a {
-    @apply font-bold underline text-DarkBlue100
+    @apply font-bold underline text-LightBlue100
   }
+}
+
+a {
+  @apply text-LightBlue100
 }

@@ -83,7 +83,7 @@
         </div>
         <div class="container md:hidden">
             <!-- Mega Menus -->
-            <div x-cloak x-show="dropdownOpen" @click.outside="dropdownOpen = false" x-transition.opacity.duration.200ms
+            <div style="display: none" x-cloak x-show="dropdownOpen" @click.outside="dropdownOpen = false" x-transition.opacity.duration.200ms
                  x-trap.inert.noscroll="dropdownOpen" class="relative">
                 <div x-show="dropdownOpen"
                      x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity"
@@ -293,6 +293,27 @@
                         <button class="button btn-medium" type="button" aria-label="Button">
     <span>Button</span>
 </button>
+
+                        <div class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  <a class="w-full" href="#">
+    <div class="flex items-center justify-center pb-6 border-b border-LightBlue30 w-full min-h-[196px] h-[196px]">
+      <img class="object-cover" src="" alt="">
+    </div>
+    <div class="mt-6 flex flex-col text-DarkBlue100">
+      <span class="text-Top1 font-semibold">Cardura</span>
+      <p class="text-base text-DarkBlue100">(Doxazosin Mesylate)</p>
+      <ul class="flex items-center gap-x-2 my-5">
+        <li class="p-2 border border-DarkBlue30 rounded-lg flex items-center justify-center text-body2 font-medium">20 tabs</li>
+        <li class="p-2 border border-DarkBlue30 rounded-lg flex items-center justify-center text-body2 font-medium">2 mg</li>
+      </ul>
+      <div class="flex items-center gap-x-1">
+        <span class="text-body2 text-Text-color line-through">$ 39.00 USD</span>
+        <span class="text-base font-semibold">$ 35.00 USD</span>
+      </div>
+    </div>
+  </a>
+  <button class="mt-[32px]">Add to wishlist</button>
+</div>
                     </div>
 
                 </div>
@@ -303,7 +324,7 @@
     <footer class="w-full mt-auto overflow-hidden bg-DarkBlue100 pt-16 pb-10 text-white shadow-3xl">
   <div class="container">
     <div class="row gap-x-6 pb-12 relative">
-      <div class="col-span-4">
+      <div class="col-span-4 relative z-1">
         <div class="flex flex-col max-w-[265px]">
           <img width="227" src="../img/profarma-logo-white.svg" alt="Profarma + Direct Logo" class="block mb-5">
           <p class="text-body text-white">From wellness tips to expert advice,
@@ -380,7 +401,7 @@
           </ul>
         </div>
       </div>
-      <div class="col-span-8">
+      <div class="col-span-8 relative z-1">
         <div class="flex items-start justify-between gap-x-3">
           <div class="flex flex-col flex-1">
             <span class="mb-5 block font-semibold text-Top1">Navigate</span>

@@ -77,6 +77,8 @@ module.exports = {
       },
       boxShadow: {
         '3xl': '0px 2px 12px 0px rgba(27, 60, 116, 0.08)',
+        '4xl': '0px 0px 10px 0px rgba(27, 60, 116, 0.08)',
+        '5xl': '0px 0px 15px 0px rgba(27, 60, 116, 0.15)',
       },
       borderRadius: {
         '4xl': '32px',
@@ -93,6 +95,8 @@ module.exports = {
         DarkBlue100: '#1B3C74',
         DarkBlue50: '#05093E80',
         LightBlue100: '#2490EB',
+        LightBlue30: '#2490EB4D',
+        LightBlue80: '#2490EBCC',
         'Text-color': '#646E8C',
         Yellow: '#FFA729',
       },

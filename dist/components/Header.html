@@ -67,7 +67,7 @@
         </div>
         <div class="container md:hidden">
             <!-- Mega Menus -->
-            <div x-cloak x-show="dropdownOpen" @click.outside="dropdownOpen = false" x-transition.opacity.duration.200ms
+            <div style="display: none" x-cloak x-show="dropdownOpen" @click.outside="dropdownOpen = false" x-transition.opacity.duration.200ms
                  x-trap.inert.noscroll="dropdownOpen" class="relative">
                 <div x-show="dropdownOpen"
                      x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity"

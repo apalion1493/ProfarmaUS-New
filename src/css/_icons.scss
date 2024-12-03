@@ -191,3 +191,27 @@
   background-size: contain;
   @apply w-8 min-w-8 h-8 block;
 }
+
+.highlighter-shape {
+  background: url("../img/icons/highlighter-shape-14.svg") no-repeat center center;
+  background-size: 100% auto;
+  @apply w-[129px] min-w-[129px] h-[136px] block;
+}
+
+.calling-small-white {
+  background: url("../img/icons/calling-small-white.svg") no-repeat center center;
+  background-size: contain;
+  @apply w-[22px] min-w-[22px] h-[22px] block;
+}
+
+.Clock-white-icon {
+  background: url("../img/icons/Clock-white-icon.svg") no-repeat center center;
+  background-size: contain;
+  @apply w-[22px] min-w-[22px] h-[22px] block;
+}
+
+.Mail-white-icon-2 {
+  background: url("../img/icons/Mail-white-icon-2.svg") no-repeat center center;
+  background-size: contain;
+  @apply w-[22px] min-w-[22px] h-[22px] block;
+}

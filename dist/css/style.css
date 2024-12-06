@@ -2437,6 +2437,9 @@ html {
   height: -moz-min-content;
   height: min-content;
 }
+.h-16{
+  height: 4rem;
+}
 .max-h-44{
   max-height: 11rem;
 }
@@ -2470,6 +2473,9 @@ html {
 }
 .w-full{
   width: 100%;
+}
+.w-16{
+  width: 4rem;
 }
 .min-w-10{
   min-width: 2.5rem;
@@ -2679,11 +2685,11 @@ html {
 .border-b{
   border-bottom-width: 1px;
 }
-.border-t{
-  border-top-width: 1px;
-}
 .border-b-2{
   border-bottom-width: 2px;
+}
+.border-t{
+  border-top-width: 1px;
 }
 .border-solid{
   border-style: solid;
@@ -2698,6 +2704,10 @@ html {
 .border-LightBlue30{
   border-color: #2490EB4D;
 }
+.border-blue-700{
+  --tw-border-opacity: 1;
+  border-color: rgb(29 78 216 / var(--tw-border-opacity));
+}
 .border-gray-200{
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
@@ -2709,10 +2719,6 @@ html {
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-.border-blue-700{
-  --tw-border-opacity: 1;
-  border-color: rgb(29 78 216 / var(--tw-border-opacity));
 }
 .bg-DarkBlue100{
   --tw-bg-opacity: 1;
@@ -2729,6 +2735,9 @@ html {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-LightBlue10{
+  background-color: #2490EB1A;
 }
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
@@ -2766,6 +2775,10 @@ html {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -2798,6 +2811,10 @@ html {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -2813,14 +2830,6 @@ html {
 .py-\[10px\]{
   padding-top: 10px;
   padding-bottom: 10px;
-}
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 .pb-10{
   padding-bottom: 2.5rem;
@@ -2876,6 +2885,9 @@ html {
   font-size: 0px;
   line-height: 0px;
 }
+.font-bold{
+  font-weight: 700;
+}
 .font-medium{
   font-weight: 500;
 }
@@ -2884,9 +2896,6 @@ html {
 }
 .font-semibold{
   font-weight: 600;
-}
-.font-bold{
-  font-weight: 700;
 }
 .uppercase{
   text-transform: uppercase;
@@ -2922,6 +2931,10 @@ html {
   --tw-text-opacity: 1;
   color: rgb(100 110 140 / var(--tw-text-opacity));
 }
+.text-blue-700{
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
 .text-gray-500{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -2930,17 +2943,13 @@ html {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
-.text-white{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.text-blue-700{
-  --tw-text-opacity: 1;
-  color: rgb(29 78 216 / var(--tw-text-opacity));
-}
 .text-slate-700{
   --tw-text-opacity: 1;
   color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .underline{
   text-decoration-line: underline;
@@ -4246,6 +4255,10 @@ a{
   border-color: rgb(255 167 41 / var(--tw-border-opacity));
 }
 
+.hover\:border-LightBlue10:hover{
+  border-color: #2490EB1A;
+}
+
 .hover\:border-b-slate-800:hover{
   --tw-border-opacity: 1;
   border-bottom-color: rgb(30 41 59 / var(--tw-border-opacity));
@@ -4265,6 +4278,11 @@ a{
   background-color: transparent;
 }
 
+.hover\:bg-White2:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 246 249 / var(--tw-bg-opacity));
+}
+
 .hover\:text-DarkBlue100:hover{
   --tw-text-opacity: 1;
   color: rgb(27 60 116 / var(--tw-text-opacity));
@@ -4280,14 +4298,14 @@ a{
   color: rgb(255 167 41 / var(--tw-text-opacity));
 }
 
-.hover\:text-gray-700:hover{
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
 .hover\:text-black:hover{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-700:hover{
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover{

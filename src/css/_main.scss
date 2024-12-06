@@ -13,7 +13,7 @@
 .button {
 
   &.categories {
-    @apply h-[38px] min-h-[38px] min-w-fit bg-Yellow border-Yellow text-body px-4 text-DarkBlue100 hover:border-DarkBlue100 hover:text-DarkBlue100 disabled:border-DarkBlue10 disabled:text-DarkBlue50
+    @apply h-10 min-h-10 min-w-fit bg-LightBlue10 border-LightBlue10 text-body px-4 text-LightBlue100 hover:border-LightBlue100
   }
 
   &.btn-small {
@@ -56,6 +56,19 @@
 }
 
 // Button with arrow Style End
+
+// Info Elem Style Start
+
+.info-item {
+
+  &.medium {
+    @apply h-10 min-h-10 text-base
+  }
+
+  @apply p-2 border border-DarkBlue30 rounded-lg flex items-center justify-center text-body2 font-medium
+}
+
+// Info Elem Style End
 
 // Checkbox Style Start
 

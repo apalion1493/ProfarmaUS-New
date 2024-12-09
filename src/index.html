@@ -6,7 +6,7 @@
 })
 
 <body class="">
-<main id="content" class="flex flex-col items-center min-h-screen overflow-hidden">
+<main id="content" class="flex flex-col items-center min-h-screen">
     @@include('components/Header.html', {
     'commonStyle': ' ',
     })
@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <div class="col-span-6 flex justify-end">
-                    <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full ml-2 max-w-[554px]">
+                    <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full ml-2 rounded-2xl max-w-[554px]">
                         <img class="object-cover w-full h-full" src="img/hero-img-home.png"
                              alt="Your Trusted Path to Recovery">
                     </div>
@@ -538,7 +538,7 @@
         <div class="container">
             <div class="row gap-6">
                 <div class="col-span-6">
-                    <div class="flex flex-col max-w-[588px]">
+                    <div class="flex flex-col max-w-[588px] sticky top-6">
                         @@include('components/Title-category-component.html', {
                         'style': 'items-start',
                         'category': 'About Us',

@@ -80,6 +80,7 @@ module.exports = {
         '4xl': '0px 0px 10px 0px rgba(27, 60, 116, 0.08)',
         '5xl': '0px 0px 15px 0px rgba(27, 60, 116, 0.15)',
         '6xl': '0px 8px 124px -40px rgba(27, 60, 116, 0.15)',
+        '7xl': '0px 0px 20px 8px rgba(27, 60, 116, 0.10);',
       },
       borderRadius: {
         '4xl': '32px',

@@ -2323,6 +2323,18 @@ html {
 .top-full{
   top: 100%;
 }
+.bottom-\[20\%\]{
+  bottom: 20%;
+}
+.left-\[30\%\]{
+  left: 30%;
+}
+.left-\[40\%\]{
+  left: 40%;
+}
+.bottom-\[10\%\]{
+  bottom: 10%;
+}
 .-z-10{
   z-index: -10;
 }
@@ -2428,6 +2440,12 @@ html {
 .mb-6{
   margin-bottom: 1.5rem;
 }
+.ml-6{
+  margin-left: 1.5rem;
+}
+.mb-10{
+  margin-bottom: 2.5rem;
+}
 .block{
   display: block;
 }
@@ -2498,6 +2516,9 @@ html {
 .h-full{
   height: 100%;
 }
+.h-12{
+  height: 3rem;
+}
 .max-h-44{
   max-height: 11rem;
 }
@@ -2541,6 +2562,9 @@ html {
 .w-full{
   width: 100%;
 }
+.w-\[128px\]{
+  width: 128px;
+}
 .min-w-10{
   min-width: 2.5rem;
 }
@@ -2579,6 +2603,12 @@ html {
 }
 .max-w-\[644px\]{
   max-width: 644px;
+}
+.max-w-\[554px\]{
+  max-width: 554px;
+}
+.max-w-\[514px\]{
+  max-width: 514px;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -2946,6 +2976,10 @@ html {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -2966,6 +3000,9 @@ html {
 }
 .pt-5{
   padding-top: 1.25rem;
+}
+.pb-2{
+  padding-bottom: 0.5rem;
 }
 .text-left{
   text-align: left;
@@ -3012,6 +3049,10 @@ html {
   font-size: 0px;
   line-height: 0px;
 }
+.text-h1{
+  font-size: 72px;
+  line-height: 100%;
+}
 .font-bold{
   font-weight: 700;
 }
@@ -3038,6 +3079,12 @@ html {
 }
 .leading-\[130\%\]{
   line-height: 130%;
+}
+.tracking-\[\]{
+  letter-spacing: ;
+}
+.-tracking-\[0\.72px\]{
+  letter-spacing: -0.72px;
 }
 .text-DarkBlue100{
   --tw-text-opacity: 1;
@@ -4640,6 +4687,9 @@ a{
 }
 
 @media (max-width: 767px){
+  .md\:mt-8{
+    margin-top: 2rem;
+  }
   .md\:hidden{
     display: none;
   }

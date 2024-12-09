@@ -87,14 +87,14 @@
                         'URL': '#',
                         })
 
-<!--                        @@include('components/About-Cards.html', {-->
-<!--                        'common-style': '',-->
-<!--                        'num': '01',-->
-<!--                        'title': 'Who we are?',-->
-<!--                        'text': 'As a certified facility in Europe, Profarma Direct proudly imports products from-->
-<!--                        countries with government-regulated price controls. This enables us to offer attractive pricing-->
-<!--                        to both small and large-scale businesses.',-->
-<!--                        })-->
+<!--                                                @@include('components/About-Cards.html', {-->
+<!--                                                'common-style': '',-->
+<!--                                                'num': '01',-->
+<!--                                                'title': 'Who we are?',-->
+<!--                                                'text': 'As a certified facility in Europe, Profarma Direct proudly imports products from-->
+<!--                                                countries with government-regulated price controls. This enables us to offer attractive pricing-->
+<!--                                                to both small and large-scale businesses.',-->
+<!--                                                })-->
                     </div>
 
                 </div>
@@ -102,8 +102,139 @@
         </div>
     </section>
 
+    <section class="py-16 gradient-css">
+        <div class="container">
+            <div class="row gap-x-6">
+                <div class="col-span-6">
+                    <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full">
+                        <img class="object-cover w-full h-full" src="img/about-faq-image.png" alt="Choose your medication with Profarma Direct">
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <div class="flex flex-col gap-y-10 pl-6">
+                        @@include('components/Title-category-component.html', {
+                        'style': 'items-start',
+                        'category': 'Why Choose Us',
+                        'style-title': '',
+                        'title': 'Choose your medication with Profarma Direct',
+                        })
+                        <div class="row gap-12">
+                            <div class="col-span-6">
+                                <div class="flex flex-col">
+                                    <div class="bg-white rounded-full overflow-hidden w-14 h-14 min-w-14 flex justify-center items-center mb-6">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                            <path d="M6.03918 7.1132C6.41418 7.51167 6.97667 7.5585 7.44542 7.30066C7.99526 6.8059 9.06289 6.39836 10 6.39836C10.6915 6.39836 11.3478 6.57411 11.9219 6.87879C11.9219 6.72465 12.126 6.1356 12.5664 5.69521C12.8477 5.42572 13.1875 5.22651 13.5625 5.121C13.0374 4.7769 12.4547 4.50796 11.8351 4.32456C12.1489 3.92589 12.3438 3.3904 12.3438 2.84372C12.3438 1.54929 11.2945 0.5 10 0.5C8.70564 0.5 7.65635 1.54929 7.65635 2.84372C7.65635 3.39082 7.85155 3.92667 8.16576 4.3255C7.36425 4.56932 6.71409 4.88139 6.08601 5.42568C5.56137 5.90477 5.60524 6.67926 6.03918 7.1132Z" fill="#2490EB"/>
+                                            <path d="M3.82552 12.3343C4.1109 13.2723 4.46594 13.8836 4.9257 14.414C5.40687 14.941 6.18175 14.8922 6.61319 14.4609C7.01166 14.0859 7.0585 13.5233 6.80073 13.0547C6.25678 12.4503 5.89838 11.3508 5.89838 10.5234C5.93972 10.201 5.86534 9.53805 6.37881 8.58986C6.07011 8.48674 5.6878 8.42623 5.19531 7.93362C4.92574 7.65237 4.72652 7.3125 4.62102 6.9375C4.27691 7.46269 4.00805 8.04534 3.82465 8.66498C3.42599 8.35119 2.92954 8.15628 2.38279 8.15628C1.08839 8.15628 0 9.20556 0 10.5C0 11.7944 1.08839 12.8437 2.38279 12.8437C2.9299 12.8437 3.42669 12.6485 3.82552 12.3343Z" fill="#2490EB"/>
+                                            <path d="M11.8343 16.6745C12.835 16.37 13.4359 15.9886 13.914 15.5743C14.4399 15.0941 14.3934 14.3193 13.9609 13.8869C13.5741 13.4884 12.9999 13.4416 12.5312 13.7111C11.866 14.1296 11.299 14.6016 10.0234 14.6016C9.32648 14.6016 8.67556 14.4381 8.07807 14.1211C8.07807 14.2752 7.87401 14.8643 7.43354 15.3047C7.15229 15.5742 6.8125 15.7735 6.4375 15.879C6.96269 16.223 7.54542 16.4919 8.16499 16.6754C7.85116 17.074 7.65624 17.5705 7.65624 18.1173C7.65624 19.4117 8.70556 20.5001 9.99997 20.5001C11.2944 20.5001 12.3437 19.4117 12.3437 18.1173C12.3437 17.5701 12.1485 17.0734 11.8343 16.6745Z" fill="#2490EB"/>
+                                            <path d="M17.6172 8.15622C17.07 8.15622 16.5733 8.35142 16.1745 8.66563C15.9435 7.90618 15.5961 7.18807 15.0743 6.58589C14.5938 6.05976 13.8192 6.1066 13.3868 6.53906C12.9883 6.91405 12.9415 7.47655 13.1992 7.94529C13.7437 8.54989 14.1016 9.65642 14.1016 10.4765V10.4999C14.1016 11.1913 13.9257 11.8359 13.6095 12.4101C14.0547 12.5038 14.4767 12.7265 14.8047 13.0663C15.0743 13.3475 15.2735 13.6874 15.379 14.0624C15.7231 13.5372 15.992 12.9545 16.1754 12.3349C16.574 12.6487 17.0705 12.8436 17.6172 12.8436C18.9116 12.8436 20 11.7943 20 10.4999C20 9.20551 18.9116 8.15622 17.6172 8.15622Z" fill="#2490EB"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-Top3 font-semibold block mb-2 text-DarkBlue100">100% Authentic Products</span>
+                                    <p class="text-base">Get original products directly from themanufacturer.</p>
+                                </div>
+                            </div>
+                            <div class="col-span-6">
+                                <div class="flex flex-col">
+                                    <div class="bg-white rounded-full overflow-hidden w-14 h-14 min-w-14 flex justify-center items-center mb-6">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                            <path d="M13.4863 16.8562C12.0897 16.984 10.9544 17.117 10.0004 17.2774C7.10297 17.7643 5.93206 18.593 4.59783 20.2823C4.37516 20.5599 3.96494 20.572 3.7306 20.3185L0.174164 16.6175C-0.0254148 16.412 -0.059088 16.0858 0.102364 15.8473C0.549687 15.1864 1.04541 14.577 1.5834 14.0282C2.64786 12.7982 3.75537 11.9219 4.79838 11.3278C5.45645 10.953 6.1989 10.7636 6.95093 10.7636H10.4302C11.4937 10.7636 12.3918 11.4931 12.6783 12.4928C12.7708 12.8151 12.5585 13.1553 12.2329 13.1763C12.2203 13.1772 12.2074 13.1776 12.1945 13.1776H7.08413C6.76541 13.1776 6.49427 13.4339 6.48493 13.7621C6.47505 14.109 6.73631 14.3846 7.07062 14.3846H12.9303C13.1061 14.3846 13.2701 14.3 13.3872 14.1673C13.5372 14.0074 14.2515 12.916 15.613 11.736C16.4952 10.9712 18.6138 9.55664 19.4148 9.55664C19.9188 9.55664 20.1883 10.1722 19.8484 10.5583L14.5358 16.5933C14.4419 16.7141 14.2896 16.7864 14.1373 16.7985C13.9142 16.8178 13.6973 16.8369 13.4863 16.8562Z" fill="#FFA729"/>
+                                            <path d="M13.5163 1.75905C15.2463 -0.629259 18.79 0.616474 18.79 3.52676C18.79 5.51278 16.8567 6.90814 15.0928 8.32353C13.2322 9.81648 13.7948 9.81185 11.9399 8.32353C9.99792 6.76527 8.24268 5.44411 8.24268 3.52676C8.24268 0.618083 11.7849 -0.631351 13.5163 1.75905Z" fill="#FFA729"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-Top3 font-semibold block mb-2 text-DarkBlue100">Special offers</span>
+                                    <p class="text-base">Our qualified doctors are board-certified in their specialty.</p>
+                                </div>
+                            </div>
+                            <div class="col-span-6">
+                                <div class="flex flex-col">
+                                    <div class="bg-white rounded-full overflow-hidden w-14 h-14 min-w-14 flex justify-center items-center mb-6">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                            <path d="M10 0.5C4.486 0.5 0 4.986 0 10.5V14.643C0 15.667 0.897 16.5 2 16.5H3C3.26522 16.5 3.51957 16.3946 3.70711 16.2071C3.89464 16.0196 4 15.7652 4 15.5V10.357C4 10.0918 3.89464 9.83743 3.70711 9.64989C3.51957 9.46236 3.26522 9.357 3 9.357H2.092C2.648 5.487 5.978 2.5 10 2.5C14.022 2.5 17.352 5.487 17.908 9.357H17C16.7348 9.357 16.4804 9.46236 16.2929 9.64989C16.1054 9.83743 16 10.0918 16 10.357V16.5C16 17.603 15.103 18.5 14 18.5H12V17.5H8V20.5H14C16.206 20.5 18 18.706 18 16.5C19.103 16.5 20 15.667 20 14.643V10.5C20 4.986 15.514 0.5 10 0.5Z" fill="#2490EB"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-Top3 font-semibold block mb-2 text-DarkBlue100">Customer Support</span>
+                                    <p class="text-base">Get original products directly from themanufacturer.</p>
+                                </div>
+                            </div>
+                            <div class="col-span-6">
+                                <div class="flex flex-col">
+                                    <div class="bg-white rounded-full overflow-hidden w-14 h-14 min-w-14 flex justify-center items-center mb-6">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                            <path d="M6.7724 0.704344C6.49994 0.431885 6.0582 0.431885 5.78574 0.704344C5.51328 0.976803 5.51328 1.41855 5.78574 1.691L8.31567 4.22093H0.697674C0.312359 4.22093 0 4.53329 0 4.9186V8.63953C0 9.02485 0.312359 9.33721 0.697674 9.33721H1.39535V19.8023C1.39535 20.1876 1.70771 20.5 2.09302 20.5H17.907C18.2923 20.5 18.6047 20.1876 18.6047 19.8023V9.33721H19.3023C19.6876 9.33721 20 9.02485 20 8.63953V4.9186C20 4.53329 19.6876 4.22093 19.3023 4.22093H11.6843L14.2143 1.691C14.4867 1.41855 14.4867 0.976803 14.2143 0.704344C13.9418 0.431885 13.5001 0.431885 13.2276 0.704344L10 3.93194L6.7724 0.704344ZM10.6977 19.1047H9.30233V9.33721H10.6977V19.1047Z" fill="#FFA729"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-Top3 font-semibold block mb-2 text-DarkBlue100">Fast Delivery</span>
+                                    <p class="text-base">Get original products directly from themanufacturer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="container">
+            <div class="row">
+                <div class="col-span-12">
+                    @@include('components/Title-category-component.html', {
+                    'style': 'items-start',
+                    'category': 'Our Products',
+                    'style-title': '',
+                    'title': 'Best Sellers',
+                    })
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="container">
+            <div class="row gap-6">
+                <div class="col-span-6">
+                    <div class="flex flex-col max-w-[588px]">
+                        @@include('components/Title-category-component.html', {
+                        'style': 'items-start',
+                        'category': 'About Us',
+                        'style-title': '',
+                        'title': 'We are an Online Pharmacy you can Trust!',
+                        })
+                        <p class="mt-4 text-Top3">At ProfarmaDirect we believe that healthcare should be more than just
+                            a service. It must be a compassionate and collaborative path to health.</p>
+
+                        <a class="mt-10" href="#">
+                            More About Us
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <div class="flex flex-col gap-y-6">
+                        @@include('components/About-Cards.html', {
+                        'common-style': '',
+                        'num': '01',
+                        'title': 'Who we are?',
+                        'text': 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis',
+                        })
+                        @@include('components/About-Cards.html', {
+                        'common-style': '',
+                        'num': '02',
+                        'title': 'License',
+                        'text': 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis',
+                        })
+                        @@include('components/About-Cards.html', {
+                        'common-style': '',
+                        'num': '03',
+                        'title': 'Сustomer-oriented',
+                        'text': 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis',
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="py-16 relative">
-        <span class="absolute top-0 left-0 right-0 w-full h-[546px] gradient-img"></span>
+        <span class="absolute top-0 left-0 right-0 w-full h-[546px] gradient-css"></span>
         <div class="container relative z-[1]">
             <div class="row">
                 <div class="col-span-12">

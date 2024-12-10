@@ -455,3 +455,20 @@
   width: 100%;
   height: 546px;
 }
+
+.checkbox-style:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.checkbox-style:checked:focus {
+  border-color: #2490EB !important;
+}
+
+.checkbox-style:hover {
+  border-color: #2490EB !important;
+}
+
+.checkbox-style:checked {
+  background: white !important;
+}

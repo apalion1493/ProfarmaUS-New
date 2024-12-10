@@ -221,3 +221,21 @@
   background-size: contain;
   @apply w-[22px] min-w-[22px] h-[22px] block;
 }
+
+.Icon-capsule-v1 {
+  background: url("../img/icons/Icon-capsule-v1.svg") no-repeat center center;
+  background-size: contain;
+  @apply w-[143px] min-w-[143px] h-[135px] block;
+}
+
+.Icon-stethoscope-v1 {
+  background: url("../img/icons/Icon-stethoscope-v1.svg") no-repeat center center;
+  background-size: contain;
+  @apply w-[135px] min-w-[135px] h-[135px] block;
+}
+
+.Icon-couple-pills {
+  background: url("../img/icons/Icon-couple-pills.svg") no-repeat center center;
+  background-size: contain;
+  @apply w-[66px] min-w-[66px] h-[78px] block;
+}

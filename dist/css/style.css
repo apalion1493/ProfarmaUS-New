@@ -2900,6 +2900,9 @@ html {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
+.border-transparent{
+  border-color: transparent;
+}
 .bg-DarkBlue100{
   --tw-bg-opacity: 1;
   background-color: rgb(27 60 116 / var(--tw-bg-opacity));
@@ -4778,13 +4781,27 @@ a{
   border-color: rgb(29 78 216 / var(--tw-border-opacity));
 }
 
+.has-\[\:checked\]\:border-LightBlue100:has(:checked){
+  --tw-border-opacity: 1;
+  border-color: rgb(36 144 235 / var(--tw-border-opacity));
+}
+
 .has-\[\:checked\]\:bg-blue-700\/5:has(:checked){
   background-color: rgb(29 78 216 / 0.05);
+}
+
+.has-\[\:checked\]\:bg-LightBlue10:has(:checked){
+  background-color: #2490EB1A;
 }
 
 .has-\[\:checked\]\:text-black:has(:checked){
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.has-\[\:checked\]\:text-LightBlue100:has(:checked){
+  --tw-text-opacity: 1;
+  color: rgb(36 144 235 / var(--tw-text-opacity));
 }
 
 .has-\[\:focus\]\:outline:has(:focus){
@@ -4793,6 +4810,10 @@ a{
 
 .has-\[\:focus\]\:outline-2:has(:focus){
   outline-width: 2px;
+}
+
+.has-\[\:focus\]\:outline-0:has(:focus){
+  outline-width: 0px;
 }
 
 .has-\[\:focus\]\:outline-offset-2:has(:focus){

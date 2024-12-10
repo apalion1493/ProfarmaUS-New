@@ -156,6 +156,12 @@
   @apply w-8 min-w-8 h-8 block;
 }
 
+.Search-black-32 {
+  background: url("../img/icons/Search-black-32.svg") no-repeat center center;
+  background-size: contain;
+  @apply w-6 min-w-6 h-6 block;
+}
+
 .Sugar-Control-40 {
   background: url("../img/icons/Sugar-Control-40.svg") no-repeat center center;
   background-size: contain;

@@ -14,7 +14,7 @@
 
 <body class="">
 <main id="content" class="flex flex-col items-center min-h-screen overflow-hidden">
-    <header class="flex flex-col w-full relative z-10  ">
+  <header class="flex flex-col w-full relative z-10  ">
     <div x-data="{dropdownOpen: false}" class="w-full flex flex-col">
         <div class="bg-white shadow-3xl py-8">
             <div class="container flex items-center w-full">
@@ -272,15 +272,108 @@
     </div>
 </header>
 
-    <section class="">
-        <div class="container">
-            <div class="row">
-                <span>FAQs</span>
-            </div>
+  <section class="py-16 gradient-css">
+    <div class="container">
+      <div class="row">
+        <div class="col-span-12">
+          <div class="flex flex-col items-center">
+            <h1
+              class="text-center text-h1 text-DarkBlue100 font-semibold mb-6 -tracking-[0.72px] capitalize max-w-[950px] mx-auto">
+              FAQs</h1>
+            <p class="text-center max-w-[720px] text-Top3 text-Text-color">We’re committed to helping you with
+              your order and packaging requirements. Our experienced staff provides flexible payment options to let you
+              focus more on patient care. Customer satisfaction is our primary goal, and we strive to provide the best
+              service possible.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer class="w-full mt-auto overflow-hidden bg-DarkBlue100 pt-16 pb-10 text-white shadow-3xl">
+  <section class="py-16">
+    <div class="container">
+      <div class="row gap-x-6">
+        <div class="col-span-6">
+          <div class="flex flex-col">
+            <div class="flex flex-col gap-y-4 items-start">
+    <span class="px-3 w-fit h-10 rounded-lg bg-LightBlue10 text-LightBlue100 text-base font-medium flex items-center justify-center @style-category-elem">FAQs</span>
+    <h3 class="text-DarkBlue100 text-h2 font-semibold ">
+        Get Your General Answers
+    </h3>
+</div>
+
+            <div class="mt-10">
+              <div class="flex flex-col gap-y-5">
+  <div x-data="{ isExpanded: false }" :class="isExpanded  ?  'bg-White2'  :  ''" class="rounded-lg border border-DarkBlue20 px-5 py-6">
+    <button id="controlsAccordionItemOne" type="button"
+            class="flex w-full items-center justify-between gap-4 text-left text-Top1 font-medium text-DarkBlue100"
+            aria-controls="accordionItemOne" @click="isExpanded = ! isExpanded"
+            :aria-expanded="isExpanded ? 'true' : 'false'">
+      How can I place an order?
+      <svg :class="isExpanded  ?  'rotate-180'  :  ''" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+        <path d="M2 2L10 10L18 2" stroke="#1B3C74" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div x-cloak x-show="isExpanded" id="accordionItemOne" role="region" aria-labelledby="controlsAccordionItemOne"
+         x-collapse>
+      <div class="mt-3">
+        <p class="text-Top3">After adding your selections to the cart and filling in your personal information, you will receive an email
+          requesting further details to complete your account setup, enabling you to place an order with us.</p>
+      </div>
+    </div>
+  </div>
+
+  <div x-data="{ isExpanded: false }" :class="isExpanded  ?  'bg-White2'  :  ''" class="rounded-lg border border-DarkBlue20 px-5 py-6">
+    <button id="controlsAccordionItem2" type="button"
+            class="flex w-full items-center justify-between gap-4 text-left text-Top1 font-medium text-DarkBlue100"
+            aria-controls="accordionItem2" @click="isExpanded = ! isExpanded"
+            :aria-expanded="isExpanded ? 'true' : 'false'">
+      What are your business hours?
+      <svg :class="isExpanded  ?  'rotate-180'  :  ''" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+        <path d="M2 2L10 10L18 2" stroke="#1B3C74" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div x-cloak x-show="isExpanded" id="accordionItem2" role="region" aria-labelledby="controlsAccordionItem2"
+         x-collapse>
+      <div class="mt-3">
+        <p class="text-Top3">After adding your selections to the cart and filling in your personal information, you will receive an email
+          requesting further details to complete your account setup, enabling you to place an order with us.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div x-data="{ isExpanded: false }" :class="isExpanded  ?  'bg-White2'  :  ''" class="rounded-lg border border-DarkBlue20 px-5 py-6">
+    <button id="controlsAccordionItem3" type="button"
+            class="flex w-full items-center justify-between gap-4 text-left text-Top1 font-medium text-DarkBlue100"
+            aria-controls="accordionItem3" @click="isExpanded = ! isExpanded"
+            :aria-expanded="isExpanded ? 'true' : 'false'">
+      How fast will I get the products?
+      <svg :class="isExpanded  ?  'rotate-180'  :  ''" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+        <path d="M2 2L10 10L18 2" stroke="#1B3C74" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div x-cloak x-show="isExpanded" id="accordionItem3" role="region" aria-labelledby="controlsAccordionItem3"
+         x-collapse>
+      <div class="mt-3">
+        <p class="text-Top3">After adding your selections to the cart and filling in your personal information, you will receive an email
+          requesting further details to complete your account setup, enabling you to place an order with us.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-span-6">
+          <img class="ml-auto max-w-[90%] rounded-lg w-full object-cover" src="img/why-choose-us-two.png" alt="Get Your General Answers">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="w-full mt-auto overflow-hidden bg-DarkBlue100 pt-16 pb-10 text-white shadow-3xl">
   <div class="container">
     <div class="row gap-x-6 pb-12 relative">
       <div class="col-span-4 relative z-1">

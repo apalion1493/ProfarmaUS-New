@@ -2449,6 +2449,12 @@ html {
 .mt-auto{
   margin-top: auto;
 }
+.mr-auto{
+  margin-right: auto;
+}
+.mt-3{
+  margin-top: 0.75rem;
+}
 .block{
   display: block;
 }
@@ -2890,6 +2896,10 @@ html {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-White2{
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 246 249 / var(--tw-bg-opacity));
 }
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;

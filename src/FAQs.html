@@ -7,19 +7,53 @@
 
 <body class="">
 <main id="content" class="flex flex-col items-center min-h-screen overflow-hidden">
-    @@include('components/Header.html', {
-    'commonStyle': ' ',
-    })
+  @@include('components/Header.html', {
+  'commonStyle': ' ',
+  })
 
-    <section class="">
-        <div class="container">
-            <div class="row">
-                <span>FAQs</span>
-            </div>
+  <section class="py-16 gradient-css">
+    <div class="container">
+      <div class="row">
+        <div class="col-span-12">
+          <div class="flex flex-col items-center">
+            <h1
+              class="text-center text-h1 text-DarkBlue100 font-semibold mb-6 -tracking-[0.72px] capitalize max-w-[950px] mx-auto">
+              FAQs</h1>
+            <p class="text-center max-w-[720px] text-Top3 text-Text-color">We’re committed to helping you with
+              your order and packaging requirements. Our experienced staff provides flexible payment options to let you
+              focus more on patient care. Customer satisfaction is our primary goal, and we strive to provide the best
+              service possible.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    @@include('components/Footer.html')
+  <section class="py-16">
+    <div class="container">
+      <div class="row gap-x-6">
+        <div class="col-span-6">
+          <div class="flex flex-col">
+            @@include('components/Title-category-component.html', {
+            'style': 'items-start',
+            'category': 'FAQs',
+            'style-title': '',
+            'title': 'Get Your General Answers',
+            })
+
+            <div class="mt-10">
+              @@include('components/FAQ.html')
+            </div>
+          </div>
+        </div>
+        <div class="col-span-6">
+          <img class="ml-auto max-w-[90%] rounded-lg w-full object-cover" src="img/why-choose-us-two.png" alt="Get Your General Answers">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include('components/Footer.html')
 </main>
 
 @@include('components/script.html')

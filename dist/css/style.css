@@ -2344,6 +2344,9 @@ html {
 .z-\[1\]{
   z-index: 1;
 }
+.z-\[9\]{
+  z-index: 9;
+}
 .col-span-1{
   grid-column: span 1 / span 1;
 }
@@ -2364,6 +2367,9 @@ html {
 }
 .col-span-8{
   grid-column: span 8 / span 8;
+}
+.col-span-9{
+  grid-column: span 9 / span 9;
 }
 .mx-auto{
   margin-left: auto;
@@ -2455,6 +2461,15 @@ html {
 .mt-3{
   margin-top: 0.75rem;
 }
+.mb-16{
+  margin-bottom: 4rem;
+}
+.mb-8{
+  margin-bottom: 2rem;
+}
+.mt-14{
+  margin-top: 3.5rem;
+}
 .block{
   display: block;
 }
@@ -2527,6 +2542,9 @@ html {
 .h-min{
   height: -moz-min-content;
   height: min-content;
+}
+.h-screen{
+  height: 100vh;
 }
 .max-h-44{
   max-height: 11rem;
@@ -2643,6 +2661,14 @@ html {
 }
 .-translate-y-1\/2{
   --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-x-full{
+  --tw-translate-x: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-x-0{
+  --tw-translate-x: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .rotate-180{
@@ -2765,6 +2791,9 @@ html {
 .gap-y-6{
   row-gap: 1.5rem;
 }
+.gap-y-8{
+  row-gap: 2rem;
+}
 .space-y-1 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -2790,6 +2819,9 @@ html {
 }
 .overflow-y-auto{
   overflow-y: auto;
+}
+.overflow-y-scroll{
+  overflow-y: scroll;
 }
 .whitespace-nowrap{
   white-space: nowrap;
@@ -2820,6 +2852,9 @@ html {
 }
 .rounded-xl{
   border-radius: 0.75rem;
+}
+.rounded-6xl{
+  border-radius: 20px;
 }
 .border{
   border-width: 1px;
@@ -3111,6 +3146,9 @@ html {
 .-tracking-\[0\.72px\]{
   letter-spacing: -0.72px;
 }
+.-tracking-018{
+  letter-spacing: 0.18px;
+}
 .text-DarkBlue100{
   --tw-text-opacity: 1;
   color: rgb(27 60 116 / var(--tw-text-opacity));
@@ -3164,6 +3202,9 @@ html {
 }
 .opacity-100{
   opacity: 1;
+}
+.opacity-40{
+  opacity: 0.4;
 }
 .shadow{
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -3237,6 +3278,9 @@ html {
 }
 .duration-200{
   transition-duration: 200ms;
+}
+.duration-300{
+  transition-duration: 300ms;
 }
 .ease-in-out{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -4466,6 +4510,12 @@ a{
   height: 546px;
 }
 
+@media (min-width: 1024px){
+  .minlg\:w-full {
+    width: 100% !important;
+  }
+}
+
 .hover\:border-b-2:hover{
   border-bottom-width: 2px;
 }
@@ -4643,6 +4693,9 @@ a{
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
+  .motion-reduce\:transition-none{
+    transition-property: none;
+  }
 }
 
 .dark\:divide-slate-700:is(.dark *) > :not([hidden]) ~ :not([hidden]){
@@ -4698,6 +4751,21 @@ a{
 }
 
 @media (max-width: 1023px){
+  .lg\:fixed{
+    position: fixed;
+  }
+  .lg\:left-0{
+    left: 0px;
+  }
+  .lg\:top-0{
+    top: 0px;
+  }
+  .lg\:z-10{
+    z-index: 10;
+  }
+  .lg\:col-span-12{
+    grid-column: span 12 / span 12;
+  }
   .lg\:ml-auto{
     margin-left: auto;
   }
@@ -4710,8 +4778,24 @@ a{
   .lg\:h-\[36px\]{
     height: 36px;
   }
+  .lg\:h-full{
+    height: 100%;
+  }
+  .lg\:h-screen{
+    height: 100vh;
+  }
+  .lg\:min-h-screen{
+    min-height: 100vh;
+  }
   .lg\:max-w-\[171x\]{
     max-width: 171x;
+  }
+  .lg\:max-w-\[342px\]{
+    max-width: 342px;
+  }
+  .lg\:gap-x-0{
+    -moz-column-gap: 0px;
+         column-gap: 0px;
   }
   .lg\:text-body2{
     font-size: 14px;
@@ -4729,6 +4813,10 @@ a{
   .md\:w-max{
     width: -moz-max-content;
     width: max-content;
+  }
+  .md\:gap-x-0{
+    -moz-column-gap: 0px;
+         column-gap: 0px;
   }
   .md\:overflow-y-scroll{
     overflow-y: scroll;
@@ -4758,6 +4846,12 @@ a{
   .sm\:flex-col{
     flex-direction: column;
   }
+  .sm\:items-start{
+    align-items: flex-start;
+  }
+  .sm\:gap-y-3{
+    row-gap: 0.75rem;
+  }
   .sm\:text-base{
     font-size: 18px;
     line-height: 130%;
@@ -4770,6 +4864,9 @@ a{
   }
   .minlg\:h-14{
     height: 3.5rem;
+  }
+  .minlg\:w-full{
+    width: 100%;
   }
   .minlg\:min-w-\[200px\]{
     min-width: 200px;

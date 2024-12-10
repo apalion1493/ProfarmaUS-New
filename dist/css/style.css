@@ -2332,6 +2332,9 @@ html {
 .top-full{
   top: 100%;
 }
+.bottom-3{
+  bottom: 0.75rem;
+}
 .-z-10{
   z-index: -10;
 }
@@ -2720,6 +2723,9 @@ html {
 .items-center{
   align-items: center;
 }
+.justify-start{
+  justify-content: flex-start;
+}
 .justify-end{
   justify-content: flex-end;
 }
@@ -2798,6 +2804,9 @@ html {
 }
 .gap-y-8{
   row-gap: 2rem;
+}
+.gap-y-12{
+  row-gap: 3rem;
 }
 .space-y-1 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;

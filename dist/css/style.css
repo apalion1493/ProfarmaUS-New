@@ -2491,10 +2491,6 @@ html {
 .hidden{
   display: none;
 }
-.size-10{
-  width: 2.5rem;
-  height: 2.5rem;
-}
 .size-3{
   width: 0.75rem;
   height: 0.75rem;
@@ -2502,6 +2498,10 @@ html {
 .size-4{
   width: 1rem;
   height: 1rem;
+}
+.size-8{
+  width: 2rem;
+  height: 2rem;
 }
 .h-10{
   height: 2.5rem;
@@ -4268,28 +4268,23 @@ a{
 
 .pagination-button{
   display: flex;
-  height: 3rem;
-  width: 3rem;
-  min-width: 3rem;
+  height: 42px;
+  width: 42px;
+  min-width: 42px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border-radius: 9999px;
   border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(100 110 140 / var(--tw-border-opacity));
+  border-color: #1B3C7433;
   --tw-bg-opacity: 1;
-  background-color: rgb(27 60 116 / var(--tw-bg-opacity));
+  background-color: rgb(242 246 249 / var(--tw-bg-opacity));
   font-size: 0px;
   line-height: 0px;
 }
 
 .pagination-button:hover{
   cursor: pointer;
-}
-
-.pagination-button:disabled{
-  background-color: transparent;
 }
 .pagination-button--disabled{
   background-color: transparent;
@@ -4735,10 +4730,6 @@ a{
   cursor: not-allowed;
 }
 
-.disabled\:opacity-50:disabled{
-  opacity: 0.5;
-}
-
 .group:hover .group-hover\:block{
   display: block;
 }
@@ -4934,9 +4925,6 @@ a{
 }
 
 @media (max-width: 639px){
-  .sm\:hidden{
-    display: none;
-  }
   .sm\:flex-col{
     flex-direction: column;
   }

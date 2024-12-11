@@ -221,7 +221,7 @@
     @apply bg-transparent
   }
 
-  @apply w-12 h-12 min-w-12 flex items-center justify-center rounded-full overflow-hidden border border-Text-color text-none bg-DarkBlue100 disabled:bg-transparent hover:cursor-pointer
+  @apply w-[42px] h-[42px] min-w-[42px] flex items-center justify-center rounded-full overflow-hidden border border-DarkBlue20 text-none bg-White2 hover:cursor-pointer
 }
 
 // Pagination End

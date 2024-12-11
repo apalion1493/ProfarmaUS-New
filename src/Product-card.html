@@ -6,15 +6,105 @@
 })
 
 <body class="">
-<main id="content" class="flex flex-col items-center min-h-screen overflow-hidden">
+<main id="content" class="flex flex-col items-center min-h-screen">
     @@include('components/Header.html', {
     'commonStyle': ' ',
     })
 
-    <section class="">
+    <section class="py-16">
         <div class="container">
-            <div class="row">
-                <span>Product card</span>
+            <div class="grid grid-cols-12 gap-5">
+                <div class="col-span-6 lg:col-span-12">
+                    <div class="w-full sticky top-5 overflow-hidden border border-primary rounded-lg flex justify-center items-center max-w-[90%] lg:max-w-full min-h-[100px] py-8 px-2">
+                        <img class="" src="img/image-3.png" alt="Product">
+                    </div>
+                </div>
+                <div class="col-span-6 lg:col-span-12">
+                    <div class="flex flex-col gap-y-8">
+                        <div class="flex flex-col">
+                            <nav class="flex mb-10" aria-label="Breadcrumb">
+                                <ol class="inline-flex items-center flex-wrap space-x-2 md:space-x-2 rtl:space-x-reverse">
+                                    <li class="inline-flex items-center">
+                                        <a href="index.html" class="text-base text-DarkBlue50 inline-flex items-center">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                            <span class="text-base text-DarkBlue50"> > </span>
+                                            <a href="Categories-Shop-Page.html" class="text-base text-DarkBlue50 ms-2 md:ms-2">Categories</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center">
+                                            <span class="text-base text-DarkBlue50"> > </span>
+                                            <a href="#" class="text-base text-DarkBlue50 ms-2 md:ms-2">Infection</a>
+                                        </div>
+                                    </li>
+                                    <li aria-current="page">
+                                        <div class="flex items-center">
+                                            <span class="text-base text-DarkBlue50"> > </span>
+                                            <span class="ms-2 text-base text-DarkBlue100 md:ms-2">Cardura</span>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </nav>
+                            @@include('components/Category-elem.html', {
+                            'title': '-10% Sale',
+                            'styleCategoryElem': 'mb-4',
+                            })
+                            <h1 class="text-h2 font-semibold mb-8">Cardura <span class="text-h2-5 font-normal">(Doxazosin Mesylate)</span></h1>
+                            <div class="flex items-center justify-between gap-x-2 mb-8">
+                                <div class="inline-flex items-center gap-x-1">
+                                    <span class="line-through text-Top3 text-Text-color">$ 49.00 USD</span>
+                                    <span class="text-Top1 text-LightBlue100 font-semibold">$ 39.00 USD</span>
+                                </div>
+
+                                <ul class="flex items-center gap-x-2 my-5">
+                                    <li>
+                                        @@include('components/Info-elem.html', {
+                                        'Style': '',
+                                        'Text': '20 tabs',
+                                        })
+                                    </li>
+                                    <li>
+                                        @@include('components/Info-elem.html', {
+                                        'Style': '',
+                                        'Text': '2 mg',
+                                        })
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="flex items-center justify-between gap-x-2 px-5 py-4 border border-DarkBlue10 mb-10 rounded-lg bg-White2">
+                                <div class="flex items-center gap-x-4">
+                                    <span class="text-Top1 font-medium">Quantity</span>
+                                    @@include('components/Counter.html')
+                                </div>
+                                @@include('components/button.html', {
+                                'style': 'btn-medium',
+                                'type': 'button',
+                                'ariaLabel': 'Add to wishlist',
+                                'title': 'Add to wishlist',
+                                })
+                            </div>
+                            <div class="flex flex-col mb-10">
+                                <h4 class="text-h8 font-semibold leading-[120%] mb-2 text-dark-green">Ingredients:</h4>
+                                <ul class="flex flex-col gap-2 pl-5 list-image-checkmark">
+                                    <li>
+                                        <p class="leading-[130%] text-black-1">Active ingredient: Doxazosin</p>
+                                    </li>
+                                    <li>
+                                        <p class="leading-[130%] text-black-1">Prebiotic Fiber</p>
+                                    </li>
+                                    <li>
+                                        <p class="leading-[130%] text-black-1">Probiotic</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            @@include('components/Tabs.html')
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -123,6 +123,19 @@ input[type='search']::-webkit-search-results-decoration {
   cursor: pointer;
 }
 
+.searchContainer:not(.mob-version) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: none;
+
+  &.active {
+    display: block;
+    z-index: 1;
+  }
+}
+
 .custom-checkbox input[type='checkbox'] {
   @apply hidden;
 }

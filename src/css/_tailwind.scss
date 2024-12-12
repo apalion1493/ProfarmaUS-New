@@ -136,6 +136,14 @@ input[type='search']::-webkit-search-results-decoration {
   }
 }
 
+.wishlist {
+  transition: 0.3s;
+}
+
+.wishlist.active {
+  right: 0;
+}
+
 .custom-checkbox input[type='checkbox'] {
   @apply hidden;
 }

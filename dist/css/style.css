@@ -2275,6 +2275,9 @@ html {
 .inset-0{
   inset: 0px;
 }
+.-right-full{
+  right: -100%;
+}
 .bottom-0{
   bottom: 0px;
 }
@@ -2353,6 +2356,12 @@ html {
 .z-\[1\]{
   z-index: 1;
 }
+.z-\[98\]{
+  z-index: 98;
+}
+.z-\[99\]{
+  z-index: 99;
+}
 .z-\[9\]{
   z-index: 9;
 }
@@ -2391,6 +2400,10 @@ html {
 .my-5{
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+.my-6{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .mb-10{
   margin-bottom: 2.5rem;
@@ -2530,8 +2543,14 @@ html {
 .h-6{
   height: 1.5rem;
 }
+.h-\[120px\]{
+  height: 120px;
+}
 .h-\[196px\]{
   height: 196px;
+}
+.h-\[20px\]{
+  height: 20px;
 }
 .h-\[40px\]{
   height: 40px;
@@ -2591,6 +2610,12 @@ html {
 .w-6{
   width: 1.5rem;
 }
+.w-\[108px\]{
+  width: 108px;
+}
+.w-\[120px\]{
+  width: 120px;
+}
 .w-\[128px\]{
   width: 128px;
 }
@@ -2599,6 +2624,9 @@ html {
 }
 .w-\[201px\]{
   width: 201px;
+}
+.w-\[20px\]{
+  width: 20px;
 }
 .w-\[52px\]{
   width: 52px;
@@ -2609,6 +2637,9 @@ html {
 }
 .w-full{
   width: 100%;
+}
+.w-screen{
+  width: 100vw;
 }
 .min-w-10{
   min-width: 2.5rem;
@@ -2624,6 +2655,9 @@ html {
 }
 .min-w-6{
   min-width: 1.5rem;
+}
+.min-w-\[120px\]{
+  min-width: 120px;
 }
 .min-w-\[27px\]{
   min-width: 27px;
@@ -2951,6 +2985,9 @@ html {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-DarkBlue20{
+  background-color: #1B3C7433;
+}
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
 }
@@ -3009,6 +3046,10 @@ html {
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .px-\[87px\]{
   padding-left: 87px;
@@ -3162,11 +3203,20 @@ html {
 .leading-100{
   line-height: 100%;
 }
+.leading-7{
+  line-height: 1.75rem;
+}
 .leading-8{
   line-height: 2rem;
 }
+.leading-\[100\%\]{
+  line-height: 100%;
+}
 .leading-\[130\%\]{
   line-height: 130%;
+}
+.leading-\[150\%\]{
+  line-height: 150%;
 }
 .-tracking-018{
   letter-spacing: 0.18px;
@@ -3482,6 +3532,14 @@ input[type=search]::-webkit-search-results-decoration {
 .searchContainer:not(.mob-version).active {
   display: block;
   z-index: 1;
+}
+
+.wishlist {
+  transition: 0.3s;
+}
+
+.wishlist.active {
+  right: 0;
 }
 
 .custom-checkbox input[type=checkbox]{
@@ -4910,6 +4968,9 @@ a{
     width: -moz-max-content;
     width: max-content;
   }
+  .md\:flex-col{
+    flex-direction: column;
+  }
   .md\:gap-x-0{
     -moz-column-gap: 0px;
          column-gap: 0px;
@@ -4949,6 +5010,15 @@ a{
   }
   .sm\:gap-y-3{
     row-gap: 0.75rem;
+  }
+}
+
+@media (min-width: 640px){
+  .minsm\:-right-\[400px\]{
+    right: -400px;
+  }
+  .minsm\:w-\[400px\]{
+    width: 400px;
   }
 }
 

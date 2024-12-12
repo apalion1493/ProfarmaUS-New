@@ -17,20 +17,20 @@
         openedWithKeyboard: false,
         selectedOption: null,
         setSelectedOption(option) {
-            this.selectedOption = option
-            this.isOpen = false
-            this.openedWithKeyboard = false
-            this.$refs.hiddenTextField.value = option.value
+            this.selectedOption = option;
+            this.isOpen = false;
+            this.openedWithKeyboard = false;
+            this.$refs.hiddenTextField.value = option.value;
         },
         highlightFirstMatchingOption(pressedKey) {
             const option = this.options.find((item) =>
                 item.label.toLowerCase().startsWith(pressedKey.toLowerCase()),
-            )
+            );
             if (option) {
-                const index = this.options.indexOf(option)
-                const allOptions = document.querySelectorAll('.combobox-option')
+                const index = this.options.indexOf(option);
+                const allOptions = document.querySelectorAll('.combobox-option');
                 if (allOptions[index]) {
-                    allOptions[index].focus()
+                    allOptions[index].focus();
                 }
             }
         },

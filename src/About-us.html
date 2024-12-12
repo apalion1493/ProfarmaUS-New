@@ -7,180 +7,191 @@
 
 <body class="">
 <main id="content" class="flex flex-col items-center min-h-screen">
-    @@include('components/Header.html', {
-    'commonStyle': ' ',
-    })
+  @@include('components/Header.html', {
+  'commonStyle': ' ',
+  })
 
-    <section class="py-16 gradient-css">
-        <div class="container relative">
-            <i class="Icon-capsule-v1 absolute top-[44px] left-0"></i>
-            <i class="Icon-stethoscope-v1 absolute top-[44px] right-0"></i>
-            <div class="row relative z-[1]">
-                <div class="col-span-12">
-                    <div class="flex flex-col items-center">
-                        <h1 class="text-center text-h1 text-DarkBlue100 font-semibold mb-6 -tracking-[0.72px] capitalize max-w-[950px] mx-auto">
-                            Your Journey to Better Health
-                            Begins With Us</h1>
-                        <p class="text-center max-w-[720px] text-Top3 text-Text-color mb-10">With Profarma Direct,
-                            you’ll get genuine products, quick shipping, expert customer support, and unbeatable
-                            prices.</p>
-                    </div>
-                </div>
-                <div class="col-span-1"></div>
-                <div class="col-span-10">
-                    <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full ml-2 w-full rounded-2xl">
-                        <img class="object-cover w-full h-full rounded-2xl" src="img/hero-image-two.png"
-                             alt="Your Trusted Path to Recovery">
-                    </div>
-                </div>
-                <div class="col-span-1"></div>
-            </div>
+  <section class="py-16 gradient-css">
+    <div class="container relative">
+      <i class="Icon-capsule-v1 absolute top-[44px] left-0"></i>
+      <i class="Icon-stethoscope-v1 absolute top-[44px] right-0"></i>
+      <div class="row relative z-[1]">
+        <div class="col-span-12">
+          <div class="flex flex-col items-center">
+            <h1
+              class="text-center text-h1 text-DarkBlue100 font-semibold mb-6 -tracking-[0.72px] capitalize max-w-[950px] mx-auto">
+              Your Journey to Better Health
+              Begins With Us</h1>
+            <p class="text-center max-w-[720px] text-Top3 text-Text-color mb-10">With Profarma Direct,
+              you’ll get genuine products, quick shipping, expert customer support, and unbeatable
+              prices.</p>
+          </div>
         </div>
-    </section>
-    <section class="py-16">
-        <div class="container">
-            <div class="row gap-6">
-                <div class="col-span-6">
-                    <div class="flex flex-col max-w-[588px] sticky top-6">
-                        @@include('components/Title-category-component.html', {
-                        'style': 'items-start',
-                        'category': 'About Us',
-                        'style-title': '',
-                        'title': 'We are an Online Pharmacy you can Trust!',
-                        })
-                        <p class="mt-4 text-Top3">At ProfarmaDirect we believe that healthcare should be more than just
-                            a service. It must be a compassionate and collaborative path to health.</p>
+        <div class="col-span-1"></div>
+        <div class="col-span-10">
+          <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full ml-2 w-full rounded-2xl">
+            <img class="object-cover w-full h-full rounded-2xl" src="img/hero-image-two.png"
+                 alt="Your Trusted Path to Recovery">
+          </div>
+        </div>
+        <div class="col-span-1"></div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16">
+    <div class="container">
+      <div class="row gap-6">
+        <div class="col-span-6">
+          <div class="flex flex-col max-w-[588px] sticky top-6">
+            @@include('components/Title-category-component.html', {
+            'style': 'items-start',
+            'category': 'About Us',
+            'style-title': '',
+            'title': 'We are an Online Pharmacy you can Trust!',
+            })
+            <p class="mt-4 text-Top3">At ProfarmaDirect we believe that healthcare should be more than just
+              a service. It must be a compassionate and collaborative path to health.</p>
 
-                        @@include('components/Link.html', {
-                        'style': 'mt-10',
-                        'url': 'Categories-Shop-Page.html',
-                        'title': 'More About Us',
-                        })
-                    </div>
-                </div>
-                <div class="col-span-6">
-                    <div class="flex flex-col gap-y-6">
-                        @@include('components/About-Cards.html', {
-                        'common-style': '',
-                        'num': '01',
-                        'title': 'Who we are?',
-                        'text': 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis',
-                        })
-                        @@include('components/About-Cards.html', {
-                        'common-style': '',
-                        'num': '02',
-                        'title': 'License',
-                        'text': 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis',
-                        })
-                        @@include('components/About-Cards.html', {
-                        'common-style': '',
-                        'num': '03',
-                        'title': 'Сustomer-oriented',
-                        'text': 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis',
-                        })
-                        @@include('components/About-Cards.html', {
-                        'common-style': '',
-                        'num': '04',
-                        'title': 'Only Original products',
-                        'text': 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis',
-                        })
-                    </div>
-                </div>
-            </div>
+            @@include('components/Link.html', {
+            'style': 'mt-10',
+            'url': 'Categories-Shop-Page.html',
+            'title': 'More About Us',
+            })
+          </div>
         </div>
-    </section>
-    <section class="py-16 gradient-css">
-        <div class="container">
-            <div class="row gap-x-6">
-                <div class="col-span-6">
-                    <div class="flex flex-col gap-y-10 max-w-[553px] mr-4">
-                        @@include('components/Title-category-component.html', {
-                        'style': 'items-start',
-                        'category': '10+ years of experience',
-                        'style-title': '',
-                        'title': 'In Sickness and in Health, We’re Here!',
-                        })
-                        <div class="row gap-y-10">
-                            <div class="col-span-12">
-                                <div class="flex gap-x-4">
-                                    <div class="w-14 h-14 min-w-14 flex justify-center items-center rounded-full bg-white overflow-hidden shadow-7xl">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <g clip-path="url(#clip0_362_575)">
-                                                <mask id="mask0_362_575" style="mask-type:luminance"
-                                                      maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
-                                                    <path d="M20 0H0V20H20V0Z" fill="white"/>
-                                                </mask>
-                                                <g mask="url(#mask0_362_575)">
-                                                    <path d="M6.66916 10.2093C6.9154 10.1583 7.17268 10.0466 7.41539 9.8713C8.11326 9.36655 8.42299 8.53764 8.10649 8.01903C7.76236 7.45491 6.82101 7.49284 6.09763 8.13485C5.40588 8.73214 5.2583 9.35622 5.2583 10.0121C5.2583 10.4755 5.40653 11.3031 6.31202 12.0216C6.73955 11.6913 7.24923 11.4196 7.82779 11.2231L7.83546 11.2203C7.39091 11.0351 6.81144 10.6694 6.66916 10.2093ZM6.55753 8.61414C6.55753 8.42039 6.71192 8.26454 6.90234 8.26454C7.0926 8.26454 7.24716 8.42105 7.24716 8.61489C7.24716 8.80864 7.0926 8.96447 6.90234 8.96447C6.71196 8.96447 6.55753 8.80789 6.55753 8.61414Z"
-                                                          fill="#2490EB"/>
-                                                    <path d="M14.7544 10.0129C14.7523 9.35627 14.6054 8.73218 13.9131 8.13491C13.1902 7.49355 12.2482 7.45424 11.9041 8.01909C11.5882 8.53768 11.8972 9.3666 12.5951 9.87143C12.8378 10.0466 13.0952 10.1583 13.3413 10.2094C13.2557 10.4859 12.9958 10.7673 12.5993 11.0044C12.0541 11.3299 11.7595 11.3702 8.27107 12.5286C6.98012 12.9672 6.21191 13.8389 6.21191 14.8602C6.21191 15.5878 6.58358 16.1491 7.10007 16.5602C7.42494 16.2257 7.83048 15.9354 8.30426 15.7029C7.75876 15.4271 7.59045 15.2181 7.59045 14.8602C7.59045 14.2694 8.77125 13.9317 9.316 13.7519V15.2471L10.6952 14.6319V13.7527C11.2408 13.9334 12.4187 14.2707 12.4187 14.8602C12.4187 15.841 9.61025 16.4194 8.41533 17.2436C7.83536 17.6456 7.52351 18.1567 7.52351 18.7574C7.52351 19.1022 7.5636 19.5297 8.16905 19.9545C8.34075 20.0917 8.57925 19.8914 8.46775 19.6986C8.06767 18.8979 8.4925 18.498 9.31733 18.1518V19.309C9.31733 19.6897 9.62625 19.9986 10.007 19.9986C10.3877 19.9986 10.6966 19.6897 10.6966 19.309V18.1525C11.4889 18.4849 11.9877 18.9545 11.5442 19.6986C11.4342 19.8876 11.6683 20.0934 11.8421 19.9545C12.4282 19.5104 12.4745 19.1297 12.4745 18.7663C12.4745 18.207 12.1683 17.6643 11.5876 17.2484C12.7614 16.8243 13.7999 16.1105 13.7999 14.8616C13.7999 13.9989 13.2517 13.243 12.3042 12.7644C12.7468 12.6051 12.9696 12.4982 13.2654 12.3217C14.5613 11.5472 14.7544 10.5424 14.7544 10.0129ZM13.109 8.96452C12.9186 8.96452 12.7642 8.80802 12.7642 8.61418C12.7642 8.42043 12.9186 8.26387 13.109 8.26387C13.2992 8.26387 13.4538 8.42043 13.4538 8.61418C13.4538 8.80802 13.2992 8.96452 13.109 8.96452Z"
-                                                          fill="#2490EB"/>
-                                                    <path d="M19.6548 1.3806H14.9318C14.0053 1.3806 13.31 1.79016 12.7119 2.38832C12.0621 3.03813 11.7242 4.48262 10.6895 4.48262V2.56724C11.1001 2.32833 11.3792 1.88856 11.3792 1.37927C11.3792 0.617523 10.7617 0 9.99986 0C9.23811 0 8.62061 0.617523 8.62061 1.37927C8.62061 1.88852 8.89969 2.32828 9.31027 2.56724V10.7862C9.73586 10.6504 10.203 10.5008 10.6895 10.3445V6.89013C10.9888 6.74 11.2302 6.49729 11.3782 6.19691C11.6181 6.6069 12.0741 6.89767 12.5824 6.89767C13.0979 6.89767 13.5421 6.61142 13.7788 6.19252C14.5866 7.00047 16.0884 7.01603 16.8962 6.20812L15.7243 5.03618L16.2619 5.25888C17.3175 5.69615 18.5278 5.19483 18.9651 4.13918L17.3002 3.44954C18.9131 3.4495 19.6548 2.43743 19.6548 1.3806Z"
-                                                          fill="#2490EB"/>
-                                                    <path d="M7.2881 2.38834C6.68996 1.79017 5.99469 1.38062 5.06816 1.38062H0.345215C0.345215 2.43739 1.08687 3.44951 2.69975 3.44951L1.03485 4.13914C1.47216 5.1948 2.68242 5.69607 3.73808 5.25885L4.27569 5.03614L3.10375 6.20808C3.91165 7.01603 5.41333 7.00047 6.22123 6.19248C6.45786 6.61143 6.90203 6.89767 7.41757 6.89767C7.42266 6.89767 7.42775 6.89763 7.43283 6.89759C8.10669 6.88991 8.62175 6.28123 8.62175 5.60737V4.21992C8.0782 3.77394 7.76687 2.86712 7.2881 2.38834Z"
-                                                          fill="#2490EB"/>
-                                                </g>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_362_575">
-                                                    <rect width="20" height="20" fill="white"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <span class="text-Top3 font-semibold block mb-2 text-DarkBlue100">Our Mission</span>
-                                        <p class="text-base">We strive to be the finest online source for your
-                                            pharmaceutical requirements and to suit perfectly the needs of your
-                                            business, making us the first place you will think of when it is time to
-                                            re-order.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-span-12">
-                                <div class="flex gap-x-4">
-                                    <div class="w-14 h-14 min-w-14 flex justify-center items-center rounded-full bg-white overflow-hidden shadow-7xl">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path d="M14.5457 6.80591L13.5356 7.816L14.0406 8.32117L13.5356 8.82617L15.5558 10.8464L16.061 10.3414L16.5661 10.8464L17.5762 9.8364L14.5457 6.80591Z"
-                                                  fill="#2490EB"/>
-                                            <path d="M15.6183 9.03594C15.4807 9.3356 15.2977 9.62002 15.0508 9.86677C14.5402 10.3774 13.8836 10.6426 13.2155 10.6859C13.8208 12.3339 13.3288 14.0276 12.2295 15.1269C12.0576 15.2988 11.8723 15.4498 11.6803 15.5879L3.93909 7.84644L3.43401 8.35152L8.74125 13.6588C8.38375 13.7125 8.03928 13.8714 7.7641 14.1465L7.48624 14.4244L6.46437 13.4024L6.9695 12.8972L3.93909 9.86694L2.42383 11.382L5.45428 14.4125L5.95937 13.9074L6.98125 14.9294L5.50758 16.4031H4.56669C3.77771 16.4031 3.13816 17.0427 3.13816 17.8316L3.1382 19.2602H14.5668V17.8316C14.5668 17.8099 14.5613 17.7894 14.5603 17.7678L14.5653 17.769C14.5409 17.2129 14.7018 16.6761 15.0237 16.2219C16.4497 14.2104 16.809 11.4965 15.6183 9.03594ZM8.98984 16.1115C8.59542 16.1115 8.27558 15.7917 8.27558 15.3972C8.27558 15.0028 8.59542 14.6829 8.98984 14.6829C9.38434 14.6829 9.70417 15.0028 9.70417 15.3972C9.70417 15.7917 9.38434 16.1115 8.98984 16.1115Z"
-                                                  fill="#2490EB"/>
-                                            <path d="M15.5558 3.23975L12.5254 0.209262C12.2464 -0.0697542 11.7942 -0.0697542 11.5152 0.209262C10.3604 1.36405 7.22019 4.5044 6.14581 5.57882C6.02648 5.6981 5.95947 5.85994 5.95947 6.02873V7.52182C5.95942 7.69065 6.02652 7.85249 6.14581 7.97174L7.79331 9.61932C7.91264 9.73865 8.07456 9.80582 8.24326 9.80582H9.73641C9.90516 9.80582 10.0671 9.73882 10.1863 9.61932C10.6784 9.1274 10.2342 9.57157 11.5152 8.29049C12.352 9.1274 13.7088 9.1274 14.5457 8.29049C15.3825 7.45365 15.3825 6.0969 14.5457 5.26003L15.5529 4.2528C15.8318 3.97373 15.8348 3.51855 15.5558 3.23975ZM7.9797 6.77532L7.47461 6.27025L12.0202 1.72454L12.5253 2.22958L7.9797 6.77532ZM13.0304 7.48957C12.6359 7.48957 12.3162 7.16974 12.3162 6.77524C12.3162 6.38079 12.6359 6.06096 13.0305 6.06096C13.4249 6.06096 13.7447 6.38079 13.7447 6.77524C13.7447 7.16974 13.425 7.48957 13.0304 7.48957Z"
-                                                  fill="#2490EB"/>
-                                        </svg>
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <span class="text-Top3 font-semibold block mb-2 text-DarkBlue100">Our Vision</span>
-                                        <p class="text-base">Our vision is straightforward: to offer the best for the
-                                            best. We aim to help you become the most successful provider.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span-6">
-                    <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full">
-                        <img class="object-cover w-full h-full" src="img/image-5.png"
-                             alt="In Sickness and in Health, We’re Here!">
-                    </div>
-                </div>
-            </div>
+        <div class="col-span-6">
+          <div class="flex flex-col gap-y-6">
+            @@include('components/About-Cards.html', {
+            'common-style': '',
+            'num': '01',
+            'title': 'Who we are?',
+            'text': 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis',
+            })
+            @@include('components/About-Cards.html', {
+            'common-style': '',
+            'num': '02',
+            'title': 'License',
+            'text': 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis',
+            })
+            @@include('components/About-Cards.html', {
+            'common-style': '',
+            'num': '03',
+            'title': 'Сustomer-oriented',
+            'text': 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis',
+            })
+            @@include('components/About-Cards.html', {
+            'common-style': '',
+            'num': '04',
+            'title': 'Only Original products',
+            'text': 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis',
+            })
+          </div>
         </div>
-    </section>
-    <section class="py-16 relative">
-        <div class="container relative z-[1]">
-            <div class="row">
-                <div class="col-span-12">
-                    @@include('components/Form-section.html')
+      </div>
+    </div>
+  </section>
+  <section class="py-16 gradient-css">
+    <div class="container">
+      <div class="row gap-x-6">
+        <div class="col-span-6">
+          <div class="flex flex-col gap-y-10 max-w-[553px] mr-4">
+            @@include('components/Title-category-component.html', {
+            'style': 'items-start',
+            'category': '10+ years of experience',
+            'style-title': '',
+            'title': 'In Sickness and in Health, We’re Here!',
+            })
+            <div class="row gap-y-10">
+              <div class="col-span-12">
+                <div class="flex gap-x-4">
+                  <div
+                    class="w-14 h-14 min-w-14 flex justify-center items-center rounded-full bg-white overflow-hidden shadow-7xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                         viewBox="0 0 20 20" fill="none">
+                      <g clip-path="url(#clip0_362_575)">
+                        <mask id="mask0_362_575" style="mask-type:luminance"
+                              maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                          <path d="M20 0H0V20H20V0Z" fill="white" />
+                        </mask>
+                        <g mask="url(#mask0_362_575)">
+                          <path
+                            d="M6.66916 10.2093C6.9154 10.1583 7.17268 10.0466 7.41539 9.8713C8.11326 9.36655 8.42299 8.53764 8.10649 8.01903C7.76236 7.45491 6.82101 7.49284 6.09763 8.13485C5.40588 8.73214 5.2583 9.35622 5.2583 10.0121C5.2583 10.4755 5.40653 11.3031 6.31202 12.0216C6.73955 11.6913 7.24923 11.4196 7.82779 11.2231L7.83546 11.2203C7.39091 11.0351 6.81144 10.6694 6.66916 10.2093ZM6.55753 8.61414C6.55753 8.42039 6.71192 8.26454 6.90234 8.26454C7.0926 8.26454 7.24716 8.42105 7.24716 8.61489C7.24716 8.80864 7.0926 8.96447 6.90234 8.96447C6.71196 8.96447 6.55753 8.80789 6.55753 8.61414Z"
+                            fill="#2490EB" />
+                          <path
+                            d="M14.7544 10.0129C14.7523 9.35627 14.6054 8.73218 13.9131 8.13491C13.1902 7.49355 12.2482 7.45424 11.9041 8.01909C11.5882 8.53768 11.8972 9.3666 12.5951 9.87143C12.8378 10.0466 13.0952 10.1583 13.3413 10.2094C13.2557 10.4859 12.9958 10.7673 12.5993 11.0044C12.0541 11.3299 11.7595 11.3702 8.27107 12.5286C6.98012 12.9672 6.21191 13.8389 6.21191 14.8602C6.21191 15.5878 6.58358 16.1491 7.10007 16.5602C7.42494 16.2257 7.83048 15.9354 8.30426 15.7029C7.75876 15.4271 7.59045 15.2181 7.59045 14.8602C7.59045 14.2694 8.77125 13.9317 9.316 13.7519V15.2471L10.6952 14.6319V13.7527C11.2408 13.9334 12.4187 14.2707 12.4187 14.8602C12.4187 15.841 9.61025 16.4194 8.41533 17.2436C7.83536 17.6456 7.52351 18.1567 7.52351 18.7574C7.52351 19.1022 7.5636 19.5297 8.16905 19.9545C8.34075 20.0917 8.57925 19.8914 8.46775 19.6986C8.06767 18.8979 8.4925 18.498 9.31733 18.1518V19.309C9.31733 19.6897 9.62625 19.9986 10.007 19.9986C10.3877 19.9986 10.6966 19.6897 10.6966 19.309V18.1525C11.4889 18.4849 11.9877 18.9545 11.5442 19.6986C11.4342 19.8876 11.6683 20.0934 11.8421 19.9545C12.4282 19.5104 12.4745 19.1297 12.4745 18.7663C12.4745 18.207 12.1683 17.6643 11.5876 17.2484C12.7614 16.8243 13.7999 16.1105 13.7999 14.8616C13.7999 13.9989 13.2517 13.243 12.3042 12.7644C12.7468 12.6051 12.9696 12.4982 13.2654 12.3217C14.5613 11.5472 14.7544 10.5424 14.7544 10.0129ZM13.109 8.96452C12.9186 8.96452 12.7642 8.80802 12.7642 8.61418C12.7642 8.42043 12.9186 8.26387 13.109 8.26387C13.2992 8.26387 13.4538 8.42043 13.4538 8.61418C13.4538 8.80802 13.2992 8.96452 13.109 8.96452Z"
+                            fill="#2490EB" />
+                          <path
+                            d="M19.6548 1.3806H14.9318C14.0053 1.3806 13.31 1.79016 12.7119 2.38832C12.0621 3.03813 11.7242 4.48262 10.6895 4.48262V2.56724C11.1001 2.32833 11.3792 1.88856 11.3792 1.37927C11.3792 0.617523 10.7617 0 9.99986 0C9.23811 0 8.62061 0.617523 8.62061 1.37927C8.62061 1.88852 8.89969 2.32828 9.31027 2.56724V10.7862C9.73586 10.6504 10.203 10.5008 10.6895 10.3445V6.89013C10.9888 6.74 11.2302 6.49729 11.3782 6.19691C11.6181 6.6069 12.0741 6.89767 12.5824 6.89767C13.0979 6.89767 13.5421 6.61142 13.7788 6.19252C14.5866 7.00047 16.0884 7.01603 16.8962 6.20812L15.7243 5.03618L16.2619 5.25888C17.3175 5.69615 18.5278 5.19483 18.9651 4.13918L17.3002 3.44954C18.9131 3.4495 19.6548 2.43743 19.6548 1.3806Z"
+                            fill="#2490EB" />
+                          <path
+                            d="M7.2881 2.38834C6.68996 1.79017 5.99469 1.38062 5.06816 1.38062H0.345215C0.345215 2.43739 1.08687 3.44951 2.69975 3.44951L1.03485 4.13914C1.47216 5.1948 2.68242 5.69607 3.73808 5.25885L4.27569 5.03614L3.10375 6.20808C3.91165 7.01603 5.41333 7.00047 6.22123 6.19248C6.45786 6.61143 6.90203 6.89767 7.41757 6.89767C7.42266 6.89767 7.42775 6.89763 7.43283 6.89759C8.10669 6.88991 8.62175 6.28123 8.62175 5.60737V4.21992C8.0782 3.77394 7.76687 2.86712 7.2881 2.38834Z"
+                            fill="#2490EB" />
+                        </g>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_362_575">
+                          <rect width="20" height="20" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-Top3 font-semibold block mb-2 text-DarkBlue100">Our Mission</span>
+                    <p class="text-base">We strive to be the finest online source for your
+                      pharmaceutical requirements and to suit perfectly the needs of your
+                      business, making us the first place you will think of when it is time to
+                      re-order.</p>
+                  </div>
                 </div>
+              </div>
+              <div class="col-span-12">
+                <div class="flex gap-x-4">
+                  <div
+                    class="w-14 h-14 min-w-14 flex justify-center items-center rounded-full bg-white overflow-hidden shadow-7xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                         viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M14.5457 6.80591L13.5356 7.816L14.0406 8.32117L13.5356 8.82617L15.5558 10.8464L16.061 10.3414L16.5661 10.8464L17.5762 9.8364L14.5457 6.80591Z"
+                        fill="#2490EB" />
+                      <path
+                        d="M15.6183 9.03594C15.4807 9.3356 15.2977 9.62002 15.0508 9.86677C14.5402 10.3774 13.8836 10.6426 13.2155 10.6859C13.8208 12.3339 13.3288 14.0276 12.2295 15.1269C12.0576 15.2988 11.8723 15.4498 11.6803 15.5879L3.93909 7.84644L3.43401 8.35152L8.74125 13.6588C8.38375 13.7125 8.03928 13.8714 7.7641 14.1465L7.48624 14.4244L6.46437 13.4024L6.9695 12.8972L3.93909 9.86694L2.42383 11.382L5.45428 14.4125L5.95937 13.9074L6.98125 14.9294L5.50758 16.4031H4.56669C3.77771 16.4031 3.13816 17.0427 3.13816 17.8316L3.1382 19.2602H14.5668V17.8316C14.5668 17.8099 14.5613 17.7894 14.5603 17.7678L14.5653 17.769C14.5409 17.2129 14.7018 16.6761 15.0237 16.2219C16.4497 14.2104 16.809 11.4965 15.6183 9.03594ZM8.98984 16.1115C8.59542 16.1115 8.27558 15.7917 8.27558 15.3972C8.27558 15.0028 8.59542 14.6829 8.98984 14.6829C9.38434 14.6829 9.70417 15.0028 9.70417 15.3972C9.70417 15.7917 9.38434 16.1115 8.98984 16.1115Z"
+                        fill="#2490EB" />
+                      <path
+                        d="M15.5558 3.23975L12.5254 0.209262C12.2464 -0.0697542 11.7942 -0.0697542 11.5152 0.209262C10.3604 1.36405 7.22019 4.5044 6.14581 5.57882C6.02648 5.6981 5.95947 5.85994 5.95947 6.02873V7.52182C5.95942 7.69065 6.02652 7.85249 6.14581 7.97174L7.79331 9.61932C7.91264 9.73865 8.07456 9.80582 8.24326 9.80582H9.73641C9.90516 9.80582 10.0671 9.73882 10.1863 9.61932C10.6784 9.1274 10.2342 9.57157 11.5152 8.29049C12.352 9.1274 13.7088 9.1274 14.5457 8.29049C15.3825 7.45365 15.3825 6.0969 14.5457 5.26003L15.5529 4.2528C15.8318 3.97373 15.8348 3.51855 15.5558 3.23975ZM7.9797 6.77532L7.47461 6.27025L12.0202 1.72454L12.5253 2.22958L7.9797 6.77532ZM13.0304 7.48957C12.6359 7.48957 12.3162 7.16974 12.3162 6.77524C12.3162 6.38079 12.6359 6.06096 13.0305 6.06096C13.4249 6.06096 13.7447 6.38079 13.7447 6.77524C13.7447 7.16974 13.425 7.48957 13.0304 7.48957Z"
+                        fill="#2490EB" />
+                    </svg>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-Top3 font-semibold block mb-2 text-DarkBlue100">Our Vision</span>
+                    <p class="text-base">Our vision is straightforward: to offer the best for the
+                      best. We aim to help you become the most successful provider.</p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+        <div class="col-span-6">
+          <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full">
+            <img class="object-cover w-full h-full" src="img/image-5.png"
+                 alt="In Sickness and in Health, We’re Here!">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 relative">
+    <div class="container relative z-[1]">
+      <div class="row">
+        <div class="col-span-12">
+          @@include('components/Form-section.html')
+        </div>
+      </div>
+    </div>
+  </section>
 
-    @@include('components/Footer.html')
+  @@include('components/wishlistBlock.html')
+  @@include('components/Footer.html')
 </main>
 
 @@include('components/script.html')

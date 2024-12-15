@@ -2,7 +2,7 @@
   <label for="counterInput" class="text-none">Items(s)</label>
   <div @dblclick.prevent class="flex items-center rounded overflow-hidden border border-DarkBlue30 w-fit">
     <button @click="currentVal = Math.max(minVal, currentVal - incrementAmount)"
-            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-4 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0 focus-visible:outline-blue-700"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
             aria-label="subtract">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
         <path
@@ -12,10 +12,10 @@
     </button>
     <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
            id="counterInput" type="text"
-           class="border-x-none h-[40px] lg:h-[36px] w-fit text-base bg-White2 text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0 focus-visible:outline-blue-700"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
            readonly />
     <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
-            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-4 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0 focus-visible:outline-blue-700"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
             aria-label="add">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
         <path

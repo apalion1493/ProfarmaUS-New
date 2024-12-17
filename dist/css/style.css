@@ -4861,6 +4861,15 @@ a{
   .xl\:col-span-6{
     grid-column: span 6 / span 6;
   }
+  .xl\:flex-col{
+    flex-direction: column;
+  }
+  .xl\:items-start{
+    align-items: flex-start;
+  }
+  .xl\:gap-y-6{
+    row-gap: 1.5rem;
+  }
 }
 
 @media (max-width: 1023px){

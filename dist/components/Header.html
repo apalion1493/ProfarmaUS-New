@@ -1,4 +1,5 @@
-<header x-data="{dropdownOpen: false, mobileMenuIsOpen: false}" @click.away="mobileMenuIsOpen = false" class="flex flex-col w-full relative z-10 @@commonStyle">
+<header x-data="{dropdownOpen: false, mobileMenuIsOpen: false}" @click.away="mobileMenuIsOpen = false"
+        class="flex flex-col w-full relative z-10 @@commonStyle">
   <div class="w-full flex flex-col">
     <div class="bg-white shadow-3xl py-8">
       <div class="container flex items-center w-full">
@@ -84,15 +85,18 @@
           </div>
           <button id="burger-button" @click="mobileMenuIsOpen = !mobileMenuIsOpen" :aria-expanded="mobileMenuIsOpen"
                   :class="mobileMenuIsOpen ? '0' : null" type="button"
-                  class="w-11 min-w-11 h-11 flex justify-center items-center rounded-full overflow-hidden bg-blue100 minlg:hidden" aria-label="mobile menu"
+                  class="w-14 min-w-14 h-14 ml-3 flex justify-center items-center rounded-full overflow-hidden bg-LightBlue100 minlg:hidden"
+                  aria-label="mobile menu"
                   aria-controls="mobileMenu">
-            <svg style="display: none" x-cloak x-show="!mobileMenuIsOpen" xmlns="http://www.w3.org/2000/svg" fill="#1B3C74" aria-hidden="true"
-                 viewBox="0 0 24 24" stroke-width="2" stroke="#1B3C74" class="size-6 fill-DarkBlue100">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+            <svg style="display: none" x-cloak x-show="!mobileMenuIsOpen" xmlns="http://www.w3.org/2000/svg"
+                 fill="#1B3C74" aria-hidden="true"
+                 viewBox="0 0 24 24" stroke-width="2" stroke="#fff" class="size-6 fill-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
-            <svg style="display: none" x-cloak x-show="mobileMenuIsOpen" xmlns="http://www.w3.org/2000/svg" fill="#1B3C74" aria-hidden="true"
-                 viewBox="0 0 24 24" stroke-width="2" stroke="#1B3C74" class="size-6 fill-DarkBlue100">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+            <svg style="display: none" x-cloak x-show="mobileMenuIsOpen" xmlns="http://www.w3.org/2000/svg"
+                 fill="#1B3C74" aria-hidden="true"
+                 viewBox="0 0 24 24" stroke-width="2" stroke="#fff" class="size-6 fill-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
@@ -224,7 +228,7 @@
     <div class="overflow-y-scroll flex flex-col items-center w-full pt-16 pb-[250px] container">
       <div class="items-center gap-x-2 lg:flex">
         <div class="relative flex w-full">
-          <div class="searchContainer mob-version w-full">
+          <div class="searchContainer mob-version w-full mb-6">
   <form class="searchForm flex items-center relative overflow-hidden">
     <label class='absolute opacity-0 -z-10' for='search-mb'>Search</label>
     <input id='search-mb' type="text" placeholder="Search..."
@@ -247,104 +251,132 @@
       <nav class="bg-white shadow-md p-4 w-full mb-20">
         <ul class="flex flex-col gap-y-6">
           <li>
-            <button
-              class="menu-btn flex justify-between items-center w-full px-4 text-left text-gray-700 focus:outline-none">
-              All Categories
-              <span class='menu-btn--icon'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"
-                                     fill="none">
-                                    <path d="M8.88715 0.511963L5 4.4881L1.11285 0.511963" stroke="#333333"
-                                          stroke-linecap="round" />
-                                </svg>
-                            </span>
-            </button>
-            <ul class="hidden space-y-1 mt-2">
-              <li class="flex flex-col px-4">
-                <ul class="py-5 flex flex-col gap-5">
-                  <li>
-                    <a href="#" class="text-black-1 text-base flex items-center">
-                      <i class="botulinum-icon mr-2"></i>
-                      Botulinum
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-black-1 text-base flex items-center">
-                      <i class="mesotherapy-icon mr-2"></i>
-                      Mesotherapy
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-black-1 text-base flex items-center">
-                      <i class="dermal-fillers-icon mr-2"></i>
-                      Dermal Fillers
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-black-1 text-base flex items-center">
-                      <i class="lipolitics-icon mr-2"></i>
-                      Lipolitics
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-black-1 text-base flex items-center">
-                      <i class="placental-extract-icon mr-2"></i>
-                      Placental Extract
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-black-1 text-base flex items-center">
-                      <i class="creams-serum-icon mr-2"></i>
-                      Creams & Serum
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-black-1 text-base flex items-center">
-                      <i class="Rheumatology-icon mr-2"></i>
-                      Rheumatology
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-black-1 text-base flex items-center">
-                      <i class="ortophedics-icon mr-2"></i>
-                      Ortophedics
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-black-1 text-base flex items-center">
-                      <i class="ginecology-icon mr-2"></i>
-                      Ginecology
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>
             <a href="Brand-Shop-Page.html"
-               class="menu-btn block w-full text-left px-4 text-gray-700 hover:bg-gray-200 focus:outline-none">
+               class="menu-btn block w-full text-left text-base text-DarkBlue100 focus:outline-none">
               Brands
             </a>
           </li>
-
-
-
+          <li>
+            <button
+              class="menu-btn flex justify-between items-center w-full text-left text-base text-DarkBlue100 focus:outline-none">
+              Categories
+              <span class='menu-btn--icon'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                  <path d="M8.88715 0.511963L5 4.4881L1.11285 0.511963" stroke="#333333"
+                        stroke-linecap="round" />
+                </svg>
+              </span>
+            </button>
+            <div class="hidden space-y-1 mt-5 flex flex-col gap-y-4">
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Neurology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Neurology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Oncology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Oncology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Cardiology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Cardiology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Hematology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Hematology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Fertility-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Fertility
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Urology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Urology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Obgyn-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Obgyn
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Erectile-Disfunction-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Erectile Disfunction
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Pulmonology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Pulmonology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Endochrinology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Endocrinology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Rheymatology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Rheymotology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Gastroenterology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Gastroenterology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Allergy-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Allergy
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Infection-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Infection
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Weight-Loss-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Weight Loss
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Dermatology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Dermatology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Sugar-Control-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Sugar Control
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Ophtalmology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:h-auto lg:min-w-5"></i>
+                Ophtalmology
+              </a>
+            </div>
+          </li>
           <li>
             <a href="About-us.html"
-               class="menu-btn block w-full text-left px-4 text-gray-700 hover:bg-gray-200 focus:outline-none">
+               class="menu-btn block w-full text-left text-base text-DarkBlue100 focus:outline-none">
               About Us
             </a>
           </li>
 
           <li>
             <a href="contact-us.html"
-               class="menu-btn block w-full text-left px-4 text-gray-700 hover:bg-gray-200 focus:outline-none">
+               class="menu-btn block w-full text-left text-base text-DarkBlue100 focus:outline-none">
               Contacts
             </a>
           </li>
         </ul>
       </nav>
       <div class="flex items-center mx-auto mt-auto">
-        <div class="flex flex-col gap-y-1">
+        <div class="flex flex-col items-center gap-y-1">
           <span class="font-medium text-DarkBlue100 text-base">Support</span>
           <a class="hover:underline text-body whitespace-nowrap" href="tel:+16467559735">+1 646 755
             9735</a>

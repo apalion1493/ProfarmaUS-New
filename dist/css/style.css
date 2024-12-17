@@ -5027,6 +5027,9 @@ a{
   .md\:p-5{
     padding: 1.25rem;
   }
+  .md\:p-4{
+    padding: 1rem;
+  }
   .md\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
@@ -5060,6 +5063,10 @@ a{
   }
   .md\:text-h3{
     font-size: 40px;
+    line-height: 130%;
+  }
+  .md\:text-Top3{
+    font-size: 20px;
     line-height: 130%;
   }
 }

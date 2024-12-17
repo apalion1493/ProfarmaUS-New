@@ -6,6 +6,20 @@ window.addEventListener('DOMContentLoaded', () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      769: {
+        slidesPerView: 2,
+      },
+      1025: {
+        slidesPerView: 3,
+      },
+      1346: {
+        slidesPerView: 4,
+      }
+    }
   });
 
   const swiper2 = new Swiper('.swiper-container-sellers', {
@@ -15,6 +29,20 @@ window.addEventListener('DOMContentLoaded', () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      769: {
+        slidesPerView: 2,
+      },
+      1025: {
+        slidesPerView: 3,
+      },
+      1346: {
+        slidesPerView: 4,
+      }
+    }
   });
 });
 

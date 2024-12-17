@@ -258,42 +258,50 @@
 
   .swiper-button-prev {
     left: 0;
+
+    svg {
+      width: 22px;
+    }
   }
 
   .swiper-button-next {
     right: 0;
-  }
 
-  .swiper-button-arrow {
-    .swiper-button-icon {
-      width: auto;
-      height: auto;
-    }
-
-    .swiper-button-icon--Text-color {
-      @apply hidden
-    }
-
-    .swiper-button-icon--white {
-      @apply block
-    }
-
-    &.swiper-button-disabled {
-      @apply opacity-100 border border-Text-color bg-transparent
-    }
-
-    @apply w-12 h-12 rounded-full flex justify-center items-center overflow-hidden bg-DarkBlue100
-  }
-
-  .swiper-button-arrow.swiper-button-disabled {
-    .swiper-button-icon--Text-color {
-      @apply block
-    }
-
-    .swiper-button-icon--white {
-      @apply hidden
+    svg {
+      width: 22px;
     }
   }
+
+  //.swiper-button-arrow {
+  //  .swiper-button-icon {
+  //    width: auto;
+  //    height: auto;
+  //  }
+  //
+  //  .swiper-button-icon--Text-color {
+  //    @apply hidden
+  //  }
+  //
+  //  .swiper-button-icon--white {
+  //    @apply block
+  //  }
+  //
+  //  &.swiper-button-disabled {
+  //    @apply opacity-100 border border-Text-color bg-transparent
+  //  }
+  //
+  //  @apply w-12 h-12 rounded-full flex justify-center items-center overflow-hidden bg-DarkBlue100
+  //}
+  //
+  //.swiper-button-arrow.swiper-button-disabled {
+  //  .swiper-button-icon--Text-color {
+  //    @apply block
+  //  }
+  //
+  //  .swiper-button-icon--white {
+  //    @apply hidden
+  //  }
+  //}
 }
 
 .condition-swiper {

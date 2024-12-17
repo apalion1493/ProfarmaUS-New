@@ -339,164 +339,9 @@
   </div>
 </header>
 
-  <section class="my-20 hidden">
-    <div class="container">
-      <div class="row">
-        <div class="col-span-12">
-          <div class="flex flex-col gap-y-5">
-            <button class="button " type="button" aria-label="Button">
-  <span>Button</span>
-</button>
-
-            <button class="button btn-medium" type="button" aria-label="Button">
-  <span>Button</span>
-</button>
-
-            <button class="button categories" type="button" aria-label="Button">
-  <span>Button</span>
-</button>
-
-            <button
-  class="flex items-center gap-x-2 text-body text-LightBlue100 group hover:text-DarkBlue100 transition-all "
-  type="button" aria-label="Add to wishlist">
-  Add to wishlist
-  <span
-    class="w-6 h-6 min-w-6 flex items-center justify-center rounded-full group-hover:bg-DarkBlue100 transition-all bg-LightBlue100">
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-          <path
-            d="M11.5 6C11.5 5.56606 11.1482 5.21429 10.7143 5.21429H6.78571V1.28572C6.78571 0.851777 6.43394 0.5 6 0.5C5.56606 0.5 5.21429 0.851776 5.21429 1.28571V5.21429H1.28572C0.851777 5.21429 0.5 5.56606 0.5 6C0.5 6.43394 0.851776 6.78571 1.28571 6.78571H5.21429V10.7143C5.21429 11.1482 5.56606 11.5 6 11.5C6.43394 11.5 6.78571 11.1482 6.78571 10.7143V6.78571H10.7143C11.1482 6.78571 11.5 6.43394 11.5 6Z"
-            fill="white" />
-        </svg>
-    </span>
-</button>
-
-
-            <div class="form-group flex flex-col items-start ">
-  <label class="mb-3 font-semibold text-body md:text-body2 " for="Text1"></label>
-  <input
-    class="input  "
-    type="text" id="Text1" placeholder="Your Name" required>
-  <small class="self-end text-body text-Error mt-1 block">Name is required</small>
-</div>
-
-            <div class="form-group flex flex-col items-start overflow-hidden @@commonStyle">
-  <label class="mb-3 font-semibold text-body" for="@@idTextarea"></label>
-  <textarea
-    class="input "
-    id="@@idTextarea" placeholder="Message" rows="3"></textarea>
-</div>
-
-            <div x-data="{ selectedTab: 'tab1' }" class="w-full">
-  <div @keydown.right.prevent="$focus.wrap().next()" @keydown.left.prevent="$focus.wrap().previous()"
-       class="flex gap-2 overflow-x-auto" role="tablist" aria-label="tab options">
-    <button @click="selectedTab = 'tab1'" :aria-selected="selectedTab === 'tab1'"
-            :tabindex="selectedTab === 'tab1' ? '0' : '-1'"
-            :class="selectedTab === 'tab1' ? 'text-DarkBlue100 border-b-2 border-LightBlue100' : 'text-LightBlue100'"
-            class="h-min px-3 py-2 text-Top1 font-medium" type="button" role="tab" aria-controls="tabPanel1">
-      Description
-    </button>
-    <button @click="selectedTab = 'tab2'" :aria-selected="selectedTab === 'tab2'"
-            :tabindex="selectedTab === 'tab2' ? '0' : '-1'"
-            :class="selectedTab === 'tab2' ? 'text-DarkBlue100 border-b-2 border-LightBlue100' : 'text-LightBlue100'"
-            class="h-min px-3 py-2 text-Top1 font-medium" type="button" role="tab" aria-controls="tabPanel2">
-      Information
-    </button>
-  </div>
-  <div class="pt-6 text-Text-color text-content">
-    <div x-show="selectedTab === 'tab1'" id="tabPanel1" role="tabpanel" aria-label="tab1">
-      <p>Cardura is a medication used to treat high blood pressure, benign prostatic hyperplasia (BPH), and other
-        conditions. It belongs to a class of drugs called alpha-adrenergic blockers, which work by relaxing the
-        muscles in the bladder and prostate. This helps to reduce symptoms of BPH such as difficulty urinating,
-        weak stream, and the need to urinate frequently or urgently. Cardura helps to lower high blood pressure
-        by relaxing the blood vessels, allowing blood to flow more easily. It can also be used to treat
-        Raynaud’s phenomenon, a condition in which certain areas of the body, usually the fingers and toes,
-        become cold and numb due to a decrease in blood flow. Cardura is available as a tablet and should be
-        taken with meals.
-        Common side effects include dizziness, headache, tiredness, and diarrhea. Make sure to talk to your
-        doctor or pharmacist before taking Cardura.</p>
-    </div>
-    <div x-show="selectedTab === 'tab2'" id="tabPanel2" role="tabpanel" aria-label="tab2">
-      <p>Cardura is used to treat hypertension (high blood pressure) and to improve symptoms of benign prostatic
-        hyperplasia (enlarged prostate).</p>
-    </div>
-  </div>
-</div>
-
-
-            <a href="#" class="overflow-hidden flex flex-col rounded-lg border border-LightBlue30 bg-white px-5 py-8
-hover:bg-White2 transition-all hover:border-LightBlue80 ">
-  <div class="rounded-full overflow-hidden w-16 h-16 bg-LightBlue10 flex items-center justify-center">
-    <i class=""></i>
-  </div>
-  <div class="flex flex-col mt-6">
-    <span class="text-Top1 block mb-3 text-DarkBlue100 font-semibold">Cardiology</span>
-    <p class="text-base text-Text-color">Medications that lower blood pressure and improve heart function</p>
-    <span class="text-body mt-6 text-DarkBlue100 underline md:text-body4">Explore Now</span>
-  </div>
-</a>
-
-            <div
-  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
-  <a class="w-full" href="Product-card.html">
-    <div class="flex items-center justify-center pb-6 border-b border-LightBlue30 w-full min-h-[196px] h-[196px]">
-      <img class="object-cover" src="img/image-2.png" alt="">
-    </div>
-    <div class="mt-6 flex flex-col text-DarkBlue100">
-      <span class="text-Top1 font-semibold">Cardura</span>
-      <p class="text-base text-DarkBlue100">(Doxazosin Mesylate)</p>
-      <ul class="flex items-center gap-x-2 my-5">
-        <li>
-          <span class="info-item ">20 tabs</span>
-        </li>
-        <li>
-          <span class="info-item ">2 mg</span>
-        </li>
-        <!--        <li>-->
-        
-        <!--          'Style': 'medium',-->
-        <!--          'Text': '2 mg',-->
-        <!--          })-->
-        <!--        </li>-->
-      </ul>
-      <div class="flex items-center gap-x-1">
-        <span class="text-body2 text-Text-color line-through">$ 39.00 USD</span>
-        <span class="text-base font-semibold">$ 35.00 USD</span>
-      </div>
-    </div>
-  </a>
-  <button
-  class="flex items-center gap-x-2 text-body text-LightBlue100 group hover:text-DarkBlue100 transition-all mt-[32px] ml-auto"
-  type="button" aria-label="Add to wishlist">
-  Add to wishlist
-  <span
-    class="w-6 h-6 min-w-6 flex items-center justify-center rounded-full group-hover:bg-DarkBlue100 transition-all bg-LightBlue100">
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-          <path
-            d="M11.5 6C11.5 5.56606 11.1482 5.21429 10.7143 5.21429H6.78571V1.28572C6.78571 0.851777 6.43394 0.5 6 0.5C5.56606 0.5 5.21429 0.851776 5.21429 1.28571V5.21429H1.28572C0.851777 5.21429 0.5 5.56606 0.5 6C0.5 6.43394 0.851776 6.78571 1.28571 6.78571H5.21429V10.7143C5.21429 11.1482 5.56606 11.5 6 11.5C6.43394 11.5 6.78571 11.1482 6.78571 10.7143V6.78571H10.7143C11.1482 6.78571 11.5 6.43394 11.5 6Z"
-            fill="white" />
-        </svg>
-    </span>
-</button>
-</div>
-
-            
-            <!--                                                'common-style': '',-->
-            <!--                                                'num': '01',-->
-            <!--                                                'title': 'Who we are?',-->
-            <!--                                                'text': 'As a certified facility in Europe, Profarma Direct proudly imports products from-->
-            <!--                                                countries with government-regulated price controls. This enables us to offer attractive pricing-->
-            <!--                                                to both small and large-scale businesses.',-->
-            <!--                                                })-->
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-10 gradient-css">
+  <section class="py-10 gradient-css overflow-hidden">
     <div class="container relative">
-      <div class="absolute bottom-[10%] left-[40%]">
+      <div class="absolute bottom-[10%] left-[40%] lg:left-[80%]">
         <svg xmlns="http://www.w3.org/2000/svg" width="177" height="167" viewBox="0 0 177 167" fill="none">
           <mask id="mask0_2_2352" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="177"
                 height="167">
@@ -536,10 +381,10 @@ hover:bg-White2 transition-all hover:border-LightBlue80 ">
           </g>
         </svg>
       </div>
-      <div class="row gap-x-6 relative z-[1]">
-        <div class="col-span-6 flex items-center">
+      <div class="row gap-x-6 relative z-[1] lg:gap-y-8 lg:gap-x-0">
+        <div class="col-span-6 xl:col-span-8 lg:col-span-12 flex items-center">
           <div class="flex flex-col">
-            <h1 class="text-h1 text-DarkBlue100 font-semibold capitalize -tracking-[0.72px] mb-6">Your
+            <h1 class="text-h1 md:text-h1Mob text-DarkBlue100 font-semibold capitalize -tracking-[0.72px] mb-6">Your
               Trusted Path to Recovery</h1>
             <p class="max-w-[514px] text-Top3 mb-10">As a certified facility in Europe, Profarma Direct
               proudly imports products from countries with government-regulated price controls. This
@@ -549,7 +394,7 @@ hover:bg-White2 transition-all hover:border-LightBlue80 ">
 </a>
           </div>
         </div>
-        <div class="col-span-6 flex justify-end">
+        <div class="col-span-6 xl:col-span-4 lg:hidden flex justify-end">
           <div
             class="p-3 bg-white overflow-hidden flex justify-center items-center h-full ml-2 rounded-2xl max-w-[554px]">
             <img class="object-cover w-full h-full" src="img/hero-img-home.png"
@@ -569,7 +414,7 @@ hover:bg-White2 transition-all hover:border-LightBlue80 ">
   class="px-3 w-fit h-10 rounded-lg bg-LightBlue10 text-LightBlue100 text-base font-medium flex items-center justify-center @@styleCategoryElem">
   Our Categories
 </span>
-  <h3 class="text-DarkBlue100 text-h2 font-semibold ">
+  <h3 class="text-DarkBlue100 text-h2 font-semibold md:text-h2Mob ">
     Categories for Your Health
   </h3>
 </div>
@@ -812,46 +657,27 @@ hover:bg-White2 transition-all hover:border-LightBlue80 ">
 </a>
               </div>
             </div>
-            <div class="flex items-center justify-between mt-10 md:mt-8">
+            <div class="flex items-center justify-between mt-10 md:mt-8 sm:flex-col-reverse sm:gap-y-4">
               <a class="button " href="Our-Category.html">
     <span class="">More Categories</span>
 </a>
               <div class="swiper-custom relative h-12 w-[128px]">
-                <div class="swiper-button-arrow swiper-button-next">
-                  <svg class="swiper-button-icon swiper-button-icon--white"
-                       xmlns="http://www.w3.org/2000/svg"
-                       width="20" height="20" viewBox="0 0 20 20"
+                <div class="swiper-button-arrow swiper-button-next pagination-button group">
+                  <svg class="pagination-button--icon w-[22px]" xmlns="http://www.w3.org/2000/svg" width="22" height="14" viewBox="0 0 22 14"
                        fill="none">
-                    <path
-                      d="M10.5497 19.0359C10.3331 19.0359 10.1415 18.9839 9.97491 18.8799C9.80831 18.7759 9.68753 18.6319 9.61256 18.4479C9.53759 18.2639 9.52093 18.0759 9.56258 17.8839C9.60423 17.6919 9.69169 17.5319 9.82497 17.4039L17.5719 9.93989L9.82497 2.49989C9.72501 2.40389 9.65004 2.29589 9.60006 2.17589C9.55008 2.05589 9.52509 1.93189 9.52509 1.80389C9.52509 1.67589 9.55008 1.55589 9.60006 1.44389C9.65004 1.33189 9.72501 1.22789 9.82497 1.13189C9.92493 1.03589 10.0374 0.96389 10.1623 0.91589C10.2873 0.867889 10.4039 0.843889 10.5122 0.843889C10.6205 0.843889 10.7579 0.875891 10.9245 0.93989C11.0412 0.98789 11.1494 1.05989 11.2494 1.15589L19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.8959 10.4439 19.696 10.6359L11.2494 18.7479C11.0495 18.9399 10.8162 19.0359 10.5497 19.0359ZM18.9963 10.8999H1.00351C0.720286 10.8999 0.482881 10.8079 0.291291 10.6239C0.0997012 10.4399 0.00390625 10.2159 0.00390625 9.95189C0.00390625 9.68789 0.103866 9.45989 0.303786 9.26789C0.503706 9.07589 0.736946 8.97989 1.00351 8.97989H18.9963C19.2629 8.97989 19.4961 9.07589 19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.9001 10.4399 19.7085 10.6239C19.5169 10.8079 19.2795 10.8999 18.9963 10.8999Z"
-                      fill="white" />
-                  </svg>
-                  <svg class="swiper-button-icon swiper-button-icon--grey"
-                       xmlns="http://www.w3.org/2000/svg"
-                       width="20" height="20" viewBox="0 0 20 20"
-                       fill="none">
-                    <path
-                      d="M10.5497 19.0359C10.3331 19.0359 10.1415 18.9839 9.97491 18.8799C9.80831 18.7759 9.68753 18.6319 9.61256 18.4479C9.53759 18.2639 9.52093 18.0759 9.56258 17.8839C9.60423 17.6919 9.69169 17.5319 9.82497 17.4039L17.5719 9.93989L9.82497 2.49989C9.72501 2.40389 9.65004 2.29589 9.60006 2.17589C9.55008 2.05589 9.52509 1.93189 9.52509 1.80389C9.52509 1.67589 9.55008 1.55589 9.60006 1.44389C9.65004 1.33189 9.72501 1.22789 9.82497 1.13189C9.92493 1.03589 10.0374 0.96389 10.1623 0.91589C10.2873 0.867889 10.4039 0.843889 10.5122 0.843889C10.6205 0.843889 10.7579 0.875891 10.9245 0.93989C11.0412 0.98789 11.1494 1.05989 11.2494 1.15589L19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.8959 10.4439 19.696 10.6359L11.2494 18.7479C11.0495 18.9399 10.8162 19.0359 10.5497 19.0359ZM18.9963 10.8999H1.00351C0.720286 10.8999 0.482881 10.8079 0.291291 10.6239C0.0997012 10.4399 0.00390625 10.2159 0.00390625 9.95189C0.00390625 9.68789 0.103866 9.45989 0.303786 9.26789C0.503706 9.07589 0.736946 8.97989 1.00351 8.97989H18.9963C19.2629 8.97989 19.4961 9.07589 19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.9001 10.4399 19.7085 10.6239C19.5169 10.8079 19.2795 10.8999 18.9963 10.8999Z"
-                      fill="#BFC6D6" />
+                    <path class="group-disabled:fill-DarkBlue20"
+                      d="M11.3071 2.1355C11.5247 1.84818 11.9613 1.26433 12.1694 0.975586C15.5021 1.55211 18.8675 2.8772 21.2774 5.27288C22.204 6.3253 21.1412 7.53036 20.0528 7.87499C17.3506 9.03117 15.0646 10.8335 12.7651 12.5963C11.8044 13.6379 9.65101 12.6269 10.3504 11.1977C11.3328 9.75459 13.1331 9.0558 14.4395 7.90619C11.1073 7.5839 7.76956 7.29844 4.41847 7.35925C2.99672 7.40899 1.59779 7.11386 0.368164 6.40179C0.423342 6.09946 0.527003 5.47496 0.582173 5.17262C5.72922 4.5065 10.9353 4.79999 16.0682 5.51547C16.311 5.76849 16.8062 6.27596 17.0476 6.53819C17.2149 6.32801 17.5494 5.90766 17.7166 5.69748C15.6483 4.37921 13.3171 3.52029 11.3071 2.1355Z"
+                      fill="#2490EB" />
                   </svg>
                 </div>
-                <div class="swiper-button-arrow swiper-button-prev">
-                  <svg class="swiper-button-icon rotate-180 swiper-button-icon--white"
-                       xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                <div class="swiper-button-arrow swiper-button-prev pagination-button group">
+                  <svg class="pagination-button--icon w-[22px]" xmlns="http://www.w3.org/2000/svg" width="22" height="14" viewBox="0 0 22 14"
                        fill="none">
-                    <path
-                      d="M10.5497 19.0359C10.3331 19.0359 10.1415 18.9839 9.97491 18.8799C9.80831 18.7759 9.68753 18.6319 9.61256 18.4479C9.53759 18.2639 9.52093 18.0759 9.56258 17.8839C9.60423 17.6919 9.69169 17.5319 9.82497 17.4039L17.5719 9.93989L9.82497 2.49989C9.72501 2.40389 9.65004 2.29589 9.60006 2.17589C9.55008 2.05589 9.52509 1.93189 9.52509 1.80389C9.52509 1.67589 9.55008 1.55589 9.60006 1.44389C9.65004 1.33189 9.72501 1.22789 9.82497 1.13189C9.92493 1.03589 10.0374 0.96389 10.1623 0.91589C10.2873 0.867889 10.4039 0.843889 10.5122 0.843889C10.6205 0.843889 10.7579 0.875891 10.9245 0.93989C11.0412 0.98789 11.1494 1.05989 11.2494 1.15589L19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.8959 10.4439 19.696 10.6359L11.2494 18.7479C11.0495 18.9399 10.8162 19.0359 10.5497 19.0359ZM18.9963 10.8999H1.00351C0.720286 10.8999 0.482881 10.8079 0.291291 10.6239C0.0997012 10.4399 0.00390625 10.2159 0.00390625 9.95189C0.00390625 9.68789 0.103866 9.45989 0.303786 9.26789C0.503706 9.07589 0.736946 8.97989 1.00351 8.97989H18.9963C19.2629 8.97989 19.4961 9.07589 19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.9001 10.4399 19.7085 10.6239C19.5169 10.8079 19.2795 10.8999 18.9963 10.8999Z"
-                      fill="white" />
-                  </svg>
-                  <svg class="swiper-button-icon rotate-180 swiper-button-icon--grey"
-                       xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                       fill="none">
-                    <path
-                      d="M10.5497 19.0359C10.3331 19.0359 10.1415 18.9839 9.97491 18.8799C9.80831 18.7759 9.68753 18.6319 9.61256 18.4479C9.53759 18.2639 9.52093 18.0759 9.56258 17.8839C9.60423 17.6919 9.69169 17.5319 9.82497 17.4039L17.5719 9.93989L9.82497 2.49989C9.72501 2.40389 9.65004 2.29589 9.60006 2.17589C9.55008 2.05589 9.52509 1.93189 9.52509 1.80389C9.52509 1.67589 9.55008 1.55589 9.60006 1.44389C9.65004 1.33189 9.72501 1.22789 9.82497 1.13189C9.92493 1.03589 10.0374 0.96389 10.1623 0.91589C10.2873 0.867889 10.4039 0.843889 10.5122 0.843889C10.6205 0.843889 10.7579 0.875891 10.9245 0.93989C11.0412 0.98789 11.1494 1.05989 11.2494 1.15589L19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.8959 10.4439 19.696 10.6359L11.2494 18.7479C11.0495 18.9399 10.8162 19.0359 10.5497 19.0359ZM18.9963 10.8999H1.00351C0.720286 10.8999 0.482881 10.8079 0.291291 10.6239C0.0997012 10.4399 0.00390625 10.2159 0.00390625 9.95189C0.00390625 9.68789 0.103866 9.45989 0.303786 9.26789C0.503706 9.07589 0.736946 8.97989 1.00351 8.97989H18.9963C19.2629 8.97989 19.4961 9.07589 19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.9001 10.4399 19.7085 10.6239C19.5169 10.8079 19.2795 10.8999 18.9963 10.8999Z"
-                      fill="#BFC6D6" />
+                    <path class="group-disabled:fill-DarkBlue20"
+                      d="M10.6926 2.1355C10.475 1.84818 10.0384 1.26433 9.83034 0.975586C6.49764 1.55211 3.13224 2.8772 0.722342 5.27288C-0.204258 6.3253 0.858543 7.53036 1.94694 7.87499C4.64914 9.03117 6.93514 10.8335 9.23464 12.5963C10.1953 13.6379 12.3487 12.6269 11.6493 11.1977C10.6669 9.75459 8.86664 9.0558 7.56024 7.90619C10.8924 7.5839 14.2302 7.29844 17.5813 7.35925C19.003 7.40899 20.402 7.11386 21.6316 6.40179C21.5764 6.09946 21.4728 5.47496 21.4176 5.17262C16.2705 4.5065 11.0644 4.79999 5.93154 5.51547C5.68874 5.76849 5.19354 6.27596 4.95214 6.53819C4.78484 6.32801 4.45034 5.90766 4.28314 5.69748C6.35144 4.37921 8.68264 3.52029 10.6926 2.1355Z"
+                      fill="#2490EB" />
                   </svg>
                 </div>
-                <div class="swiper-pagination"></div>
               </div>
             </div>
           </div>
@@ -860,28 +686,28 @@ hover:bg-White2 transition-all hover:border-LightBlue80 ">
     </div>
   </section>
 
-  <section class="py-16 gradient-css">
+  <section class="py-16 gradient-css overflow-hidden">
     <div class="container">
-      <div class="row gap-x-6">
-        <div class="col-span-6">
+      <div class="row gap-x-6 lg:gap-x-0 lg:gap-y-8">
+        <div class="col-span-6 xl:col-span-5 lg:col-span-12">
           <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full">
             <img class="object-cover w-full h-full" src="img/about-faq-image.png"
                  alt="Choose your medication with Profarma Direct">
           </div>
         </div>
-        <div class="col-span-6">
-          <div class="flex flex-col gap-y-10 pl-6">
+        <div class="col-span-6 xl:col-span-7 lg:col-span-12">
+          <div class="flex flex-col gap-y-10 pl-6 lg:pl-0">
             <div class="flex flex-col gap-y-4 items-start">
   <span
   class="px-3 w-fit h-10 rounded-lg bg-LightBlue10 text-LightBlue100 text-base font-medium flex items-center justify-center @@styleCategoryElem">
   Why Choose Us
 </span>
-  <h3 class="text-DarkBlue100 text-h2 font-semibold ">
+  <h3 class="text-DarkBlue100 text-h2 font-semibold md:text-h2Mob ">
     Choose your medication with Profarma Direct
   </h3>
 </div>
-            <div class="row gap-12">
-              <div class="col-span-6">
+            <div class="row gap-12 md:gap-x-0">
+              <div class="col-span-6 md:col-span-12">
                 <div class="flex flex-col">
                   <div
                     class="bg-white rounded-full overflow-hidden w-14 h-14 min-w-14 flex justify-center items-center mb-6">
@@ -905,7 +731,7 @@ hover:bg-White2 transition-all hover:border-LightBlue80 ">
                   <p class="text-base">Get original products directly from themanufacturer.</p>
                 </div>
               </div>
-              <div class="col-span-6">
+              <div class="col-span-6 md:col-span-12">
                 <div class="flex flex-col">
                   <div
                     class="bg-white rounded-full overflow-hidden w-14 h-14 min-w-14 flex justify-center items-center mb-6">
@@ -924,7 +750,7 @@ hover:bg-White2 transition-all hover:border-LightBlue80 ">
                     specialty.</p>
                 </div>
               </div>
-              <div class="col-span-6">
+              <div class="col-span-6 md:col-span-12">
                 <div class="flex flex-col">
                   <div
                     class="bg-white rounded-full overflow-hidden w-14 h-14 min-w-14 flex justify-center items-center mb-6">
@@ -939,7 +765,7 @@ hover:bg-White2 transition-all hover:border-LightBlue80 ">
                   <p class="text-base">Get original products directly from themanufacturer.</p>
                 </div>
               </div>
-              <div class="col-span-6">
+              <div class="col-span-6 md:col-span-12">
                 <div class="flex flex-col">
                   <div
                     class="bg-white rounded-full overflow-hidden w-14 h-14 min-w-14 flex justify-center items-center mb-6">
@@ -970,7 +796,7 @@ hover:bg-White2 transition-all hover:border-LightBlue80 ">
   class="px-3 w-fit h-10 rounded-lg bg-LightBlue10 text-LightBlue100 text-base font-medium flex items-center justify-center @@styleCategoryElem">
   Our Products
 </span>
-  <h3 class="text-DarkBlue100 text-h2 font-semibold ">
+  <h3 class="text-DarkBlue100 text-h2 font-semibold md:text-h2Mob ">
     Best Sellers
   </h3>
 </div>
@@ -1204,46 +1030,27 @@ hover:bg-White2 transition-all hover:border-LightBlue80 ">
 </div>
               </div>
             </div>
-            <div class="flex items-center justify-between mt-10 md:mt-8">
+            <div class="flex items-center justify-between mt-10 md:mt-8 sm:flex-col-reverse sm:gap-y-4">
               <a class="button " href="Our-Category.html">
     <span class="">Show More</span>
 </a>
               <div class="swiper-custom relative h-12 w-[128px]">
-                <div class="swiper-button-arrow swiper-button-next">
-                  <svg class="swiper-button-icon swiper-button-icon--white"
-                       xmlns="http://www.w3.org/2000/svg"
-                       width="20" height="20" viewBox="0 0 20 20"
+                <div class="swiper-button-arrow swiper-button-next pagination-button group">
+                  <svg class="pagination-button--icon w-[22px]" xmlns="http://www.w3.org/2000/svg" width="22" height="14" viewBox="0 0 22 14"
                        fill="none">
-                    <path
-                      d="M10.5497 19.0359C10.3331 19.0359 10.1415 18.9839 9.97491 18.8799C9.80831 18.7759 9.68753 18.6319 9.61256 18.4479C9.53759 18.2639 9.52093 18.0759 9.56258 17.8839C9.60423 17.6919 9.69169 17.5319 9.82497 17.4039L17.5719 9.93989L9.82497 2.49989C9.72501 2.40389 9.65004 2.29589 9.60006 2.17589C9.55008 2.05589 9.52509 1.93189 9.52509 1.80389C9.52509 1.67589 9.55008 1.55589 9.60006 1.44389C9.65004 1.33189 9.72501 1.22789 9.82497 1.13189C9.92493 1.03589 10.0374 0.96389 10.1623 0.91589C10.2873 0.867889 10.4039 0.843889 10.5122 0.843889C10.6205 0.843889 10.7579 0.875891 10.9245 0.93989C11.0412 0.98789 11.1494 1.05989 11.2494 1.15589L19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.8959 10.4439 19.696 10.6359L11.2494 18.7479C11.0495 18.9399 10.8162 19.0359 10.5497 19.0359ZM18.9963 10.8999H1.00351C0.720286 10.8999 0.482881 10.8079 0.291291 10.6239C0.0997012 10.4399 0.00390625 10.2159 0.00390625 9.95189C0.00390625 9.68789 0.103866 9.45989 0.303786 9.26789C0.503706 9.07589 0.736946 8.97989 1.00351 8.97989H18.9963C19.2629 8.97989 19.4961 9.07589 19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.9001 10.4399 19.7085 10.6239C19.5169 10.8079 19.2795 10.8999 18.9963 10.8999Z"
-                      fill="white" />
-                  </svg>
-                  <svg class="swiper-button-icon swiper-button-icon--grey"
-                       xmlns="http://www.w3.org/2000/svg"
-                       width="20" height="20" viewBox="0 0 20 20"
-                       fill="none">
-                    <path
-                      d="M10.5497 19.0359C10.3331 19.0359 10.1415 18.9839 9.97491 18.8799C9.80831 18.7759 9.68753 18.6319 9.61256 18.4479C9.53759 18.2639 9.52093 18.0759 9.56258 17.8839C9.60423 17.6919 9.69169 17.5319 9.82497 17.4039L17.5719 9.93989L9.82497 2.49989C9.72501 2.40389 9.65004 2.29589 9.60006 2.17589C9.55008 2.05589 9.52509 1.93189 9.52509 1.80389C9.52509 1.67589 9.55008 1.55589 9.60006 1.44389C9.65004 1.33189 9.72501 1.22789 9.82497 1.13189C9.92493 1.03589 10.0374 0.96389 10.1623 0.91589C10.2873 0.867889 10.4039 0.843889 10.5122 0.843889C10.6205 0.843889 10.7579 0.875891 10.9245 0.93989C11.0412 0.98789 11.1494 1.05989 11.2494 1.15589L19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.8959 10.4439 19.696 10.6359L11.2494 18.7479C11.0495 18.9399 10.8162 19.0359 10.5497 19.0359ZM18.9963 10.8999H1.00351C0.720286 10.8999 0.482881 10.8079 0.291291 10.6239C0.0997012 10.4399 0.00390625 10.2159 0.00390625 9.95189C0.00390625 9.68789 0.103866 9.45989 0.303786 9.26789C0.503706 9.07589 0.736946 8.97989 1.00351 8.97989H18.9963C19.2629 8.97989 19.4961 9.07589 19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.9001 10.4399 19.7085 10.6239C19.5169 10.8079 19.2795 10.8999 18.9963 10.8999Z"
-                      fill="#BFC6D6" />
+                    <path class="group-disabled:fill-DarkBlue20"
+                          d="M11.3071 2.1355C11.5247 1.84818 11.9613 1.26433 12.1694 0.975586C15.5021 1.55211 18.8675 2.8772 21.2774 5.27288C22.204 6.3253 21.1412 7.53036 20.0528 7.87499C17.3506 9.03117 15.0646 10.8335 12.7651 12.5963C11.8044 13.6379 9.65101 12.6269 10.3504 11.1977C11.3328 9.75459 13.1331 9.0558 14.4395 7.90619C11.1073 7.5839 7.76956 7.29844 4.41847 7.35925C2.99672 7.40899 1.59779 7.11386 0.368164 6.40179C0.423342 6.09946 0.527003 5.47496 0.582173 5.17262C5.72922 4.5065 10.9353 4.79999 16.0682 5.51547C16.311 5.76849 16.8062 6.27596 17.0476 6.53819C17.2149 6.32801 17.5494 5.90766 17.7166 5.69748C15.6483 4.37921 13.3171 3.52029 11.3071 2.1355Z"
+                          fill="#2490EB" />
                   </svg>
                 </div>
-                <div class="swiper-button-arrow swiper-button-prev">
-                  <svg class="swiper-button-icon rotate-180 swiper-button-icon--white"
-                       xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                <div class="swiper-button-arrow swiper-button-prev pagination-button group">
+                  <svg class="pagination-button--icon w-[22px]" xmlns="http://www.w3.org/2000/svg" width="22" height="14" viewBox="0 0 22 14"
                        fill="none">
-                    <path
-                      d="M10.5497 19.0359C10.3331 19.0359 10.1415 18.9839 9.97491 18.8799C9.80831 18.7759 9.68753 18.6319 9.61256 18.4479C9.53759 18.2639 9.52093 18.0759 9.56258 17.8839C9.60423 17.6919 9.69169 17.5319 9.82497 17.4039L17.5719 9.93989L9.82497 2.49989C9.72501 2.40389 9.65004 2.29589 9.60006 2.17589C9.55008 2.05589 9.52509 1.93189 9.52509 1.80389C9.52509 1.67589 9.55008 1.55589 9.60006 1.44389C9.65004 1.33189 9.72501 1.22789 9.82497 1.13189C9.92493 1.03589 10.0374 0.96389 10.1623 0.91589C10.2873 0.867889 10.4039 0.843889 10.5122 0.843889C10.6205 0.843889 10.7579 0.875891 10.9245 0.93989C11.0412 0.98789 11.1494 1.05989 11.2494 1.15589L19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.8959 10.4439 19.696 10.6359L11.2494 18.7479C11.0495 18.9399 10.8162 19.0359 10.5497 19.0359ZM18.9963 10.8999H1.00351C0.720286 10.8999 0.482881 10.8079 0.291291 10.6239C0.0997012 10.4399 0.00390625 10.2159 0.00390625 9.95189C0.00390625 9.68789 0.103866 9.45989 0.303786 9.26789C0.503706 9.07589 0.736946 8.97989 1.00351 8.97989H18.9963C19.2629 8.97989 19.4961 9.07589 19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.9001 10.4399 19.7085 10.6239C19.5169 10.8079 19.2795 10.8999 18.9963 10.8999Z"
-                      fill="white" />
-                  </svg>
-                  <svg class="swiper-button-icon rotate-180 swiper-button-icon--grey"
-                       xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                       fill="none">
-                    <path
-                      d="M10.5497 19.0359C10.3331 19.0359 10.1415 18.9839 9.97491 18.8799C9.80831 18.7759 9.68753 18.6319 9.61256 18.4479C9.53759 18.2639 9.52093 18.0759 9.56258 17.8839C9.60423 17.6919 9.69169 17.5319 9.82497 17.4039L17.5719 9.93989L9.82497 2.49989C9.72501 2.40389 9.65004 2.29589 9.60006 2.17589C9.55008 2.05589 9.52509 1.93189 9.52509 1.80389C9.52509 1.67589 9.55008 1.55589 9.60006 1.44389C9.65004 1.33189 9.72501 1.22789 9.82497 1.13189C9.92493 1.03589 10.0374 0.96389 10.1623 0.91589C10.2873 0.867889 10.4039 0.843889 10.5122 0.843889C10.6205 0.843889 10.7579 0.875891 10.9245 0.93989C11.0412 0.98789 11.1494 1.05989 11.2494 1.15589L19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.8959 10.4439 19.696 10.6359L11.2494 18.7479C11.0495 18.9399 10.8162 19.0359 10.5497 19.0359ZM18.9963 10.8999H1.00351C0.720286 10.8999 0.482881 10.8079 0.291291 10.6239C0.0997012 10.4399 0.00390625 10.2159 0.00390625 9.95189C0.00390625 9.68789 0.103866 9.45989 0.303786 9.26789C0.503706 9.07589 0.736946 8.97989 1.00351 8.97989H18.9963C19.2629 8.97989 19.4961 9.07589 19.696 9.26789C19.8959 9.45989 19.9959 9.68789 19.9959 9.95189C19.9959 10.2159 19.9001 10.4399 19.7085 10.6239C19.5169 10.8079 19.2795 10.8999 18.9963 10.8999Z"
-                      fill="#BFC6D6" />
+                    <path class="group-disabled:fill-DarkBlue20"
+                          d="M10.6926 2.1355C10.475 1.84818 10.0384 1.26433 9.83034 0.975586C6.49764 1.55211 3.13224 2.8772 0.722342 5.27288C-0.204258 6.3253 0.858543 7.53036 1.94694 7.87499C4.64914 9.03117 6.93514 10.8335 9.23464 12.5963C10.1953 13.6379 12.3487 12.6269 11.6493 11.1977C10.6669 9.75459 8.86664 9.0558 7.56024 7.90619C10.8924 7.5839 14.2302 7.29844 17.5813 7.35925C19.003 7.40899 20.402 7.11386 21.6316 6.40179C21.5764 6.09946 21.4728 5.47496 21.4176 5.17262C16.2705 4.5065 11.0644 4.79999 5.93154 5.51547C5.68874 5.76849 5.19354 6.27596 4.95214 6.53819C4.78484 6.32801 4.45034 5.90766 4.28314 5.69748C6.35144 4.37921 8.68264 3.52029 10.6926 2.1355Z"
+                          fill="#2490EB" />
                   </svg>
                 </div>
-                <div class="swiper-pagination"></div>
               </div>
             </div>
           </div>
@@ -1254,15 +1061,15 @@ hover:bg-White2 transition-all hover:border-LightBlue80 ">
 
   <section class="py-16">
     <div class="container">
-      <div class="row gap-6">
-        <div class="col-span-6">
+      <div class="row gap-6 lg:gap-x-0">
+        <div class="col-span-6 lg:col-span-12">
           <div class="flex flex-col max-w-[588px] sticky top-6">
             <div class="flex flex-col gap-y-4 items-start">
   <span
   class="px-3 w-fit h-10 rounded-lg bg-LightBlue10 text-LightBlue100 text-base font-medium flex items-center justify-center @@styleCategoryElem">
   About Us
 </span>
-  <h3 class="text-DarkBlue100 text-h2 font-semibold ">
+  <h3 class="text-DarkBlue100 text-h2 font-semibold md:text-h2Mob ">
     We are an Online Pharmacy you can Trust!
   </h3>
 </div>
@@ -1274,38 +1081,38 @@ hover:bg-White2 transition-all hover:border-LightBlue80 ">
 </a>
           </div>
         </div>
-        <div class="col-span-6">
+        <div class="col-span-6 lg:col-span-12">
           <div class="flex flex-col gap-y-6">
             <div class="overflow-hidden flex flex-col gap-y-6 rounded-lg border border-LightBlue30 bg-white p-8
-hover:bg-White2 transition-all hover:border-LightBlue80 group ">
+hover:bg-White2 transition-all hover:border-LightBlue80 group md:p-5 md:gap-y-4 ">
   <div
     class="w-[52px] h-[52px] flex items-center justify-center rounded-full bg-LightBlue10 transition-all group-hover:bg-white">
     <span class="text-Top1 font-medium text-LightBlue100">01</span>
   </div>
   <div class="flex flex-col mt-4">
-    <span class="text-h4 block mb-4 font-semibold text-DarkBlue100">Who we are?</span>
+    <span class="text-h4 md:text-Top2 block mb-4 font-semibold text-DarkBlue100">Who we are?</span>
     <p class="text-Top3 text-Text-color">lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis</p>
   </div>
 </div>
             <div class="overflow-hidden flex flex-col gap-y-6 rounded-lg border border-LightBlue30 bg-white p-8
-hover:bg-White2 transition-all hover:border-LightBlue80 group ">
+hover:bg-White2 transition-all hover:border-LightBlue80 group md:p-5 md:gap-y-4 ">
   <div
     class="w-[52px] h-[52px] flex items-center justify-center rounded-full bg-LightBlue10 transition-all group-hover:bg-white">
     <span class="text-Top1 font-medium text-LightBlue100">02</span>
   </div>
   <div class="flex flex-col mt-4">
-    <span class="text-h4 block mb-4 font-semibold text-DarkBlue100">License</span>
+    <span class="text-h4 md:text-Top2 block mb-4 font-semibold text-DarkBlue100">License</span>
     <p class="text-Top3 text-Text-color">lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis</p>
   </div>
 </div>
             <div class="overflow-hidden flex flex-col gap-y-6 rounded-lg border border-LightBlue30 bg-white p-8
-hover:bg-White2 transition-all hover:border-LightBlue80 group ">
+hover:bg-White2 transition-all hover:border-LightBlue80 group md:p-5 md:gap-y-4 ">
   <div
     class="w-[52px] h-[52px] flex items-center justify-center rounded-full bg-LightBlue10 transition-all group-hover:bg-white">
     <span class="text-Top1 font-medium text-LightBlue100">03</span>
   </div>
   <div class="flex flex-col mt-4">
-    <span class="text-h4 block mb-4 font-semibold text-DarkBlue100">Сustomer-oriented</span>
+    <span class="text-h4 md:text-Top2 block mb-4 font-semibold text-DarkBlue100">Сustomer-oriented</span>
     <p class="text-Top3 text-Text-color">lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis</p>
   </div>
 </div>
@@ -1320,7 +1127,7 @@ hover:bg-White2 transition-all hover:border-LightBlue80 group ">
       <div class="row">
         <div class="col-span-12">
           <div
-  class="flex flex-col gap-y-10 py-16 px-[87px] border border-DarkBlue20 rounded-lg overflow-hidden bg-white shadow-6xl relative z-[1]">
+  class="flex flex-col gap-y-10 py-16 px-[87px] border border-DarkBlue20 rounded-lg overflow-hidden bg-white shadow-6xl relative z-[1] md:p-6">
   <div class="absolute top-[72px] right-[78px]">
     <svg xmlns="http://www.w3.org/2000/svg" width="47" height="52" viewBox="0 0 47 52" fill="none">
       <g clip-path="url(#clip0_71_10378)">
@@ -1358,12 +1165,12 @@ hover:bg-White2 transition-all hover:border-LightBlue80 group ">
   class="px-3 w-fit h-10 rounded-lg bg-LightBlue10 text-LightBlue100 text-base font-medium flex items-center justify-center @@styleCategoryElem">
   Contact Us
 </span>
-  <h3 class="text-DarkBlue100 text-h2 font-semibold ">
+  <h3 class="text-DarkBlue100 text-h2 font-semibold md:text-h2Mob md:text-center">
     Send us a Message
   </h3>
 </div>
-  <form class="row gap-6">
-    <div class="col-span-6">
+  <form class="row gap-6 md:gap-x-0">
+    <div class="col-span-6 md:col-span-12">
       <div class="form-group flex flex-col items-start ">
   <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="TextId1"></label>
   <input
@@ -1372,7 +1179,7 @@ hover:bg-White2 transition-all hover:border-LightBlue80 group ">
   <small class="self-end text-body text-Error mt-1 hidden">Name is required</small>
 </div>
     </div>
-    <div class="col-span-6">
+    <div class="col-span-6 md:col-span-12">
       <div class="form-group flex flex-col items-start ">
   <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="EmailId1"></label>
   <input
@@ -1381,7 +1188,7 @@ hover:bg-White2 transition-all hover:border-LightBlue80 group ">
   <small class="self-end text-body text-Error mt-1 hidden">Name is required</small>
 </div>
     </div>
-    <div class="col-span-6">
+    <div class="col-span-6 md:col-span-12">
       <div class="form-group flex flex-col items-start relative ">
   <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="selectId1"></label>
   <svg class="absolute pointer-events-none right-4 top-6 h-[6px] w-[12px]" xmlns="http://www.w3.org/2000/svg" width="14"
@@ -1444,7 +1251,7 @@ hover:bg-White2 transition-all hover:border-LightBlue80 group ">
 </div>
 
     </div>
-    <div class="col-span-6">
+    <div class="col-span-6 md:col-span-12">
       <div class="form-group flex flex-col items-start ">
   <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="PhoneId1"></label>
   <input
@@ -1638,7 +1445,7 @@ hover:bg-White2 transition-all hover:border-LightBlue80 group ">
     </button>
     <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
            id="counterInput" type="text"
-           class="border-x-none h-[40px] lg:h-[36px] w-fit text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit max-w-[40px] text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
            readonly />
     <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
             class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
@@ -1669,9 +1476,9 @@ hover:bg-White2 transition-all hover:border-LightBlue80 group ">
 <div id="wishlist-bg" class="fixed w-screen h-screen top-0 left-0 z-[98] bg-DarkBlue20 hidden"></div>
   <footer class="w-full mt-auto overflow-hidden bg-DarkBlue100 pt-16 pb-10 text-white shadow-3xl">
   <div class="container">
-    <div class="row gap-x-6 pb-12 relative">
-      <div class="col-span-4 relative z-1">
-        <div class="flex flex-col max-w-[265px]">
+    <div class="row gap-x-6 pb-12 relative lg:gap-x-0 lg:gap-y-14">
+      <div class="col-span-4 lg:col-span-12 relative z-1">
+        <div class="flex flex-col max-w-[265px] lg:max-w-full lg:items-center">
           <a href="index.html">
             <img width="227" src="img/profarma-logo-white.svg" alt="Profarma + Direct Logo" class="block mb-5">
           </a>
@@ -1765,8 +1572,8 @@ hover:bg-White2 transition-all hover:border-LightBlue80 group ">
           </ul>
         </div>
       </div>
-      <div class="col-span-8 relative z-1">
-        <div class="flex items-start justify-between gap-x-3">
+      <div class="col-span-8 lg:col-span-12 relative z-1">
+        <div class="flex items-start justify-between gap-x-3 md:flex-col md:gap-x-0 md:gap-y-8">
           <div class="flex flex-col flex-1">
             <span class="mb-5 block font-semibold text-Top1">Navigate</span>
             <ul class="flex flex-col gap-y-3">
@@ -1833,7 +1640,7 @@ hover:bg-White2 transition-all hover:border-LightBlue80 group ">
       <i class="absolute bottom-0 right-0 highlighter-shape"></i>
     </div>
     <div class="flex items-center justify-center mt-8 pt-5 border-t border-white w-full">
-      <span>© 2023 All rights reserved.</span>
+      <span>© 2024 All rights reserved.</span>
     </div>
   </div>
 </footer>

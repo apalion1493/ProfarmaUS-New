@@ -369,7 +369,7 @@
   class="px-3 w-fit h-10 rounded-lg bg-LightBlue10 text-LightBlue100 text-base font-medium flex items-center justify-center @@styleCategoryElem">
   FAQs
 </span>
-  <h3 class="text-DarkBlue100 text-h2 font-semibold ">
+  <h3 class="text-DarkBlue100 text-h2 font-semibold md:text-h2Mob ">
     Get Your General Answers
   </h3>
 </div>
@@ -460,7 +460,7 @@
       <div class="row">
         <div class="col-span-12">
           <div
-  class="flex flex-col gap-y-10 py-16 px-[87px] border border-DarkBlue20 rounded-lg overflow-hidden bg-white shadow-6xl relative z-[1]">
+  class="flex flex-col gap-y-10 py-16 px-[87px] border border-DarkBlue20 rounded-lg overflow-hidden bg-white shadow-6xl relative z-[1] md:p-6">
   <div class="absolute top-[72px] right-[78px]">
     <svg xmlns="http://www.w3.org/2000/svg" width="47" height="52" viewBox="0 0 47 52" fill="none">
       <g clip-path="url(#clip0_71_10378)">
@@ -498,12 +498,12 @@
   class="px-3 w-fit h-10 rounded-lg bg-LightBlue10 text-LightBlue100 text-base font-medium flex items-center justify-center @@styleCategoryElem">
   Contact Us
 </span>
-  <h3 class="text-DarkBlue100 text-h2 font-semibold ">
+  <h3 class="text-DarkBlue100 text-h2 font-semibold md:text-h2Mob md:text-center">
     Send us a Message
   </h3>
 </div>
-  <form class="row gap-6">
-    <div class="col-span-6">
+  <form class="row gap-6 md:gap-x-0">
+    <div class="col-span-6 md:col-span-12">
       <div class="form-group flex flex-col items-start ">
   <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="TextId1"></label>
   <input
@@ -512,7 +512,7 @@
   <small class="self-end text-body text-Error mt-1 hidden">Name is required</small>
 </div>
     </div>
-    <div class="col-span-6">
+    <div class="col-span-6 md:col-span-12">
       <div class="form-group flex flex-col items-start ">
   <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="EmailId1"></label>
   <input
@@ -521,7 +521,7 @@
   <small class="self-end text-body text-Error mt-1 hidden">Name is required</small>
 </div>
     </div>
-    <div class="col-span-6">
+    <div class="col-span-6 md:col-span-12">
       <div class="form-group flex flex-col items-start relative ">
   <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="selectId1"></label>
   <svg class="absolute pointer-events-none right-4 top-6 h-[6px] w-[12px]" xmlns="http://www.w3.org/2000/svg" width="14"
@@ -584,7 +584,7 @@
 </div>
 
     </div>
-    <div class="col-span-6">
+    <div class="col-span-6 md:col-span-12">
       <div class="form-group flex flex-col items-start ">
   <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="PhoneId1"></label>
   <input
@@ -778,7 +778,7 @@
     </button>
     <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
            id="counterInput" type="text"
-           class="border-x-none h-[40px] lg:h-[36px] w-fit text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit max-w-[40px] text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
            readonly />
     <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
             class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
@@ -809,9 +809,9 @@
 <div id="wishlist-bg" class="fixed w-screen h-screen top-0 left-0 z-[98] bg-DarkBlue20 hidden"></div>
   <footer class="w-full mt-auto overflow-hidden bg-DarkBlue100 pt-16 pb-10 text-white shadow-3xl">
   <div class="container">
-    <div class="row gap-x-6 pb-12 relative">
-      <div class="col-span-4 relative z-1">
-        <div class="flex flex-col max-w-[265px]">
+    <div class="row gap-x-6 pb-12 relative lg:gap-x-0 lg:gap-y-14">
+      <div class="col-span-4 lg:col-span-12 relative z-1">
+        <div class="flex flex-col max-w-[265px] lg:max-w-full lg:items-center">
           <a href="index.html">
             <img width="227" src="img/profarma-logo-white.svg" alt="Profarma + Direct Logo" class="block mb-5">
           </a>
@@ -905,8 +905,8 @@
           </ul>
         </div>
       </div>
-      <div class="col-span-8 relative z-1">
-        <div class="flex items-start justify-between gap-x-3">
+      <div class="col-span-8 lg:col-span-12 relative z-1">
+        <div class="flex items-start justify-between gap-x-3 md:flex-col md:gap-x-0 md:gap-y-8">
           <div class="flex flex-col flex-1">
             <span class="mb-5 block font-semibold text-Top1">Navigate</span>
             <ul class="flex flex-col gap-y-3">
@@ -973,7 +973,7 @@
       <i class="absolute bottom-0 right-0 highlighter-shape"></i>
     </div>
     <div class="flex items-center justify-center mt-8 pt-5 border-t border-white w-full">
-      <span>© 2023 All rights reserved.</span>
+      <span>© 2024 All rights reserved.</span>
     </div>
   </div>
 </footer>

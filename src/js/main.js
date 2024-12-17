@@ -46,17 +46,17 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const burgerButton = document.getElementById('burger-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  const toggleMenu = () => {
-    mobileMenu.classList.toggle('active');
-    document.body.classList.toggle('overflow-hidden');
-  };
-
-  burgerButton?.addEventListener('click', toggleMenu);
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//   const burgerButton = document.getElementById('burger-button');
+//   const mobileMenu = document.getElementById('mobile-menu');
+//
+//   const toggleMenu = () => {
+//     mobileMenu.classList.toggle('active');
+//     document.body.classList.toggle('overflow-hidden');
+//   };
+//
+//   burgerButton?.addEventListener('click', toggleMenu);
+// });
 
 window.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('modal');

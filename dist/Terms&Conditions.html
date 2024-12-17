@@ -16,11 +16,11 @@
 
 <body class="">
 <main id="content" class="flex flex-col items-center min-h-screen overflow-hidden">
-  <header class="flex flex-col w-full relative z-10  ">
-  <div x-data="{dropdownOpen: false}" class="w-full flex flex-col">
+  <header x-data="{dropdownOpen: false, mobileMenuIsOpen: false}" @click.away="mobileMenuIsOpen = false" class="flex flex-col w-full relative z-10  ">
+  <div class="w-full flex flex-col">
     <div class="bg-white shadow-3xl py-8">
       <div class="container flex items-center w-full">
-        <a class="lg:max-w-[171x] minlg:min-w-[200px] mr-10" href="index.html">
+        <a class="lg:max-w-[171x] lg:w-full minlg:min-w-[200px] mr-10" href="index.html">
           <img src="img/profarma-logo.svg" alt="Logo">
         </a>
         <div class="flex items-center w-full">
@@ -100,12 +100,17 @@
               </div>
             </div>
           </div>
-          <button id="burger-button" class="minlg:hidden ml-5 flex items-center justify-center p-2"
-                  aria-label="Mobile Burger Button">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24"
-                 stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16" />
+          <button id="burger-button" @click="mobileMenuIsOpen = !mobileMenuIsOpen" :aria-expanded="mobileMenuIsOpen"
+                  :class="mobileMenuIsOpen ? '0' : null" type="button"
+                  class="w-11 min-w-11 h-11 flex justify-center items-center rounded-full overflow-hidden bg-blue100 minlg:hidden" aria-label="mobile menu"
+                  aria-controls="mobileMenu">
+            <svg style="display: none" x-cloak x-show="!mobileMenuIsOpen" xmlns="http://www.w3.org/2000/svg" fill="#1B3C74" aria-hidden="true"
+                 viewBox="0 0 24 24" stroke-width="2" stroke="#1B3C74" class="size-6 fill-DarkBlue100">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+            </svg>
+            <svg style="display: none" x-cloak x-show="mobileMenuIsOpen" xmlns="http://www.w3.org/2000/svg" fill="#1B3C74" aria-hidden="true"
+                 viewBox="0 0 24 24" stroke-width="2" stroke="#1B3C74" class="size-6 fill-DarkBlue100">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
             </svg>
           </button>
         </div>
@@ -228,12 +233,33 @@
       </div>
     </div>
   </div>
-  <div id="mobile-menu" class="mobile-menu hidden">
-    <div class="flex flex-col container py-6 gap-y-6">
-
+  <div style="display: none" x-cloak x-show="mobileMenuIsOpen" id="mobile-menu"
+       x-transition:enter="transition motion-reduce:transition-none ease-out duration-300"
+       x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
+       x-transition:leave="transition motion-reduce:transition-none ease-out duration-300"
+       x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full"
+       class="absolute min-h-screen minlg:hidden h-full overflow-x-auto inset-x-0 top-[100%] z-[10000] flex flex-col items-center divide-x divide-slate-300 rounded-b-xl border-b border-slate-300 bg-slate-100">
+    <div class="overflow-y-scroll flex flex-col items-center w-full pt-16 pb-[250px] container">
       <div class="items-center gap-x-2 lg:flex">
         <div class="relative flex w-full">
-
+          <div class="searchContainer mob-version w-full">
+  <form class="searchForm flex items-center relative overflow-hidden">
+    <label class='absolute opacity-0 -z-10' for='search-mb'>Search</label>
+    <input id='search-mb' type="text" placeholder="Search..."
+           class="searchInput bg-white relative w-full rounded-lg border border-DarkBlue20 py-2 px-5 pr-16 min-h-[56px] focus:outline-none focus:ring-inherit focus:shadow-none">
+    <button class="text-none absolute right-4 top-4 block" aria-label="Search" type="submit">
+      Search
+      <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M0 10.9072C0 4.88334 4.88334 0 10.9072 0C16.931 0 21.8144 4.88334 21.8144 10.9072C21.8144 16.931 16.931 21.8144 10.9072 21.8144C4.88334 21.8144 0 16.931 0 10.9072ZM10.9072 1.76873C5.86018 1.76873 1.76873 5.86018 1.76873 10.9072C1.76873 15.9542 5.86018 20.0456 10.9072 20.0456C15.9542 20.0456 20.0456 15.9542 20.0456 10.9072C20.0456 5.86018 15.9542 1.76873 10.9072 1.76873Z"
+          fill="#2490EB" />
+        <path
+          d="M17.4875 17.4875C17.8329 17.1422 18.3929 17.1422 18.7382 17.4875L23.741 22.4903C24.0863 22.8357 24.0863 23.3956 23.741 23.741C23.3956 24.0863 22.8357 24.0863 22.4903 23.741L17.4875 18.7382C17.1422 18.3929 17.1422 17.8329 17.4875 17.4875Z"
+          fill="#2490EB" />
+      </svg>
+    </button>
+  </form>
+</div>
         </div>
       </div>
       <nav class="bg-white shadow-md p-4 w-full mb-20">
@@ -243,10 +269,12 @@
               class="menu-btn flex justify-between items-center w-full px-4 text-left text-gray-700 focus:outline-none">
               All Categories
               <span class='menu-btn--icon'>
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                  <path d="M8.88715 0.511963L5 4.4881L1.11285 0.511963" stroke="#333333" stroke-linecap="round" />
-                </svg>
-              </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"
+                                     fill="none">
+                                    <path d="M8.88715 0.511963L5 4.4881L1.11285 0.511963" stroke="#333333"
+                                          stroke-linecap="round" />
+                                </svg>
+                            </span>
             </button>
             <ul class="hidden space-y-1 mt-2">
               <li class="flex flex-col px-4">
@@ -310,29 +338,34 @@
             </ul>
           </li>
           <li>
-            <a href="#"
+            <a href="Brand-Shop-Page.html"
+               class="menu-btn block w-full text-left px-4 text-gray-700 hover:bg-gray-200 focus:outline-none">
+              Brands
+            </a>
+          </li>
+
+
+
+          <li>
+            <a href="About-us.html"
                class="menu-btn block w-full text-left px-4 text-gray-700 hover:bg-gray-200 focus:outline-none">
               About Us
             </a>
           </li>
+
           <li>
-            <a href="#"
+            <a href="contact-us.html"
                class="menu-btn block w-full text-left px-4 text-gray-700 hover:bg-gray-200 focus:outline-none">
-              Contact Us
+              Contacts
             </a>
           </li>
         </ul>
       </nav>
       <div class="flex items-center mx-auto mt-auto">
-        <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
-             fill="none">
-          <path
-            d="M18.3077 19.7436L18.0965 20.7995C18.5728 20.8949 19.0538 20.6595 19.2709 20.2252L18.3077 19.7436ZM8.25641 9.69231L7.7748 8.72908C7.34042 8.94626 7.10517 9.4273 7.20039 9.90351L8.25641 9.69231ZM20.1026 12.5641C20.1026 13.1589 20.5847 13.641 21.1795 13.641C21.7742 13.641 22.2564 13.1589 22.2564 12.5641H20.1026ZM15.4359 5.74359C14.8411 5.74359 14.359 6.22575 14.359 6.82051C14.359 7.41528 14.8411 7.89744 15.4359 7.89744V5.74359ZM25.8462 12.5641C25.8462 13.1589 26.3283 13.641 26.9231 13.641C27.5178 13.641 28 13.1589 28 12.5641H25.8462ZM15.4359 0C14.8411 0 14.359 0.48216 14.359 1.07692C14.359 1.67169 14.8411 2.15385 15.4359 2.15385V0ZM25.8462 21.6879V24.0513H28V21.6879H25.8462ZM3.94872 2.15385H6.3121V0H3.94872V2.15385ZM18.3077 19.7436C18.5189 18.6876 18.5192 18.6876 18.5195 18.6876C18.5162 18.6869 18.5087 18.6855 18.4988 18.6832C18.479 18.6789 18.4465 18.6714 18.4023 18.6608C18.314 18.6392 18.179 18.6043 18.0059 18.5534C17.659 18.4513 17.1613 18.2857 16.578 18.0357C15.4066 17.5337 13.9194 16.7042 12.6076 15.3924L11.0847 16.9153C12.6447 18.4753 14.3883 19.4406 15.7297 20.0155C16.4028 20.304 16.9821 20.4974 17.3981 20.6196C17.6063 20.6809 17.7743 20.7246 17.8933 20.7536C17.9529 20.7681 18.0003 20.7789 18.0344 20.7865C18.0517 20.7902 18.0655 20.7931 18.0758 20.7954C18.081 20.7964 18.0853 20.7974 18.0887 20.798C18.0904 20.7984 18.092 20.7987 18.0933 20.799C18.0939 20.7991 18.0945 20.7993 18.095 20.7993C18.0953 20.7994 18.0963 20.7995 18.0965 20.7995C18.0969 20.7997 18.0965 20.7995 18.3077 19.7436ZM12.6076 15.3924C11.2958 14.0806 10.4663 12.5934 9.96421 11.422C9.71423 10.8387 9.54866 10.3411 9.44663 9.99421C9.39568 9.82099 9.36079 9.68606 9.33928 9.59762C9.32854 9.55344 9.32114 9.52093 9.31678 9.50115C9.3146 9.49127 9.31316 9.48456 9.31246 9.48117C9.3121 9.47948 9.31192 9.47862 9.31191 9.4786C9.31182 9.47819 9.31191 9.47859 9.31191 9.4786C9.31192 9.47862 9.3121 9.47948 9.31246 9.48117C9.31244 9.48109 9.31248 9.48133 9.31246 9.48117C9.31251 9.48146 9.31243 9.4811 8.25641 9.69231C7.20039 9.90351 7.20032 9.90317 7.20039 9.90351C7.20042 9.90364 7.20064 9.90468 7.2007 9.90495C7.2008 9.90548 7.20091 9.90607 7.20104 9.90672C7.20131 9.90801 7.20161 9.90952 7.20197 9.91124C7.20268 9.9147 7.20357 9.91902 7.20466 9.92421C7.20684 9.93459 7.2098 9.94839 7.21358 9.9655C7.22113 9.9997 7.23197 10.0471 7.24646 10.1067C7.27543 10.2258 7.31907 10.3938 7.3803 10.6019C7.50262 11.0179 7.69602 11.5972 7.98451 12.2703C8.55937 13.6117 9.52467 15.3553 11.0847 16.9153L12.6076 15.3924ZM8.73802 10.6555L9.24636 10.4014L8.28313 8.47491L7.7748 8.72908L8.73802 10.6555ZM11.1467 5.40301L9.97841 2.48221L7.97861 3.28212L9.14693 6.20293L11.1467 5.40301ZM25.5178 18.0217L22.597 16.8533L21.7971 18.853L24.7178 20.0214L25.5178 18.0217ZM17.5986 18.7537L17.3445 19.262L19.2709 20.2252L19.525 19.7169L17.5986 18.7537ZM22.597 16.8533C20.6901 16.0905 18.517 16.9167 17.5986 18.7537L19.525 19.7169C19.9426 18.8819 20.9304 18.5064 21.7971 18.853L22.597 16.8533ZM9.24636 10.4014C11.0832 9.48294 11.9095 7.30981 11.1467 5.40301L9.14693 6.20293C9.49362 7.06966 9.11806 8.05744 8.28313 8.47491L9.24636 10.4014ZM6.3121 2.15385C7.04603 2.15385 7.70603 2.60068 7.97861 3.28212L9.97841 2.48221C9.37874 0.983044 7.92676 0 6.3121 0V2.15385ZM28 21.6879C28 20.0733 27.017 18.6213 25.5178 18.0217L24.7178 20.0214C25.3993 20.294 25.8462 20.9539 25.8462 21.6879H28ZM24.0513 25.8462C11.9577 25.8462 2.15385 16.0423 2.15385 3.94872H0C0 17.2319 10.7681 28 24.0513 28V25.8462ZM24.0513 28C26.2321 28 28 26.2321 28 24.0513H25.8462C25.8462 25.0426 25.0426 25.8462 24.0513 25.8462V28ZM2.15385 3.94872C2.15385 2.95743 2.95743 2.15385 3.94872 2.15385V0C1.76791 0 0 1.76791 0 3.94872H2.15385ZM22.2564 12.5641C22.2564 11.6684 22.0799 10.7815 21.7372 9.954L19.7473 10.7782C19.9818 11.3445 20.1026 11.9513 20.1026 12.5641H22.2564ZM21.7372 9.954C21.3944 9.12651 20.892 8.37461 20.2588 7.74127L18.7357 9.26427C19.1691 9.69761 19.5128 10.2121 19.7473 10.7782L21.7372 9.954ZM20.2588 7.74127C19.6254 7.10792 18.8734 6.60553 18.0459 6.26277L17.2217 8.25266C17.7879 8.48719 18.3024 8.83093 18.7357 9.26427L20.2588 7.74127ZM18.0459 6.26277C17.2186 5.92 16.3316 5.74359 15.4359 5.74359V7.89744C16.0487 7.89744 16.6555 8.01814 17.2217 8.25266L18.0459 6.26277ZM28 12.5641C28 10.9142 27.6751 9.28038 27.0436 7.75603L25.0537 8.58026C25.5769 9.84331 25.8462 11.197 25.8462 12.5641H28ZM27.0436 7.75603C26.4122 6.23168 25.4867 4.84663 24.3201 3.67995L22.797 5.20295C23.7637 6.16962 24.5306 7.31723 25.0537 8.58026L27.0436 7.75603ZM24.3201 3.67995C23.1534 2.51325 21.7683 1.58779 20.244 0.956379L19.4198 2.94627C20.6828 3.46944 21.8304 4.23626 22.797 5.20295L24.3201 3.67995ZM20.244 0.956379C18.7197 0.324987 17.0859 0 15.4359 0V2.15385C16.803 2.15385 18.1566 2.42312 19.4198 2.94627L20.244 0.956379Z"
-            fill="#007F84" />
-        </svg>
-        <div class="flex flex-col">
-          <span>Support</span>
-          <a class="hover:underline font-semibold" href="tel:+19298104787">(929) 810 4787</a>
+        <div class="flex flex-col gap-y-1">
+          <span class="font-medium text-DarkBlue100 text-base">Support</span>
+          <a class="hover:underline text-body whitespace-nowrap" href="tel:+16467559735">+1 646 755
+            9735</a>
         </div>
       </div>
     </div>
@@ -550,9 +583,9 @@
   </div>
 </div>
   <div id="wishlist"
-     class="wishlist width-full minsm:w-[560px] z-[99] overflow-y-scroll flex flex-col bg-white fixed top-0 -right-full minsm:-right-[560px] bottom-0 py-8 px-6">
+     class="wishlist width-full min-w-[320px] minsm:w-[560px] z-[99] overflow-y-scroll flex flex-col bg-white fixed top-0 -right-full minsm:-right-[560px] bottom-0 py-8 px-6">
   <div class="flex justify-between">
-    <span class="text-Top5 font-semibold">Your Wishlist</span>
+    <span class="text-Top5 font-semibold md:text-Top2">Your Wishlist</span>
     <button id="wishlist-close" class="" aria-label="Button close wishlist container">
       <svg class="cursor" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
         <path d="M24.3998 7.61339C24.2765 7.48978 24.1299 7.39172 23.9686 7.32481C23.8073 7.2579 23.6344 7.22346 23.4598 7.22346C23.2852 7.22346 23.1123 7.2579 22.951 7.32481C22.7897 7.39172 22.6432 7.48978 22.5198 7.61339L15.9998 14.1201L9.47981 7.60005C9.35637 7.47661 9.20982 7.37869 9.04853 7.31188C8.88725 7.24508 8.71438 7.21069 8.53981 7.21069C8.36524 7.21069 8.19237 7.24508 8.03109 7.31188C7.8698 7.37869 7.72325 7.47661 7.59981 7.60005C7.47637 7.7235 7.37845 7.87004 7.31164 8.03133C7.24483 8.19261 7.21045 8.36548 7.21045 8.54005C7.21045 8.71463 7.24483 8.88749 7.31164 9.04878C7.37845 9.21006 7.47637 9.35661 7.59981 9.48005L14.1198 16.0001L7.59981 22.5201C7.47637 22.6435 7.37845 22.79 7.31164 22.9513C7.24483 23.1126 7.21045 23.2855 7.21045 23.4601C7.21045 23.6346 7.24483 23.8075 7.31164 23.9688C7.37845 24.1301 7.47637 24.2766 7.59981 24.4001C7.72325 24.5235 7.8698 24.6214 8.03109 24.6882C8.19237 24.755 8.36524 24.7894 8.53981 24.7894C8.71438 24.7894 8.88725 24.755 9.04853 24.6882C9.20982 24.6214 9.35637 24.5235 9.47981 24.4001L15.9998 17.8801L22.5198 24.4001C22.6433 24.5235 22.7898 24.6214 22.9511 24.6882C23.1124 24.755 23.2852 24.7894 23.4598 24.7894C23.6344 24.7894 23.8072 24.755 23.9685 24.6882C24.1298 24.6214 24.2764 24.5235 24.3998 24.4001C24.5233 24.2766 24.6212 24.1301 24.688 23.9688C24.7548 23.8075 24.7892 23.6346 24.7892 23.4601C24.7892 23.2855 24.7548 23.1126 24.688 22.9513C24.6212 22.79 24.5233 22.6435 24.3998 22.5201L17.8798 16.0001L24.3998 9.48005C24.9065 8.97339 24.9065 8.12005 24.3998 7.61339Z" fill="#1B3C74"/>
@@ -560,24 +593,214 @@
     </button>
   </div>
   <div class="flex flex-col py-6 my-6">
-    <div class="flex flex-col gap-6">
-      <div class="flex items-start gap-x-4 md:flex-col">
-        <a href="#"
-           class="overflow-hidden flex items-center justify-center rounded border border-primary min-w-[123px] w-[123px] h-[123px]">
-          <img width="104" class="max-w-full" src="img/image-2.png" alt="Product Image">
-        </a>
-        <div class="flex flex-col items-start gap-y-4">
-          <a href="#" class="font-semibold block text-DarkBlue100 text-Top3">
-            Cardura
-            <span class="block text-base font-normal text-DarkBlue100">(Doxazosin Mesylate)</span>
+    <div class="flex flex-col gap-y-6 sm:gap-y-10">
+      <div class="flex items-start gap-x-4 sm:gap-x-0 w-full">
+        <div class="flex items-start gap-x-4 sm:flex-col sm:items-center sm:gap-y-4 w-full">
+          <a href="#"
+             class="overflow-hidden flex items-center justify-center rounded border border-primary min-w-[123px] w-[123px] h-[123px] sm:w-full">
+            <img width="104" class="max-w-full" src="img/image-2.png" alt="Product Image">
           </a>
-          <div class="flex items-center gap-2 flex-wrap">
-            <span class="text-h11 leading-7 line-through">$ 39.00 USD</span>
-            <span class="font-semibold text-primary leading-[130%]">$ 39.00 USD</span>
+          <div class="flex flex-col items-start gap-y-4 w-full">
+            <a href="#" class="font-semibold block text-DarkBlue100 text-Top3">
+              Cardura
+              <span class="block text-base font-normal text-DarkBlue100">(Doxazosin Mesylate)</span>
+            </a>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-h11 leading-7 line-through">$ 39.00 USD</span>
+              <span class="font-semibold text-primary leading-[130%]">$ 39.00 USD</span>
+            </div>
+            <div class="minsm:hidden">
+              <div x-data="{ currentVal: 1, minVal: 0, maxVal: 100, decimalPoints: 0, incrementAmount: 1 }" class="flex">
+  <label for="counterInput" class="text-none">Items(s)</label>
+  <div @dblclick.prevent class="flex items-center rounded overflow-hidden border border-DarkBlue30 w-fit">
+    <button @click="currentVal = Math.max(minVal, currentVal - incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="subtract">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+        <path
+          d="M12 1.00253C12 0.529142 11.6162 0.145386 11.1429 0.145386H6.85714L5.14286 0.140381L0.856727 0.144552C0.383436 0.145013 0 0.52882 0 1.00211C0 1.47573 0.383943 1.85967 0.85756 1.85967H5.14286L6.85714 1.85969L11.1429 1.85967C11.6162 1.85967 12 1.47592 12 1.00253Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+    <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
+           id="counterInput" type="text"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit max-w-[40px] text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+           readonly />
+    <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="add">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path
+          d="M12 6C12 5.52661 11.6162 5.14286 11.1429 5.14286H6.85714V0.857144C6.85714 0.383757 6.47339 0 6 0C5.52661 0 5.14286 0.383756 5.14286 0.857143V5.14286H0.857144C0.383757 5.14286 0 5.52661 0 6C0 6.47339 0.383756 6.85714 0.857143 6.85714H5.14286V11.1429C5.14286 11.6162 5.52661 12 6 12C6.47339 12 6.85714 11.6162 6.85714 11.1429V6.85714H11.1429C11.6162 6.85714 12 6.47339 12 6Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+            </div>
+            <button class="underline text-LightBlue100 text-body font-semibold" type="button">Remove</button>
           </div>
-          <button class="underline text-LightBlue100 text-body font-semibold" type="button">Remove</button>
         </div>
-        <div class="ml-auto">
+        <div class="ml-auto sm:hidden">
+          <div x-data="{ currentVal: 1, minVal: 0, maxVal: 100, decimalPoints: 0, incrementAmount: 1 }" class="flex">
+  <label for="counterInput" class="text-none">Items(s)</label>
+  <div @dblclick.prevent class="flex items-center rounded overflow-hidden border border-DarkBlue30 w-fit">
+    <button @click="currentVal = Math.max(minVal, currentVal - incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="subtract">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+        <path
+          d="M12 1.00253C12 0.529142 11.6162 0.145386 11.1429 0.145386H6.85714L5.14286 0.140381L0.856727 0.144552C0.383436 0.145013 0 0.52882 0 1.00211C0 1.47573 0.383943 1.85967 0.85756 1.85967H5.14286L6.85714 1.85969L11.1429 1.85967C11.6162 1.85967 12 1.47592 12 1.00253Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+    <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
+           id="counterInput" type="text"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit max-w-[40px] text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+           readonly />
+    <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="add">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path
+          d="M12 6C12 5.52661 11.6162 5.14286 11.1429 5.14286H6.85714V0.857144C6.85714 0.383757 6.47339 0 6 0C5.52661 0 5.14286 0.383756 5.14286 0.857143V5.14286H0.857144C0.383757 5.14286 0 5.52661 0 6C0 6.47339 0.383756 6.85714 0.857143 6.85714H5.14286V11.1429C5.14286 11.6162 5.52661 12 6 12C6.47339 12 6.85714 11.6162 6.85714 11.1429V6.85714H11.1429C11.6162 6.85714 12 6.47339 12 6Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="flex items-start gap-x-4 sm:gap-x-0 w-full">
+        <div class="flex items-start gap-x-4 sm:flex-col sm:items-center sm:gap-y-4 w-full">
+          <a href="#"
+             class="overflow-hidden flex items-center justify-center rounded border border-primary min-w-[123px] w-[123px] h-[123px] sm:w-full">
+            <img width="104" class="max-w-full" src="img/image-2.png" alt="Product Image">
+          </a>
+          <div class="flex flex-col items-start gap-y-4 w-full">
+            <a href="#" class="font-semibold block text-DarkBlue100 text-Top3">
+              Cardura
+              <span class="block text-base font-normal text-DarkBlue100">(Doxazosin Mesylate)</span>
+            </a>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-h11 leading-7 line-through">$ 39.00 USD</span>
+              <span class="font-semibold text-primary leading-[130%]">$ 39.00 USD</span>
+            </div>
+            <div class="minsm:hidden">
+              <div x-data="{ currentVal: 1, minVal: 0, maxVal: 100, decimalPoints: 0, incrementAmount: 1 }" class="flex">
+  <label for="counterInput" class="text-none">Items(s)</label>
+  <div @dblclick.prevent class="flex items-center rounded overflow-hidden border border-DarkBlue30 w-fit">
+    <button @click="currentVal = Math.max(minVal, currentVal - incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="subtract">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+        <path
+          d="M12 1.00253C12 0.529142 11.6162 0.145386 11.1429 0.145386H6.85714L5.14286 0.140381L0.856727 0.144552C0.383436 0.145013 0 0.52882 0 1.00211C0 1.47573 0.383943 1.85967 0.85756 1.85967H5.14286L6.85714 1.85969L11.1429 1.85967C11.6162 1.85967 12 1.47592 12 1.00253Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+    <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
+           id="counterInput" type="text"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit max-w-[40px] text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+           readonly />
+    <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="add">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path
+          d="M12 6C12 5.52661 11.6162 5.14286 11.1429 5.14286H6.85714V0.857144C6.85714 0.383757 6.47339 0 6 0C5.52661 0 5.14286 0.383756 5.14286 0.857143V5.14286H0.857144C0.383757 5.14286 0 5.52661 0 6C0 6.47339 0.383756 6.85714 0.857143 6.85714H5.14286V11.1429C5.14286 11.6162 5.52661 12 6 12C6.47339 12 6.85714 11.6162 6.85714 11.1429V6.85714H11.1429C11.6162 6.85714 12 6.47339 12 6Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+            </div>
+            <button class="underline text-LightBlue100 text-body font-semibold" type="button">Remove</button>
+          </div>
+        </div>
+        <div class="ml-auto sm:hidden">
+          <div x-data="{ currentVal: 1, minVal: 0, maxVal: 100, decimalPoints: 0, incrementAmount: 1 }" class="flex">
+  <label for="counterInput" class="text-none">Items(s)</label>
+  <div @dblclick.prevent class="flex items-center rounded overflow-hidden border border-DarkBlue30 w-fit">
+    <button @click="currentVal = Math.max(minVal, currentVal - incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="subtract">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+        <path
+          d="M12 1.00253C12 0.529142 11.6162 0.145386 11.1429 0.145386H6.85714L5.14286 0.140381L0.856727 0.144552C0.383436 0.145013 0 0.52882 0 1.00211C0 1.47573 0.383943 1.85967 0.85756 1.85967H5.14286L6.85714 1.85969L11.1429 1.85967C11.6162 1.85967 12 1.47592 12 1.00253Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+    <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
+           id="counterInput" type="text"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit max-w-[40px] text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+           readonly />
+    <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="add">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path
+          d="M12 6C12 5.52661 11.6162 5.14286 11.1429 5.14286H6.85714V0.857144C6.85714 0.383757 6.47339 0 6 0C5.52661 0 5.14286 0.383756 5.14286 0.857143V5.14286H0.857144C0.383757 5.14286 0 5.52661 0 6C0 6.47339 0.383756 6.85714 0.857143 6.85714H5.14286V11.1429C5.14286 11.6162 5.52661 12 6 12C6.47339 12 6.85714 11.6162 6.85714 11.1429V6.85714H11.1429C11.6162 6.85714 12 6.47339 12 6Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="flex items-start gap-x-4 sm:gap-x-0 w-full">
+        <div class="flex items-start gap-x-4 sm:flex-col sm:items-center sm:gap-y-4 w-full">
+          <a href="#"
+             class="overflow-hidden flex items-center justify-center rounded border border-primary min-w-[123px] w-[123px] h-[123px] sm:w-full">
+            <img width="104" class="max-w-full" src="img/image-2.png" alt="Product Image">
+          </a>
+          <div class="flex flex-col items-start gap-y-4 w-full">
+            <a href="#" class="font-semibold block text-DarkBlue100 text-Top3">
+              Cardura
+              <span class="block text-base font-normal text-DarkBlue100">(Doxazosin Mesylate)</span>
+            </a>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-h11 leading-7 line-through">$ 39.00 USD</span>
+              <span class="font-semibold text-primary leading-[130%]">$ 39.00 USD</span>
+            </div>
+            <div class="minsm:hidden">
+              <div x-data="{ currentVal: 1, minVal: 0, maxVal: 100, decimalPoints: 0, incrementAmount: 1 }" class="flex">
+  <label for="counterInput" class="text-none">Items(s)</label>
+  <div @dblclick.prevent class="flex items-center rounded overflow-hidden border border-DarkBlue30 w-fit">
+    <button @click="currentVal = Math.max(minVal, currentVal - incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="subtract">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+        <path
+          d="M12 1.00253C12 0.529142 11.6162 0.145386 11.1429 0.145386H6.85714L5.14286 0.140381L0.856727 0.144552C0.383436 0.145013 0 0.52882 0 1.00211C0 1.47573 0.383943 1.85967 0.85756 1.85967H5.14286L6.85714 1.85969L11.1429 1.85967C11.6162 1.85967 12 1.47592 12 1.00253Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+    <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
+           id="counterInput" type="text"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit max-w-[40px] text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+           readonly />
+    <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="add">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path
+          d="M12 6C12 5.52661 11.6162 5.14286 11.1429 5.14286H6.85714V0.857144C6.85714 0.383757 6.47339 0 6 0C5.52661 0 5.14286 0.383756 5.14286 0.857143V5.14286H0.857144C0.383757 5.14286 0 5.52661 0 6C0 6.47339 0.383756 6.85714 0.857143 6.85714H5.14286V11.1429C5.14286 11.6162 5.52661 12 6 12C6.47339 12 6.85714 11.6162 6.85714 11.1429V6.85714H11.1429C11.6162 6.85714 12 6.47339 12 6Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+            </div>
+            <button class="underline text-LightBlue100 text-body font-semibold" type="button">Remove</button>
+          </div>
+        </div>
+        <div class="ml-auto sm:hidden">
           <div x-data="{ currentVal: 1, minVal: 0, maxVal: 100, decimalPoints: 0, incrementAmount: 1 }" class="flex">
   <label for="counterInput" class="text-none">Items(s)</label>
   <div @dblclick.prevent class="flex items-center rounded overflow-hidden border border-DarkBlue30 w-fit">

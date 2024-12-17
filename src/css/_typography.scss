@@ -11,15 +11,15 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  @apply text-h4 md:text-body
+  @apply text-h4 md:text-base
 }
 
 h5, .h5 {
-  @apply text-Top1 md:text-body2
+  @apply text-Top1 md:text-base
 }
 
 h6, .h6 {
-  @apply text-Top3 md:text-body4
+  @apply text-Top3 md:text-base
 }
 
 p {

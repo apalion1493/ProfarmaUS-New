@@ -3577,7 +3577,7 @@ h4, .h4{
 
 @media (max-width: 767px){
   h4, .h4{
-    font-size: 16px;
+    font-size: 18px;
     line-height: 130%;
   }
 }
@@ -3589,8 +3589,8 @@ h5, .h5{
 
 @media (max-width: 767px){
   h5, .h5{
-    font-size: 14px;
-    line-height: 120%;
+    font-size: 18px;
+    line-height: 130%;
   }
 }
 
@@ -3601,8 +3601,8 @@ h6, .h6{
 
 @media (max-width: 767px){
   h6, .h6{
-    font-size: 12px;
-    line-height: 120%;
+    font-size: 18px;
+    line-height: 130%;
   }
 }
 
@@ -5020,13 +5020,13 @@ a{
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .md\:py-5{
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
   .md\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+  .md\:py-5{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
   .md\:text-center{
     text-align: center;

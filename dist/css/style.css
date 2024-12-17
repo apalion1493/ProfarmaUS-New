@@ -4858,6 +4858,9 @@ a{
   .xl\:col-span-7{
     grid-column: span 7 / span 7;
   }
+  .xl\:col-span-6{
+    grid-column: span 6 / span 6;
+  }
 }
 
 @media (max-width: 1023px){
@@ -4881,6 +4884,9 @@ a{
   }
   .lg\:col-span-12{
     grid-column: span 12 / span 12;
+  }
+  .lg\:col-span-6{
+    grid-column: span 6 / span 6;
   }
   .lg\:mx-auto{
     margin-left: auto;
@@ -4957,6 +4963,12 @@ a{
 }
 
 @media (max-width: 767px){
+  .md\:left-\[20px\]{
+    left: 20px;
+  }
+  .md\:right-\[20px\]{
+    right: 20px;
+  }
   .md\:col-span-12{
     grid-column: span 12 / span 12;
   }

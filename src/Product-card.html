@@ -11,7 +11,7 @@
   'commonStyle': ' ',
   })
 
-  <section class="py-16">
+  <section class="py-16 md:py-10">
     <div class="container">
       <div class="grid grid-cols-12 gap-5">
         <div class="col-span-6 lg:col-span-12">
@@ -54,15 +54,15 @@
               'title': '-10% Sale',
               'styleCategoryElem': 'mb-4',
               })
-              <h1 class="text-h2 font-semibold mb-8">Cardura <span
-                class="text-h2-5 font-normal">(Doxazosin Mesylate)</span></h1>
-              <div class="flex items-center justify-between gap-x-2 mb-8">
+              <h1 class="text-h2 font-semibold mb-8 md:text-h4">Cardura <span
+                class="text-h2-5 md:text-h5 font-normal">(Doxazosin Mesylate)</span></h1>
+              <div class="flex items-center justify-between gap-x-2 mb-8 md:flex-col md:gap-x-0 md:gap-y-4 md:items-start">
                 <div class="inline-flex items-center gap-x-1">
                   <span class="line-through text-Top3 text-Text-color">$ 49.00 USD</span>
                   <span class="text-Top1 text-LightBlue100 font-semibold">$ 39.00 USD</span>
                 </div>
 
-                <ul class="flex items-center gap-x-2 my-5">
+                <ul class="flex items-center gap-x-2 my-5 md:mt-0">
                   <li>
                     @@include('components/Info-elem.html', {
                     'Style': '',
@@ -78,7 +78,7 @@
                 </ul>
               </div>
               <div
-                class="flex items-center justify-between gap-x-2 px-5 py-4 border border-DarkBlue10 mb-10 rounded-lg bg-White2">
+                class="flex items-center justify-between gap-x-2 px-5 py-4 border border-DarkBlue10 mb-10 rounded-lg bg-White2 lg:flex-col lg:gap-y-4 lg:gap-x-0 lg:items-start">
                 <div class="flex items-center gap-x-4">
                   <span class="text-Top1 font-medium">Quantity</span>
                   @@include('components/Counter.html')
@@ -113,7 +113,7 @@
       </div>
     </div>
   </section>
-  <section class="py-16">
+  <section class="py-16 md:py-10">
     <div class="container">
       <div class="row">
         <div class="col-span-12 mb-10">

@@ -4,13 +4,13 @@
     <button @click="selectedTab = 'tab1'" :aria-selected="selectedTab === 'tab1'"
             :tabindex="selectedTab === 'tab1' ? '0' : '-1'"
             :class="selectedTab === 'tab1' ? 'text-DarkBlue100 border-b-2 border-LightBlue100' : 'text-LightBlue100'"
-            class="h-min px-3 py-2 text-Top1 font-medium" type="button" role="tab" aria-controls="tabPanel1">
+            class="h-min px-3 py-2 text-Top1 md:text-Top3 font-medium" type="button" role="tab" aria-controls="tabPanel1">
       Description
     </button>
     <button @click="selectedTab = 'tab2'" :aria-selected="selectedTab === 'tab2'"
             :tabindex="selectedTab === 'tab2' ? '0' : '-1'"
             :class="selectedTab === 'tab2' ? 'text-DarkBlue100 border-b-2 border-LightBlue100' : 'text-LightBlue100'"
-            class="h-min px-3 py-2 text-Top1 font-medium" type="button" role="tab" aria-controls="tabPanel2">
+            class="h-min px-3 py-2 text-Top1 md:text-Top3 font-medium" type="button" role="tab" aria-controls="tabPanel2">
       Information
     </button>
   </div>

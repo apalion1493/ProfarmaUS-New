@@ -339,7 +339,7 @@
   </div>
 </header>
 
-  <section class="py-16">
+  <section class="py-16 md:py-10">
     <div class="container">
       <div class="grid grid-cols-12 gap-5">
         <div class="col-span-6 lg:col-span-12">
@@ -382,15 +382,15 @@
   class="px-3 w-fit h-10 rounded-lg bg-LightBlue10 text-LightBlue100 text-base font-medium flex items-center justify-center mb-4">
   -10% Sale
 </span>
-              <h1 class="text-h2 font-semibold mb-8">Cardura <span
-                class="text-h2-5 font-normal">(Doxazosin Mesylate)</span></h1>
-              <div class="flex items-center justify-between gap-x-2 mb-8">
+              <h1 class="text-h2 font-semibold mb-8 md:text-h4">Cardura <span
+                class="text-h2-5 md:text-h5 font-normal">(Doxazosin Mesylate)</span></h1>
+              <div class="flex items-center justify-between gap-x-2 mb-8 md:flex-col md:gap-x-0 md:gap-y-4 md:items-start">
                 <div class="inline-flex items-center gap-x-1">
                   <span class="line-through text-Top3 text-Text-color">$ 49.00 USD</span>
                   <span class="text-Top1 text-LightBlue100 font-semibold">$ 39.00 USD</span>
                 </div>
 
-                <ul class="flex items-center gap-x-2 my-5">
+                <ul class="flex items-center gap-x-2 my-5 md:mt-0">
                   <li>
                     <span class="info-item ">20 tabs</span>
                   </li>
@@ -400,7 +400,7 @@
                 </ul>
               </div>
               <div
-                class="flex items-center justify-between gap-x-2 px-5 py-4 border border-DarkBlue10 mb-10 rounded-lg bg-White2">
+                class="flex items-center justify-between gap-x-2 px-5 py-4 border border-DarkBlue10 mb-10 rounded-lg bg-White2 lg:flex-col lg:gap-y-4 lg:gap-x-0 lg:items-start">
                 <div class="flex items-center gap-x-4">
                   <span class="text-Top1 font-medium">Quantity</span>
                   <div x-data="{ currentVal: 1, minVal: 0, maxVal: 100, decimalPoints: 0, incrementAmount: 1 }" class="flex">
@@ -458,13 +458,13 @@
     <button @click="selectedTab = 'tab1'" :aria-selected="selectedTab === 'tab1'"
             :tabindex="selectedTab === 'tab1' ? '0' : '-1'"
             :class="selectedTab === 'tab1' ? 'text-DarkBlue100 border-b-2 border-LightBlue100' : 'text-LightBlue100'"
-            class="h-min px-3 py-2 text-Top1 font-medium" type="button" role="tab" aria-controls="tabPanel1">
+            class="h-min px-3 py-2 text-Top1 md:text-Top3 font-medium" type="button" role="tab" aria-controls="tabPanel1">
       Description
     </button>
     <button @click="selectedTab = 'tab2'" :aria-selected="selectedTab === 'tab2'"
             :tabindex="selectedTab === 'tab2' ? '0' : '-1'"
             :class="selectedTab === 'tab2' ? 'text-DarkBlue100 border-b-2 border-LightBlue100' : 'text-LightBlue100'"
-            class="h-min px-3 py-2 text-Top1 font-medium" type="button" role="tab" aria-controls="tabPanel2">
+            class="h-min px-3 py-2 text-Top1 md:text-Top3 font-medium" type="button" role="tab" aria-controls="tabPanel2">
       Information
     </button>
   </div>
@@ -494,7 +494,7 @@
       </div>
     </div>
   </section>
-  <section class="py-16">
+  <section class="py-16 md:py-10">
     <div class="container">
       <div class="row">
         <div class="col-span-12 mb-10">

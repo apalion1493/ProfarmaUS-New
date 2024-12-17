@@ -19,7 +19,7 @@
         <div class="col-span-12">
           <div class="flex flex-col items-center">
             <h1
-              class="text-center text-h1 text-DarkBlue100 font-semibold mb-6 -tracking-[0.72px] capitalize max-w-[950px] mx-auto">
+              class="text-center text-h1 md:text-h3 text-DarkBlue100 font-semibold mb-6 -tracking-[0.72px] capitalize max-w-[950px] mx-auto">
               Your Journey to Better Health
               Begins With Us</h1>
             <p class="text-center max-w-[720px] text-Top3 text-Text-color mb-10">With Profarma Direct,
@@ -27,21 +27,21 @@
               prices.</p>
           </div>
         </div>
-        <div class="col-span-1"></div>
-        <div class="col-span-10">
-          <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full ml-2 w-full rounded-2xl">
+        <div class="col-span-1 lg:hidden"></div>
+        <div class="col-span-10 lg:col-span-12">
+          <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full w-full rounded-2xl">
             <img class="object-cover w-full h-full rounded-2xl" src="img/hero-image-two.png"
                  alt="Your Trusted Path to Recovery">
           </div>
         </div>
-        <div class="col-span-1"></div>
+        <div class="col-span-1 lg:hidden"></div>
       </div>
     </div>
   </section>
   <section class="py-16">
     <div class="container">
-      <div class="row gap-6">
-        <div class="col-span-6">
+      <div class="row gap-6 lg:gap-x-0">
+        <div class="col-span-6 lg:col-span-12">
           <div class="flex flex-col max-w-[588px] sticky top-6">
             @@include('components/Title-category-component.html', {
             'style': 'items-start',
@@ -59,7 +59,7 @@
             })
           </div>
         </div>
-        <div class="col-span-6">
+        <div class="col-span-6 lg:col-span-12">
           <div class="flex flex-col gap-y-6">
             @@include('components/About-Cards.html', {
             'common-style': '',
@@ -92,9 +92,9 @@
   </section>
   <section class="py-16 gradient-css">
     <div class="container">
-      <div class="row gap-x-6">
-        <div class="col-span-6">
-          <div class="flex flex-col gap-y-10 max-w-[553px] mr-4">
+      <div class="row gap-x-6 lg:gap-x-0 lg:gap-y-10">
+        <div class="col-span-6 lg:col-span-12">
+          <div class="flex flex-col gap-y-10 max-w-[553px] lg:max-w-full lg:mr-0 mr-4">
             @@include('components/Title-category-component.html', {
             'style': 'items-start',
             'category': '10+ years of experience',
@@ -171,8 +171,8 @@
             </div>
           </div>
         </div>
-        <div class="col-span-6">
-          <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full">
+        <div class="col-span-6 lg:col-span-12">
+          <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full lg:max-w-[500px] lg:mx-auto">
             <img class="object-cover w-full h-full" src="img/image-5.png"
                  alt="In Sickness and in Health, We’re Here!">
           </div>

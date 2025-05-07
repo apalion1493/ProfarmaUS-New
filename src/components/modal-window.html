@@ -59,16 +59,13 @@
           })
         </div>
         <div class="col-span-12">
-          @@include('input.html', {
-          'common-style': '',
-          'StyleLabel': 'hidden',
-          'idInput': 'PromoCodeId',
-          'label': '',
-          'styleInput': '',
-          'type': 'text',
-          'placeholder': 'Have a promocode?',
-          'errorStyle': 'hidden',
-          })
+          <div class="form-group flex flex-col items-start">
+            <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="PromoCodeId">@@label</label>
+            <input
+              class="input @@styleInput "
+              type="text" id="PromoCodeId" placeholder="Have a promocode?">
+            <small class="self-end text-body text-Error mt-1 hidden">Invalid code</small>
+          </div>
         </div>
         <div class="col-span-12">
           @@include('button.html', {

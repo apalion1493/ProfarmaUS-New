@@ -784,11 +784,12 @@
 </div>
         </div>
         <div class="col-span-12">
-          <div class="form-group flex flex-col items-start overflow-hidden @@commonStyle">
-  <label class="mb-3 font-semibold text-body" for="@@idTextarea"></label>
-  <textarea
-    class="input "
-    id="@@idTextarea" placeholder="Message" rows="3"></textarea>
+          <div class="form-group flex flex-col items-start ">
+  <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="PromoCodeId"></label>
+  <input
+    class="input  "
+    type="text" id="PromoCodeId" placeholder="Have a promocode?" required>
+  <small class="self-end text-body text-Error mt-1 hidden">Name is required</small>
 </div>
         </div>
         <div class="col-span-12">
@@ -800,6 +801,7 @@
     </div>
   </div>
 </div>
+
   <div id="wishlist"
      class="wishlist width-full min-w-[320px] minsm:w-[560px] z-[99] overflow-y-scroll flex flex-col bg-white fixed top-0 -right-full minsm:-right-[560px] bottom-0 py-8 px-6">
   <div class="flex justify-between">

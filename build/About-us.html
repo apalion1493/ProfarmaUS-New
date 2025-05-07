@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>About Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+
+<body class="">
+<main id="content" class="flex flex-col items-center min-h-screen">
+  <header x-data="{dropdownOpen: false, mobileMenuIsOpen: false}" @click.away="mobileMenuIsOpen = false"
+        class="flex flex-col w-full relative z-10  ">
+  <div class="w-full flex flex-col">
+    <div class="bg-white shadow-3xl py-8">
+      <div class="container flex items-center w-full">
+        <a class="lg:max-w-[171x] lg:w-full minlg:min-w-[200px] mr-10" href="index.html">
+          <img src="img/profarma-logo.svg" alt="Logo">
+        </a>
+        <div class="flex items-center w-full">
+          <div class="ml-auto w-full lg:hidden">
+            <div class="items-center minlg:h-14 flex justify-end relative">
+              <nav class="mx-auto lg:hidden">
+                <div class="container px-0 mx-auto flex justify-center items-center gap-x-8 w-full text-h8">
+                  <a href="Brand-Shop-Page.html"
+                     class="py-2 text-center text-DarkBlue100 hover:text-LightBlue100 transition-colors text-base lg:text-body2">Brands</a>
+                  <!--                                <a href="#" class="py-2 text-center text-DarkBlue100 hover:text-LightBlue100 transition-colors text-base lg:text-body2">Manufacturers</a>-->
+                  <button @click="dropdownOpen = !dropdownOpen"
+                          class="inline-flex items-center py-2 text-center text-DarkBlue100 hover:text-LightBlue100 transition-colors text-base lg:text-body2"
+                          :class="dropdownOpen ? 'text-LightBlue100' : ''"
+                          data-menu-target="menu1">Categories <span
+                    :class="dropdownOpen ? 'rotate-180' : ''"
+                    class="check-icon-menu transition-all ml-2"></span></button>
+                  <a href="About-us.html"
+                     class="py-2 text-center text-DarkBlue100 hover:text-LightBlue100 transition-colors text-base lg:text-body2">About
+                    Us</a>
+                  <a href="contact-us.html"
+                     class="py-2 text-center text-DarkBlue100 hover:text-LightBlue100 transition-colors text-base lg:text-body2">Contacts</a>
+                </div>
+              </nav>
+              <div class="flex items-center gap-2 md:w-max">
+                <div class="searchContainer ">
+  <form class="searchForm flex items-center relative overflow-hidden">
+    <label class='absolute opacity-0 -z-10' for='search-dp'>Search</label>
+    <input id='search-dp' type="text" placeholder="Search..."
+           class="searchInput bg-white relative w-full rounded-lg border border-DarkBlue20 py-2 px-5 pr-16 min-h-[56px] focus:outline-none focus:ring-inherit focus:shadow-none">
+    <button class="text-none absolute right-4 top-4 block" aria-label="Search" type="submit">
+      Search
+      <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M0 10.9072C0 4.88334 4.88334 0 10.9072 0C16.931 0 21.8144 4.88334 21.8144 10.9072C21.8144 16.931 16.931 21.8144 10.9072 21.8144C4.88334 21.8144 0 16.931 0 10.9072ZM10.9072 1.76873C5.86018 1.76873 1.76873 5.86018 1.76873 10.9072C1.76873 15.9542 5.86018 20.0456 10.9072 20.0456C15.9542 20.0456 20.0456 15.9542 20.0456 10.9072C20.0456 5.86018 15.9542 1.76873 10.9072 1.76873Z"
+          fill="#2490EB" />
+        <path
+          d="M17.4875 17.4875C17.8329 17.1422 18.3929 17.1422 18.7382 17.4875L23.741 22.4903C24.0863 22.8357 24.0863 23.3956 23.741 23.741C23.3956 24.0863 22.8357 24.0863 22.4903 23.741L17.4875 18.7382C17.1422 18.3929 17.1422 17.8329 17.4875 17.4875Z"
+          fill="#2490EB" />
+      </svg>
+    </button>
+  </form>
+</div>
+
+                <button id="search-button"
+                        class="relative w-14 min-w-14 h-14 rounded-full flex items-center justify-center bg-LightBlue100">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M0 10.9072C0 4.88334 4.88334 0 10.9072 0C16.931 0 21.8144 4.88334 21.8144 10.9072C21.8144 16.931 16.931 21.8144 10.9072 21.8144C4.88334 21.8144 0 16.931 0 10.9072ZM10.9072 1.76873C5.86018 1.76873 1.76873 5.86018 1.76873 10.9072C1.76873 15.9542 5.86018 20.0456 10.9072 20.0456C15.9542 20.0456 20.0456 15.9542 20.0456 10.9072C20.0456 5.86018 15.9542 1.76873 10.9072 1.76873Z"
+                      fill="white" />
+                    <path
+                      d="M17.4875 17.4875C17.8329 17.1422 18.3929 17.1422 18.7382 17.4875L23.741 22.4903C24.0863 22.8357 24.0863 23.3956 23.741 23.741C23.3956 24.0863 22.8357 24.0863 22.4903 23.741L17.4875 18.7382C17.1422 18.3929 17.1422 17.8329 17.4875 17.4875Z"
+                      fill="white" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-x-3 ml-3 lg:ml-auto">
+            <button id="wishlist-open"
+                    class="relative w-14 min-w-14 h-14 rounded-full flex items-center justify-center bg-DarkBlue100">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="none">
+                <path
+                  d="M17.6004 0.00120421C14.784 0.00120421 12.924 1.54261 12 2.56379C11.076 1.54381 9.216 0.00120421 6.3996 0.00120421C2.5596 0.00120421 0 3.58617 0 7.60225C0 10.6068 1.5096 16.4605 11.622 21.9048C11.7383 21.9673 11.8681 22 12 22C12.1319 22 12.2617 21.9673 12.378 21.9048C22.4904 16.4605 24 10.6068 24 7.60225C24 3.49224 21.366 0.00120421 17.6004 0.00120421ZM12 20.2839C7.1424 17.6033 1.5996 13.1381 1.5996 7.60225C1.5996 4.52185 3.4428 1.60643 6.3996 1.60643C8.6436 1.60643 10.4988 2.98647 11.3196 4.28703C11.634 4.7928 12.3684 4.7916 12.6804 4.28462C12.6972 4.25813 14.3652 1.60643 17.6004 1.60643C20.5788 1.60643 22.4004 4.55075 22.4004 7.60104C22.4004 13.1381 16.8564 17.6033 12 20.2839Z"
+                  fill="white" />
+              </svg>
+              <span
+                class="rounded-full bg-LightBlue100 absolute top-4 right-3 flex justify-center content-center align-middle w-3 min-w-3 h-3 ">
+                          <span
+                            class="text-body3 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">2</span>
+                        </span>
+            </button>
+            <div class="flex items-center lg:hidden">
+              <div class="flex flex-col gap-y-1">
+                <span class="font-medium text-DarkBlue100 text-base">Support</span>
+                <a class="hover:underline text-body whitespace-nowrap" href="tel:+16467559735">+1 646 755
+                  9735</a>
+              </div>
+            </div>
+          </div>
+          <button id="burger-button" @click="mobileMenuIsOpen = !mobileMenuIsOpen" :aria-expanded="mobileMenuIsOpen"
+                  :class="mobileMenuIsOpen ? '0' : null" type="button"
+                  class="w-14 min-w-14 h-14 ml-3 flex justify-center items-center rounded-full overflow-hidden bg-LightBlue100 minlg:hidden"
+                  aria-label="mobile menu"
+                  aria-controls="mobileMenu">
+            <svg style="display: none" x-cloak x-show="!mobileMenuIsOpen" xmlns="http://www.w3.org/2000/svg"
+                 fill="#1B3C74" aria-hidden="true"
+                 viewBox="0 0 24 24" stroke-width="2" stroke="#fff" class="size-6 fill-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg style="display: none" x-cloak x-show="mobileMenuIsOpen" xmlns="http://www.w3.org/2000/svg"
+                 fill="#1B3C74" aria-hidden="true"
+                 viewBox="0 0 24 24" stroke-width="2" stroke="#fff" class="size-6 fill-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container md:hidden">
+      <!-- Mega Menus -->
+      <div style="display: none" x-cloak x-show="dropdownOpen" @click.outside="dropdownOpen = false"
+           x-transition.opacity.duration.200ms
+           x-trap.inert.noscroll="dropdownOpen" class="relative">
+        <div x-show="dropdownOpen"
+             x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity"
+             x-transition:enter-start="opacity-0 scale-50" x-transition:enter-end="opacity-100 scale-100"
+             id="menu1"
+             class="mega-menu min-w-[1204px] rounded-xl border border-primary border-solid absolute top-3 left-1/2 -translate-x-1/2 bg-white z-50 p-8">
+          <div class="grid grid-cols-3 minxl:grid-cols-5 gap-x-12 gap-y-4">
+            <div class="flex flex-col gap-4">
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Neurology-40 mr-3 min-w-10"></i>
+                Neurology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Oncology-40 mr-3 min-w-10"></i>
+                Oncology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Cardiology-40 mr-3 min-w-10"></i>
+                Cardiology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Hematology-40 mr-3 min-w-10"></i>
+                Hematology
+              </a>
+            </div>
+            <div class="flex flex-col gap-4">
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Fertility-40 mr-3 min-w-10"></i>
+                Fertility
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Urology-40 mr-3 min-w-10"></i>
+                Urology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Obgyn-40 mr-3 min-w-10"></i>
+                Obgyn
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Erectile-Disfunction-40 mr-3 min-w-10"></i>
+                Erectile Disfunction
+              </a>
+            </div>
+            <div class="flex flex-col gap-4">
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Pulmonology-40 mr-3 min-w-10"></i>
+                Pulmonology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Endochrinology-40 mr-3 min-w-10"></i>
+                Endocrinology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Rheymatology-40 mr-3 min-w-10"></i>
+                Rheymotology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Gastroenterology-40 mr-3 min-w-10"></i>
+                Gastroenterology
+              </a>
+            </div>
+            <div class="flex flex-col gap-4">
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Allergy-40 mr-3 min-w-10"></i>
+                Allergy
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Infection-40 mr-3 min-w-10"></i>
+                Infection
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Weight-Loss-40 mr-3 min-w-10"></i>
+                Weight Loss
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Dermatology-40 mr-3 min-w-10"></i>
+                Dermatology
+              </a>
+            </div>
+            <div class="flex flex-col gap-4">
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Sugar-Control-40 mr-3 min-w-10"></i>
+                Sugar Control
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-Top3 inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Ophtalmology-40 mr-3 min-w-10"></i>
+                Ophtalmology
+              </a>
+            </div>
+          </div>
+          <a href="#" class="text-body block mt-6 text-DarkBlue100 underline font-semibold md:text-body4">Show All</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display: none" x-cloak x-show="mobileMenuIsOpen" id="mobile-menu"
+       x-transition:enter="transition motion-reduce:transition-none ease-out duration-300"
+       x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
+       x-transition:leave="transition motion-reduce:transition-none ease-out duration-300"
+       x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full"
+       class="absolute min-h-screen minlg:hidden h-full overflow-x-auto inset-x-0 top-[100%] z-[10000] flex flex-col items-center divide-x divide-slate-300 rounded-b-xl border-b border-slate-300 bg-slate-100">
+    <div class="overflow-y-scroll flex flex-col items-center w-full pt-16 pb-[250px] container">
+      <div class="items-center gap-x-2 lg:flex">
+        <div class="relative flex w-full">
+          <div class="searchContainer mob-version w-full mb-6">
+  <form class="searchForm flex items-center relative overflow-hidden">
+    <label class='absolute opacity-0 -z-10' for='search-mb'>Search</label>
+    <input id='search-mb' type="text" placeholder="Search..."
+           class="searchInput bg-white relative w-full rounded-lg border border-DarkBlue20 py-2 px-5 pr-16 min-h-[56px] focus:outline-none focus:ring-inherit focus:shadow-none">
+    <button class="text-none absolute right-4 top-4 block" aria-label="Search" type="submit">
+      Search
+      <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M0 10.9072C0 4.88334 4.88334 0 10.9072 0C16.931 0 21.8144 4.88334 21.8144 10.9072C21.8144 16.931 16.931 21.8144 10.9072 21.8144C4.88334 21.8144 0 16.931 0 10.9072ZM10.9072 1.76873C5.86018 1.76873 1.76873 5.86018 1.76873 10.9072C1.76873 15.9542 5.86018 20.0456 10.9072 20.0456C15.9542 20.0456 20.0456 15.9542 20.0456 10.9072C20.0456 5.86018 15.9542 1.76873 10.9072 1.76873Z"
+          fill="#2490EB" />
+        <path
+          d="M17.4875 17.4875C17.8329 17.1422 18.3929 17.1422 18.7382 17.4875L23.741 22.4903C24.0863 22.8357 24.0863 23.3956 23.741 23.741C23.3956 24.0863 22.8357 24.0863 22.4903 23.741L17.4875 18.7382C17.1422 18.3929 17.1422 17.8329 17.4875 17.4875Z"
+          fill="#2490EB" />
+      </svg>
+    </button>
+  </form>
+</div>
+        </div>
+      </div>
+      <nav class="bg-white shadow-md p-4 w-full mb-20">
+        <ul class="flex flex-col gap-y-6">
+          <li>
+            <a href="Brand-Shop-Page.html"
+               class="menu-btn block w-full text-left text-base text-DarkBlue100 focus:outline-none">
+              Brands
+            </a>
+          </li>
+          <li>
+            <button
+              class="menu-btn flex justify-between items-center w-full text-left text-base text-DarkBlue100 focus:outline-none">
+              Categories
+              <span class='menu-btn--icon'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                  <path d="M8.88715 0.511963L5 4.4881L1.11285 0.511963" stroke="#333333"
+                        stroke-linecap="round" />
+                </svg>
+              </span>
+            </button>
+            <div class="hidden space-y-1 mt-5 flex flex-col gap-y-4">
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Neurology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Neurology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Oncology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Oncology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Cardiology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Cardiology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Hematology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Hematology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Fertility-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Fertility
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Urology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Urology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Obgyn-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Obgyn
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Erectile-Disfunction-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Erectile Disfunction
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Pulmonology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Pulmonology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Endochrinology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Endocrinology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Rheymatology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Rheymotology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Gastroenterology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Gastroenterology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Allergy-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Allergy
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Infection-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Infection
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Weight-Loss-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Weight Loss
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Dermatology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Dermatology
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Sugar-Control-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:min-w-5"></i>
+                Sugar Control
+              </a>
+              <a href="#"
+                 class="text-DarkBlue100 text-body inline-flex items-center transition-colors hover:text-LightBlue100">
+                <i class="Ophtalmology-40 mr-3 min-w-10 lg:w-5 lg:h-5 lg:h-auto lg:min-w-5"></i>
+                Ophtalmology
+              </a>
+            </div>
+          </li>
+          <li>
+            <a href="About-us.html"
+               class="menu-btn block w-full text-left text-base text-DarkBlue100 focus:outline-none">
+              About Us
+            </a>
+          </li>
+
+          <li>
+            <a href="contact-us.html"
+               class="menu-btn block w-full text-left text-base text-DarkBlue100 focus:outline-none">
+              Contacts
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex items-center mx-auto mt-auto">
+        <div class="flex flex-col items-center gap-y-1">
+          <span class="font-medium text-DarkBlue100 text-base">Support</span>
+          <a class="hover:underline text-body whitespace-nowrap" href="tel:+16467559735">+1 646 755
+            9735</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <section class="py-16 md:py-10 gradient-css">
+    <div class="container relative">
+      <i class="Icon-capsule-v1 absolute top-[44px] left-0"></i>
+      <i class="Icon-stethoscope-v1 absolute top-[44px] right-0"></i>
+      <div class="row relative z-[1]">
+        <div class="col-span-12">
+          <div class="flex flex-col items-center">
+            <h1
+              class="text-center text-h1 md:text-h3 text-DarkBlue100 font-semibold mb-6 -tracking-[0.72px] capitalize max-w-[950px] mx-auto">
+              Your Journey to Better Health
+              Begins With Us</h1>
+            <p class="text-center max-w-[720px] text-Top3 text-Text-color mb-10">With Profarma Direct,
+              you’ll get genuine products, quick shipping, expert customer support, and unbeatable
+              prices.</p>
+          </div>
+        </div>
+        <div class="col-span-1 lg:hidden"></div>
+        <div class="col-span-10 lg:col-span-12">
+          <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full w-full rounded-2xl">
+            <img class="object-cover w-full h-full rounded-2xl" src="img/hero-image-two.png"
+                 alt="Your Trusted Path to Recovery">
+          </div>
+        </div>
+        <div class="col-span-1 lg:hidden"></div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 md:py-10">
+    <div class="container">
+      <div class="row gap-6 lg:gap-x-0">
+        <div class="col-span-6 lg:col-span-12">
+          <div class="flex flex-col max-w-[588px] sticky top-6">
+            <div class="flex flex-col gap-y-4 items-start">
+  <span
+  class="px-3 w-fit h-10 rounded-lg bg-LightBlue10 text-LightBlue100 text-base font-medium flex items-center justify-center @@styleCategoryElem">
+  About Us
+</span>
+  <h3 class="text-DarkBlue100 text-h2 font-semibold md:text-h2Mob ">
+    We are an Online Pharmacy you can Trust!
+  </h3>
+</div>
+            <p class="mt-4 text-Top3">At ProfarmaDirect we believe that healthcare should be more than just
+              a service. It must be a compassionate and collaborative path to health.</p>
+
+            <a class="button mt-10" href="Categories-Shop-Page.html">
+    <span class="">More About Us</span>
+</a>
+          </div>
+        </div>
+        <div class="col-span-6 lg:col-span-12">
+          <div class="flex flex-col gap-y-6">
+            <div class="overflow-hidden flex flex-col gap-y-6 rounded-lg border border-LightBlue30 bg-white p-8
+hover:bg-White2 transition-all hover:border-LightBlue80 group md:p-5 md:gap-y-4 ">
+  <div
+    class="w-[52px] h-[52px] flex items-center justify-center rounded-full bg-LightBlue10 transition-all group-hover:bg-white">
+    <span class="text-Top1 font-medium text-LightBlue100">01</span>
+  </div>
+  <div class="flex flex-col mt-4">
+    <span class="text-h4 md:text-Top2 block mb-4 font-semibold text-DarkBlue100">Who we are?</span>
+    <p class="text-Top3 text-Text-color">lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis</p>
+  </div>
+</div>
+            <div class="overflow-hidden flex flex-col gap-y-6 rounded-lg border border-LightBlue30 bg-white p-8
+hover:bg-White2 transition-all hover:border-LightBlue80 group md:p-5 md:gap-y-4 ">
+  <div
+    class="w-[52px] h-[52px] flex items-center justify-center rounded-full bg-LightBlue10 transition-all group-hover:bg-white">
+    <span class="text-Top1 font-medium text-LightBlue100">02</span>
+  </div>
+  <div class="flex flex-col mt-4">
+    <span class="text-h4 md:text-Top2 block mb-4 font-semibold text-DarkBlue100">License</span>
+    <p class="text-Top3 text-Text-color">lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis</p>
+  </div>
+</div>
+            <div class="overflow-hidden flex flex-col gap-y-6 rounded-lg border border-LightBlue30 bg-white p-8
+hover:bg-White2 transition-all hover:border-LightBlue80 group md:p-5 md:gap-y-4 ">
+  <div
+    class="w-[52px] h-[52px] flex items-center justify-center rounded-full bg-LightBlue10 transition-all group-hover:bg-white">
+    <span class="text-Top1 font-medium text-LightBlue100">03</span>
+  </div>
+  <div class="flex flex-col mt-4">
+    <span class="text-h4 md:text-Top2 block mb-4 font-semibold text-DarkBlue100">Сustomer-oriented</span>
+    <p class="text-Top3 text-Text-color">lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis</p>
+  </div>
+</div>
+            <div class="overflow-hidden flex flex-col gap-y-6 rounded-lg border border-LightBlue30 bg-white p-8
+hover:bg-White2 transition-all hover:border-LightBlue80 group md:p-5 md:gap-y-4 ">
+  <div
+    class="w-[52px] h-[52px] flex items-center justify-center rounded-full bg-LightBlue10 transition-all group-hover:bg-white">
+    <span class="text-Top1 font-medium text-LightBlue100">04</span>
+  </div>
+  <div class="flex flex-col mt-4">
+    <span class="text-h4 md:text-Top2 block mb-4 font-semibold text-DarkBlue100">Only Original products</span>
+    <p class="text-Top3 text-Text-color">lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor quis</p>
+  </div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 md:py-10 gradient-css">
+    <div class="container">
+      <div class="row gap-x-6 lg:gap-x-0 lg:gap-y-10">
+        <div class="col-span-6 lg:col-span-12">
+          <div class="flex flex-col gap-y-10 max-w-[553px] lg:max-w-full lg:mr-0 mr-4">
+            <div class="flex flex-col gap-y-4 items-start">
+  <span
+  class="px-3 w-fit h-10 rounded-lg bg-LightBlue10 text-LightBlue100 text-base font-medium flex items-center justify-center @@styleCategoryElem">
+  10+ years of experience
+</span>
+  <h3 class="text-DarkBlue100 text-h2 font-semibold md:text-h2Mob ">
+    In Sickness and in Health, We’re Here!
+  </h3>
+</div>
+            <div class="row gap-y-10">
+              <div class="col-span-12">
+                <div class="flex gap-x-4">
+                  <div
+                    class="w-14 h-14 min-w-14 flex justify-center items-center rounded-full bg-white overflow-hidden shadow-7xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                         viewBox="0 0 20 20" fill="none">
+                      <g clip-path="url(#clip0_362_575)">
+                        <mask id="mask0_362_575" style="mask-type:luminance"
+                              maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                          <path d="M20 0H0V20H20V0Z" fill="white" />
+                        </mask>
+                        <g mask="url(#mask0_362_575)">
+                          <path
+                            d="M6.66916 10.2093C6.9154 10.1583 7.17268 10.0466 7.41539 9.8713C8.11326 9.36655 8.42299 8.53764 8.10649 8.01903C7.76236 7.45491 6.82101 7.49284 6.09763 8.13485C5.40588 8.73214 5.2583 9.35622 5.2583 10.0121C5.2583 10.4755 5.40653 11.3031 6.31202 12.0216C6.73955 11.6913 7.24923 11.4196 7.82779 11.2231L7.83546 11.2203C7.39091 11.0351 6.81144 10.6694 6.66916 10.2093ZM6.55753 8.61414C6.55753 8.42039 6.71192 8.26454 6.90234 8.26454C7.0926 8.26454 7.24716 8.42105 7.24716 8.61489C7.24716 8.80864 7.0926 8.96447 6.90234 8.96447C6.71196 8.96447 6.55753 8.80789 6.55753 8.61414Z"
+                            fill="#2490EB" />
+                          <path
+                            d="M14.7544 10.0129C14.7523 9.35627 14.6054 8.73218 13.9131 8.13491C13.1902 7.49355 12.2482 7.45424 11.9041 8.01909C11.5882 8.53768 11.8972 9.3666 12.5951 9.87143C12.8378 10.0466 13.0952 10.1583 13.3413 10.2094C13.2557 10.4859 12.9958 10.7673 12.5993 11.0044C12.0541 11.3299 11.7595 11.3702 8.27107 12.5286C6.98012 12.9672 6.21191 13.8389 6.21191 14.8602C6.21191 15.5878 6.58358 16.1491 7.10007 16.5602C7.42494 16.2257 7.83048 15.9354 8.30426 15.7029C7.75876 15.4271 7.59045 15.2181 7.59045 14.8602C7.59045 14.2694 8.77125 13.9317 9.316 13.7519V15.2471L10.6952 14.6319V13.7527C11.2408 13.9334 12.4187 14.2707 12.4187 14.8602C12.4187 15.841 9.61025 16.4194 8.41533 17.2436C7.83536 17.6456 7.52351 18.1567 7.52351 18.7574C7.52351 19.1022 7.5636 19.5297 8.16905 19.9545C8.34075 20.0917 8.57925 19.8914 8.46775 19.6986C8.06767 18.8979 8.4925 18.498 9.31733 18.1518V19.309C9.31733 19.6897 9.62625 19.9986 10.007 19.9986C10.3877 19.9986 10.6966 19.6897 10.6966 19.309V18.1525C11.4889 18.4849 11.9877 18.9545 11.5442 19.6986C11.4342 19.8876 11.6683 20.0934 11.8421 19.9545C12.4282 19.5104 12.4745 19.1297 12.4745 18.7663C12.4745 18.207 12.1683 17.6643 11.5876 17.2484C12.7614 16.8243 13.7999 16.1105 13.7999 14.8616C13.7999 13.9989 13.2517 13.243 12.3042 12.7644C12.7468 12.6051 12.9696 12.4982 13.2654 12.3217C14.5613 11.5472 14.7544 10.5424 14.7544 10.0129ZM13.109 8.96452C12.9186 8.96452 12.7642 8.80802 12.7642 8.61418C12.7642 8.42043 12.9186 8.26387 13.109 8.26387C13.2992 8.26387 13.4538 8.42043 13.4538 8.61418C13.4538 8.80802 13.2992 8.96452 13.109 8.96452Z"
+                            fill="#2490EB" />
+                          <path
+                            d="M19.6548 1.3806H14.9318C14.0053 1.3806 13.31 1.79016 12.7119 2.38832C12.0621 3.03813 11.7242 4.48262 10.6895 4.48262V2.56724C11.1001 2.32833 11.3792 1.88856 11.3792 1.37927C11.3792 0.617523 10.7617 0 9.99986 0C9.23811 0 8.62061 0.617523 8.62061 1.37927C8.62061 1.88852 8.89969 2.32828 9.31027 2.56724V10.7862C9.73586 10.6504 10.203 10.5008 10.6895 10.3445V6.89013C10.9888 6.74 11.2302 6.49729 11.3782 6.19691C11.6181 6.6069 12.0741 6.89767 12.5824 6.89767C13.0979 6.89767 13.5421 6.61142 13.7788 6.19252C14.5866 7.00047 16.0884 7.01603 16.8962 6.20812L15.7243 5.03618L16.2619 5.25888C17.3175 5.69615 18.5278 5.19483 18.9651 4.13918L17.3002 3.44954C18.9131 3.4495 19.6548 2.43743 19.6548 1.3806Z"
+                            fill="#2490EB" />
+                          <path
+                            d="M7.2881 2.38834C6.68996 1.79017 5.99469 1.38062 5.06816 1.38062H0.345215C0.345215 2.43739 1.08687 3.44951 2.69975 3.44951L1.03485 4.13914C1.47216 5.1948 2.68242 5.69607 3.73808 5.25885L4.27569 5.03614L3.10375 6.20808C3.91165 7.01603 5.41333 7.00047 6.22123 6.19248C6.45786 6.61143 6.90203 6.89767 7.41757 6.89767C7.42266 6.89767 7.42775 6.89763 7.43283 6.89759C8.10669 6.88991 8.62175 6.28123 8.62175 5.60737V4.21992C8.0782 3.77394 7.76687 2.86712 7.2881 2.38834Z"
+                            fill="#2490EB" />
+                        </g>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_362_575">
+                          <rect width="20" height="20" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-Top3 font-semibold block mb-2 text-DarkBlue100">Our Mission</span>
+                    <p class="text-base">We strive to be the finest online source for your
+                      pharmaceutical requirements and to suit perfectly the needs of your
+                      business, making us the first place you will think of when it is time to
+                      re-order.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12">
+                <div class="flex gap-x-4">
+                  <div
+                    class="w-14 h-14 min-w-14 flex justify-center items-center rounded-full bg-white overflow-hidden shadow-7xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                         viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M14.5457 6.80591L13.5356 7.816L14.0406 8.32117L13.5356 8.82617L15.5558 10.8464L16.061 10.3414L16.5661 10.8464L17.5762 9.8364L14.5457 6.80591Z"
+                        fill="#2490EB" />
+                      <path
+                        d="M15.6183 9.03594C15.4807 9.3356 15.2977 9.62002 15.0508 9.86677C14.5402 10.3774 13.8836 10.6426 13.2155 10.6859C13.8208 12.3339 13.3288 14.0276 12.2295 15.1269C12.0576 15.2988 11.8723 15.4498 11.6803 15.5879L3.93909 7.84644L3.43401 8.35152L8.74125 13.6588C8.38375 13.7125 8.03928 13.8714 7.7641 14.1465L7.48624 14.4244L6.46437 13.4024L6.9695 12.8972L3.93909 9.86694L2.42383 11.382L5.45428 14.4125L5.95937 13.9074L6.98125 14.9294L5.50758 16.4031H4.56669C3.77771 16.4031 3.13816 17.0427 3.13816 17.8316L3.1382 19.2602H14.5668V17.8316C14.5668 17.8099 14.5613 17.7894 14.5603 17.7678L14.5653 17.769C14.5409 17.2129 14.7018 16.6761 15.0237 16.2219C16.4497 14.2104 16.809 11.4965 15.6183 9.03594ZM8.98984 16.1115C8.59542 16.1115 8.27558 15.7917 8.27558 15.3972C8.27558 15.0028 8.59542 14.6829 8.98984 14.6829C9.38434 14.6829 9.70417 15.0028 9.70417 15.3972C9.70417 15.7917 9.38434 16.1115 8.98984 16.1115Z"
+                        fill="#2490EB" />
+                      <path
+                        d="M15.5558 3.23975L12.5254 0.209262C12.2464 -0.0697542 11.7942 -0.0697542 11.5152 0.209262C10.3604 1.36405 7.22019 4.5044 6.14581 5.57882C6.02648 5.6981 5.95947 5.85994 5.95947 6.02873V7.52182C5.95942 7.69065 6.02652 7.85249 6.14581 7.97174L7.79331 9.61932C7.91264 9.73865 8.07456 9.80582 8.24326 9.80582H9.73641C9.90516 9.80582 10.0671 9.73882 10.1863 9.61932C10.6784 9.1274 10.2342 9.57157 11.5152 8.29049C12.352 9.1274 13.7088 9.1274 14.5457 8.29049C15.3825 7.45365 15.3825 6.0969 14.5457 5.26003L15.5529 4.2528C15.8318 3.97373 15.8348 3.51855 15.5558 3.23975ZM7.9797 6.77532L7.47461 6.27025L12.0202 1.72454L12.5253 2.22958L7.9797 6.77532ZM13.0304 7.48957C12.6359 7.48957 12.3162 7.16974 12.3162 6.77524C12.3162 6.38079 12.6359 6.06096 13.0305 6.06096C13.4249 6.06096 13.7447 6.38079 13.7447 6.77524C13.7447 7.16974 13.425 7.48957 13.0304 7.48957Z"
+                        fill="#2490EB" />
+                    </svg>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-Top3 font-semibold block mb-2 text-DarkBlue100">Our Vision</span>
+                    <p class="text-base">Our vision is straightforward: to offer the best for the
+                      best. We aim to help you become the most successful provider.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-6 lg:col-span-12">
+          <div class="p-3 bg-white overflow-hidden flex justify-center items-center h-full lg:max-w-[500px] lg:mx-auto">
+            <img class="object-cover w-full h-full" src="img/image-5.png"
+                 alt="In Sickness and in Health, We’re Here!">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 md:py-10 relative">
+    <div class="container relative z-[1]">
+      <div class="row">
+        <div class="col-span-12">
+          <div
+  class="flex flex-col gap-y-10 py-16 px-[87px] border border-DarkBlue20 rounded-lg overflow-hidden bg-white shadow-6xl relative z-[1] md:p-6">
+  <div class="absolute top-[72px] right-[78px] md:right-[20px]">
+    <svg xmlns="http://www.w3.org/2000/svg" width="47" height="52" viewBox="0 0 47 52" fill="none">
+      <g clip-path="url(#clip0_71_10378)">
+        <path
+          d="M30.6126 0.260273C28.771 0.146143 28.8462 2.91063 30.6126 3.11352C37.2527 3.86171 43.141 10.0247 43.354 16.8472C43.5419 22.6171 39.7333 28.3997 34.4338 30.5681C35.2606 26.2185 33.9076 21.3616 29.6981 19.3327C25.6765 17.3925 20.8155 18.9395 19.4875 23.4667C18.1595 28.0065 20.7278 32.521 24.8872 34.2964C25.9521 34.7529 27.017 35.0319 28.0944 35.1967C26.5535 37.3018 24.5865 39.1659 22.8075 40.9413C19.8884 43.8706 16.393 47.155 12.1333 47.713C8.85093 48.1315 5.31792 46.9521 3.90222 43.7692C2.7872 41.2456 -0.933719 43.4268 0.218888 45.9503C2.11067 50.0717 6.70857 52.0753 11.0309 51.9612C16.18 51.8217 20.5273 48.7021 24.123 45.2275C27.2049 42.2474 30.6377 38.9503 32.7425 35.0572C39.0943 33.7891 44.7321 28.2982 46.4359 21.983C49.2548 11.5084 41.1239 0.919691 30.6126 0.260273ZM23.2084 27.55C22.3189 24.8109 23.9225 21.6533 27.0796 22.4776C30.9133 23.4667 31.3643 27.9685 30.2619 31.2022C30.2243 31.291 30.1867 31.3797 30.1491 31.4685C27.3302 31.4939 24.148 30.4413 23.2084 27.55Z"
+          fill="#2490EB" fill-opacity="0.3" />
+      </g>
+      <defs>
+        <clipPath id="clip0_71_10378">
+          <rect width="47" height="52" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="absolute top-[30px] left-[100px] md:left-[20px]">
+    <svg xmlns="http://www.w3.org/2000/svg" width="148" height="140" viewBox="0 0 148 140" fill="none">
+      <mask id="mask0_71_10381" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-5" width="150"
+            height="150">
+        <path d="M105.707 -5.00012L0 38.6245L43.6246 144.331L149.331 100.707L105.707 -5.00012Z" fill="white" />
+      </mask>
+      <g mask="url(#mask0_71_10381)">
+        <path
+          d="M129.897 53.9792C126.883 48.89 120.877 46.3931 115.143 47.8454L113.821 44.6425C110.174 35.8056 100.487 31.3829 92.2299 34.7907C84.2109 38.1002 80.3759 47.8476 83.6736 56.5234L83.7759 56.4812L83.6807 56.541L98.0093 91.2596C102.589 102.359 98.0117 114.796 87.8109 119.006C77.6105 123.216 65.5878 117.614 61.0124 106.528L59.7713 103.521C62.3259 102.467 64.2924 99.4882 62.1483 94.293L60.3197 89.862C70.4336 82.3049 74.499 69.2641 69.9563 58.2567L68.4404 54.5834L64.9169 56.0376L55.3802 33.139C53.6031 28.9053 49.0619 26.5382 44.5734 27.5064C42.5334 25.1181 38.9436 24.8358 36.5552 26.8761C34.167 28.916 33.8847 32.5059 35.9249 34.8942C37.9649 37.2824 41.5547 37.5648 43.9431 35.5245C45.2219 34.4321 45.9515 32.8297 45.9361 31.148C48.4581 30.8587 50.869 32.2667 51.8558 34.6058L61.3934 57.4917L57.8699 58.9458L59.407 62.6702C61.7955 68.8561 59.8847 75.8771 54.6909 79.9993C51.9513 82.3009 48.5666 83.6977 45.0013 83.9985C38.4162 84.7303 32.1197 81.0977 29.4572 75.0303L27.9202 71.3059L22.635 73.4871L13.1832 50.5844C12.2105 48.199 12.9533 45.4575 14.9974 43.8894C17.1961 46.1765 20.8324 46.248 23.1195 44.0492C25.4067 41.8504 25.478 38.2139 23.2794 35.927C21.0807 33.6401 17.444 33.5686 15.1571 35.7673C13.918 36.9588 13.2773 38.6425 13.4115 40.3564C9.48697 42.8204 7.90354 47.7502 9.65967 52.0385L19.1115 74.9414L15.588 76.3953L17.1002 80.0596C21.6481 91.0795 33.734 97.4588 46.2258 95.6787L48.0544 100.109C50.1985 105.305 53.6933 106.029 56.2478 104.975L57.489 107.982C62.8692 121.019 77.1213 127.541 89.2648 122.529C101.408 117.518 106.908 102.83 101.532 89.8057L87.2394 55.1715C84.6561 48.4129 87.5521 40.8511 93.6863 38.3194C100.001 35.7136 107.453 39.2029 110.3 46.1019L111.62 49.2995C105.28 53.0544 103.185 61.2376 106.939 67.5773C110.695 73.9169 118.878 76.012 125.217 72.257C131.557 68.5021 133.652 60.3186 129.897 53.9792ZM40.9517 32.9391C39.9787 33.3406 38.8644 32.8773 38.4628 31.9044C38.0613 30.9315 38.5246 29.8171 39.4975 29.4156C40.4705 29.014 41.5848 29.4773 41.9863 30.4503C42.3878 31.4232 41.9246 32.5376 40.9517 32.9391ZM18.3566 38.1404C19.3295 37.7388 20.4439 38.2021 20.8454 39.175C21.2469 40.148 20.7836 41.2623 19.8107 41.6638C18.8378 42.0654 17.7234 41.6021 17.3219 40.6292C16.9204 39.6562 17.3836 38.5419 18.3566 38.1404ZM20.6237 78.6057L20.5656 78.4644L25.8509 76.2834L25.9337 76.4842C29.2259 84.0874 37.0781 88.6676 45.3166 87.7898C49.6708 87.42 53.8043 85.7144 57.152 82.9057C63.6161 77.7184 65.9571 68.9315 62.9305 61.2161L62.8475 61.0152L66.371 59.5611L66.4292 59.702C70.4739 69.5027 66.4785 81.2438 56.9239 87.6287C54.6802 89.1271 52.2257 90.2842 49.6416 91.0604C48.7918 91.3184 47.929 91.5311 47.0566 91.6961C35.7817 93.912 24.6684 88.4065 20.6237 78.6057ZM54.7937 101.452C53.2082 102.106 52.0141 99.712 51.5778 98.6549L50.035 94.9168C50.1832 94.8763 50.3306 94.8231 50.4791 94.7787C50.6633 94.7255 50.8453 94.6668 51.028 94.6096C51.8918 94.3398 52.7525 94.0422 53.6007 93.6946L53.6888 93.658C54.5344 93.3088 55.3519 92.912 56.1494 92.4961C56.319 92.4081 56.5 92.3168 56.6734 92.2223C56.806 92.1493 56.9483 92.0842 57.0802 92.0088L58.6231 95.7477C59.0594 96.8049 59.901 99.3438 58.3155 99.9977L54.7937 101.452ZM122.048 69.5724C117.183 71.5801 111.612 69.2638 109.604 64.399C107.596 59.5342 109.912 53.9627 114.778 51.955C119.642 49.9473 125.213 52.2635 127.221 57.1284C129.222 61.9934 126.908 67.56 122.048 69.5724Z"
+          fill="#FFB60C" fill-opacity="0.2" />
+        <path
+          d="M116.231 55.4783C113.312 56.683 111.922 60.0258 113.127 62.9448C114.332 65.8638 117.674 67.2535 120.594 66.0488C123.512 64.8442 124.901 61.5014 123.697 58.5824C122.493 55.6634 119.15 54.2737 116.231 55.4783ZM119.139 62.5253C118.166 62.9268 117.051 62.4636 116.65 61.4906C116.248 60.5177 116.712 59.4033 117.685 59.0018C118.658 58.6003 119.772 59.0636 120.174 60.0365C120.575 61.0095 120.112 62.1238 119.139 62.5253Z"
+          fill="#FFB60C" fill-opacity="0.2" />
+      </g>
+    </svg>
+  </div>
+
+  <div class="flex flex-col gap-y-4 items-center">
+  <span
+  class="px-3 w-fit h-10 rounded-lg bg-LightBlue10 text-LightBlue100 text-base font-medium flex items-center justify-center @@styleCategoryElem">
+  Contact Us
+</span>
+  <h3 class="text-DarkBlue100 text-h2 font-semibold md:text-h2Mob md:text-center">
+    Send us a Message
+  </h3>
+</div>
+  <form class="row gap-6 md:gap-x-0">
+    <div class="col-span-6 md:col-span-12">
+      <div class="form-group flex flex-col items-start ">
+  <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="TextId1"></label>
+  <input
+    class="input  "
+    type="text" id="TextId1" placeholder="Your Name" required>
+  <small class="self-end text-body text-Error mt-1 hidden">Name is required</small>
+</div>
+    </div>
+    <div class="col-span-6 md:col-span-12">
+      <div class="form-group flex flex-col items-start ">
+  <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="EmailId1"></label>
+  <input
+    class="input  "
+    type="email" id="EmailId1" placeholder="Email" required>
+  <small class="self-end text-body text-Error mt-1 hidden">Name is required</small>
+</div>
+    </div>
+    <div class="col-span-6 md:col-span-12">
+      <div class="form-group flex flex-col items-start relative ">
+  <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="selectId1"></label>
+  <svg class="absolute pointer-events-none right-4 top-6 h-[6px] w-[12px]" xmlns="http://www.w3.org/2000/svg" width="14"
+       height="8" viewBox="0 0 14 8" fill="none">
+    <path d="M1 1L7 7L13 1" stroke="#646E8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+  <select id="selectId1" required name="" class="select w-full input">
+    <option value="" selected disabled>Choose State</option>
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="CA">California</option>
+    <option value="CO">Colorado</option>
+    <option value="CT">Connecticut</option>
+    <option value="DE">Delaware</option>
+    <option value="FL">Florida</option>
+    <option value="GA">Georgia</option>
+    <option value="HI">Hawaii</option>
+    <option value="ID">Idaho</option>
+    <option value="IL">Illinois</option>
+    <option value="IN">Indiana</option>
+    <option value="IA">Iowa</option>
+    <option value="KS">Kansas</option>
+    <option value="KY">Kentucky</option>
+    <option value="LA">Louisiana</option>
+    <option value="ME">Maine</option>
+    <option value="MD">Maryland</option>
+    <option value="MA">Massachusetts</option>
+    <option value="MI">Michigan</option>
+    <option value="MN">Minnesota</option>
+    <option value="MS">Mississippi</option>
+    <option value="MO">Missouri</option>
+    <option value="MT">Montana</option>
+    <option value="NE">Nebraska</option>
+    <option value="NV">Nevada</option>
+    <option value="NH">New Hampshire</option>
+    <option value="NJ">New Jersey</option>
+    <option value="NM">New Mexico</option>
+    <option value="NY">New York</option>
+    <option value="NC">North Carolina</option>
+    <option value="ND">North Dakota</option>
+    <option value="OH">Ohio</option>
+    <option value="OK">Oklahoma</option>
+    <option value="OR">Oregon</option>
+    <option value="PA">Pennsylvania</option>
+    <option value="RI">Rhode Island</option>
+    <option value="SC">South Carolina</option>
+    <option value="SD">South Dakota</option>
+    <option value="TN">Tennessee</option>
+    <option value="TX">Texas</option>
+    <option value="UT">Utah</option>
+    <option value="VT">Vermont</option>
+    <option value="VA">Virginia</option>
+    <option value="WA">Washington</option>
+    <option value="WV">West Virginia</option>
+    <option value="WI">Wisconsin</option>
+    <option value="WY">Wyoming</option>
+  </select>
+</div>
+
+    </div>
+    <div class="col-span-6 md:col-span-12">
+      <div class="form-group flex flex-col items-start ">
+  <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="PhoneId1"></label>
+  <input
+    class="input  "
+    type="text" id="PhoneId1" placeholder="Phone" required>
+  <small class="self-end text-body text-Error mt-1 hidden">Name is required</small>
+</div>
+    </div>
+    <div class="col-span-12">
+      <div class="form-group flex flex-col items-start overflow-hidden @@commonStyle">
+  <label class="mb-3 font-semibold text-body" for="@@idTextarea"></label>
+  <textarea
+    class="input "
+    id="@@idTextarea" placeholder="Message" rows="3"></textarea>
+</div>
+    </div>
+    <div class="col-span-12">
+      <button class="button w-full" type="submit" aria-label="Submit Button">
+  <span>Submit</span>
+</button>
+    </div>
+  </form>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="modal" class="fixed inset-0 z-[10000] bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white rounded-lg shadow-lg py-8 px-6 w-full max-w-[561px] max-h-screen md:overflow-y-scroll relative">
+    <div class="flex justify-between items-center mb-5">
+      <span class="text-Top5 text-DarkBlue100 font-semibold">Make a Request</span>
+      <button class="close-modal text-gray-500 ml-auto hover:text-gray-700 focus:outline-none text-2xl transition">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+          <path d="M17.3998 1.11339C17.2765 0.989783 17.1299 0.891719 16.9686 0.824811C16.8073 0.757902 16.6344 0.723462 16.4598 0.723462C16.2852 0.723462 16.1123 0.757902 15.951 0.824811C15.7897 0.891719 15.6432 0.989783 15.5198 1.11339L8.99981 7.62005L2.47981 1.10005C2.35637 0.976611 2.20982 0.878691 2.04853 0.811885C1.88725 0.745078 1.71438 0.710693 1.53981 0.710693C1.36524 0.710693 1.19237 0.745078 1.03109 0.811885C0.8698 0.878691 0.723252 0.976611 0.59981 1.10005C0.476367 1.2235 0.378447 1.37004 0.31164 1.53133C0.244834 1.69261 0.210449 1.86548 0.210449 2.04005C0.210449 2.21463 0.244834 2.38749 0.31164 2.54878C0.378447 2.71006 0.476367 2.85661 0.59981 2.98005L7.11981 9.50005L0.59981 16.0201C0.476367 16.1435 0.378447 16.29 0.31164 16.4513C0.244834 16.6126 0.210449 16.7855 0.210449 16.9601C0.210449 17.1346 0.244834 17.3075 0.31164 17.4688C0.378447 17.6301 0.476367 17.7766 0.59981 17.9001C0.723252 18.0235 0.8698 18.1214 1.03109 18.1882C1.19237 18.255 1.36524 18.2894 1.53981 18.2894C1.71438 18.2894 1.88725 18.255 2.04853 18.1882C2.20982 18.1214 2.35637 18.0235 2.47981 17.9001L8.99981 11.3801L15.5198 17.9001C15.6433 18.0235 15.7898 18.1214 15.9511 18.1882C16.1124 18.255 16.2852 18.2894 16.4598 18.2894C16.6344 18.2894 16.8072 18.255 16.9685 18.1882C17.1298 18.1214 17.2764 18.0235 17.3998 17.9001C17.5233 17.7766 17.6212 17.6301 17.688 17.4688C17.7548 17.3075 17.7892 17.1346 17.7892 16.9601C17.7892 16.7855 17.7548 16.6126 17.688 16.4513C17.6212 16.29 17.5233 16.1435 17.3998 16.0201L10.8798 9.50005L17.3998 2.98005C17.9065 2.47339 17.9065 1.62005 17.3998 1.11339Z" fill="#1B3C74"/>
+        </svg>
+      </button>
+    </div>
+    <div class="flex flex-col">
+      <p class="mb-2 text-Top3 text-Text-color">Our professional team will assist you from the moment you place the
+        order till the moment you receive it.</p>
+      <p class="text-base text-DarkBlue100 font-medium">We sell to the certified doctors and companies only.</p>
+      <form class="row gap-y-5 gap-x-6 mt-10">
+        <div class="col-span-6">
+          <div class="form-group flex flex-col items-start ">
+  <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="TextId1"></label>
+  <input
+    class="input  "
+    type="text" id="TextId1" placeholder="Your Name" required>
+  <small class="self-end text-body text-Error mt-1 hidden">Name is required</small>
+</div>
+        </div>
+        <div class="col-span-6">
+          <div class="form-group flex flex-col items-start ">
+  <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="EmailId1"></label>
+  <input
+    class="input  "
+    type="email" id="EmailId1" placeholder="Email" required>
+  <small class="self-end text-body text-Error mt-1 hidden">Name is required</small>
+</div>
+        </div>
+        <div class="col-span-6">
+          <div class="form-group flex flex-col items-start relative ">
+  <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="selectId1"></label>
+  <svg class="absolute pointer-events-none right-4 top-6 h-[6px] w-[12px]" xmlns="http://www.w3.org/2000/svg" width="14"
+       height="8" viewBox="0 0 14 8" fill="none">
+    <path d="M1 1L7 7L13 1" stroke="#646E8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+  <select id="selectId1" required name="" class="select w-full input">
+    <option value="" selected disabled>Choose State</option>
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="CA">California</option>
+    <option value="CO">Colorado</option>
+    <option value="CT">Connecticut</option>
+    <option value="DE">Delaware</option>
+    <option value="FL">Florida</option>
+    <option value="GA">Georgia</option>
+    <option value="HI">Hawaii</option>
+    <option value="ID">Idaho</option>
+    <option value="IL">Illinois</option>
+    <option value="IN">Indiana</option>
+    <option value="IA">Iowa</option>
+    <option value="KS">Kansas</option>
+    <option value="KY">Kentucky</option>
+    <option value="LA">Louisiana</option>
+    <option value="ME">Maine</option>
+    <option value="MD">Maryland</option>
+    <option value="MA">Massachusetts</option>
+    <option value="MI">Michigan</option>
+    <option value="MN">Minnesota</option>
+    <option value="MS">Mississippi</option>
+    <option value="MO">Missouri</option>
+    <option value="MT">Montana</option>
+    <option value="NE">Nebraska</option>
+    <option value="NV">Nevada</option>
+    <option value="NH">New Hampshire</option>
+    <option value="NJ">New Jersey</option>
+    <option value="NM">New Mexico</option>
+    <option value="NY">New York</option>
+    <option value="NC">North Carolina</option>
+    <option value="ND">North Dakota</option>
+    <option value="OH">Ohio</option>
+    <option value="OK">Oklahoma</option>
+    <option value="OR">Oregon</option>
+    <option value="PA">Pennsylvania</option>
+    <option value="RI">Rhode Island</option>
+    <option value="SC">South Carolina</option>
+    <option value="SD">South Dakota</option>
+    <option value="TN">Tennessee</option>
+    <option value="TX">Texas</option>
+    <option value="UT">Utah</option>
+    <option value="VT">Vermont</option>
+    <option value="VA">Virginia</option>
+    <option value="WA">Washington</option>
+    <option value="WV">West Virginia</option>
+    <option value="WI">Wisconsin</option>
+    <option value="WY">Wyoming</option>
+  </select>
+</div>
+
+        </div>
+        <div class="col-span-6">
+          <div class="form-group flex flex-col items-start ">
+  <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="PhoneId1"></label>
+  <input
+    class="input  "
+    type="text" id="PhoneId1" placeholder="Phone" required>
+  <small class="self-end text-body text-Error mt-1 hidden">Name is required</small>
+</div>
+        </div>
+        <div class="col-span-12">
+          <div class="form-group flex flex-col items-start">
+            <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="PromoCodeId">Have a promocode?</label>
+            <input
+              class="input"
+              type="text" id="PromoCodeId" placeholder="Have a promocode?">
+            <small class="self-end text-body text-Error mt-1 hidden">Invalid code</small>
+          </div>
+        </div>
+        <div class="col-span-12">
+          <button class="button w-full" type="submit" aria-label="Send Button">
+  <span>Send</span>
+</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <div id="wishlist"
+     class="wishlist width-full min-w-[320px] minsm:w-[560px] z-[99] overflow-y-scroll flex flex-col bg-white fixed top-0 -right-full minsm:-right-[560px] bottom-0 py-8 px-6">
+  <div class="flex justify-between">
+    <span class="text-Top5 font-semibold md:text-Top2">Your Wishlist</span>
+    <button id="wishlist-close" class="" aria-label="Button close wishlist container">
+      <svg class="cursor" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <path d="M24.3998 7.61339C24.2765 7.48978 24.1299 7.39172 23.9686 7.32481C23.8073 7.2579 23.6344 7.22346 23.4598 7.22346C23.2852 7.22346 23.1123 7.2579 22.951 7.32481C22.7897 7.39172 22.6432 7.48978 22.5198 7.61339L15.9998 14.1201L9.47981 7.60005C9.35637 7.47661 9.20982 7.37869 9.04853 7.31188C8.88725 7.24508 8.71438 7.21069 8.53981 7.21069C8.36524 7.21069 8.19237 7.24508 8.03109 7.31188C7.8698 7.37869 7.72325 7.47661 7.59981 7.60005C7.47637 7.7235 7.37845 7.87004 7.31164 8.03133C7.24483 8.19261 7.21045 8.36548 7.21045 8.54005C7.21045 8.71463 7.24483 8.88749 7.31164 9.04878C7.37845 9.21006 7.47637 9.35661 7.59981 9.48005L14.1198 16.0001L7.59981 22.5201C7.47637 22.6435 7.37845 22.79 7.31164 22.9513C7.24483 23.1126 7.21045 23.2855 7.21045 23.4601C7.21045 23.6346 7.24483 23.8075 7.31164 23.9688C7.37845 24.1301 7.47637 24.2766 7.59981 24.4001C7.72325 24.5235 7.8698 24.6214 8.03109 24.6882C8.19237 24.755 8.36524 24.7894 8.53981 24.7894C8.71438 24.7894 8.88725 24.755 9.04853 24.6882C9.20982 24.6214 9.35637 24.5235 9.47981 24.4001L15.9998 17.8801L22.5198 24.4001C22.6433 24.5235 22.7898 24.6214 22.9511 24.6882C23.1124 24.755 23.2852 24.7894 23.4598 24.7894C23.6344 24.7894 23.8072 24.755 23.9685 24.6882C24.1298 24.6214 24.2764 24.5235 24.3998 24.4001C24.5233 24.2766 24.6212 24.1301 24.688 23.9688C24.7548 23.8075 24.7892 23.6346 24.7892 23.4601C24.7892 23.2855 24.7548 23.1126 24.688 22.9513C24.6212 22.79 24.5233 22.6435 24.3998 22.5201L17.8798 16.0001L24.3998 9.48005C24.9065 8.97339 24.9065 8.12005 24.3998 7.61339Z" fill="#1B3C74"/>
+      </svg>
+    </button>
+  </div>
+  <div class="flex flex-col py-6 my-6">
+    <div class="flex flex-col gap-y-6 sm:gap-y-10">
+      <div class="flex items-start gap-x-4 sm:gap-x-0 w-full">
+        <div class="flex items-start gap-x-4 sm:flex-col sm:items-center sm:gap-y-4 w-full">
+          <a href="#"
+             class="overflow-hidden flex items-center justify-center rounded border border-primary min-w-[123px] w-[123px] h-[123px] sm:w-full">
+            <img width="104" class="max-w-full" src="img/image-2.png" alt="Product Image">
+          </a>
+          <div class="flex flex-col items-start gap-y-4 w-full">
+            <a href="#" class="font-semibold block text-DarkBlue100 text-Top3">
+              Cardura
+              <span class="block text-base font-normal text-DarkBlue100">(Doxazosin Mesylate)</span>
+            </a>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-h11 leading-7 line-through">$ 39.00 USD</span>
+              <span class="font-semibold text-primary leading-[130%]">$ 39.00 USD</span>
+            </div>
+            <div class="minsm:hidden">
+              <div x-data="{ currentVal: 1, minVal: 0, maxVal: 100, decimalPoints: 0, incrementAmount: 1 }" class="flex">
+  <label for="counterInput" class="text-none">Items(s)</label>
+  <div @dblclick.prevent class="flex items-center rounded overflow-hidden border border-DarkBlue30 w-fit">
+    <button @click="currentVal = Math.max(minVal, currentVal - incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="subtract">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+        <path
+          d="M12 1.00253C12 0.529142 11.6162 0.145386 11.1429 0.145386H6.85714L5.14286 0.140381L0.856727 0.144552C0.383436 0.145013 0 0.52882 0 1.00211C0 1.47573 0.383943 1.85967 0.85756 1.85967H5.14286L6.85714 1.85969L11.1429 1.85967C11.6162 1.85967 12 1.47592 12 1.00253Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+    <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
+           id="counterInput" type="text"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit max-w-[40px] text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+           readonly />
+    <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="add">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path
+          d="M12 6C12 5.52661 11.6162 5.14286 11.1429 5.14286H6.85714V0.857144C6.85714 0.383757 6.47339 0 6 0C5.52661 0 5.14286 0.383756 5.14286 0.857143V5.14286H0.857144C0.383757 5.14286 0 5.52661 0 6C0 6.47339 0.383756 6.85714 0.857143 6.85714H5.14286V11.1429C5.14286 11.6162 5.52661 12 6 12C6.47339 12 6.85714 11.6162 6.85714 11.1429V6.85714H11.1429C11.6162 6.85714 12 6.47339 12 6Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+            </div>
+            <button class="underline text-LightBlue100 text-body font-semibold" type="button">Remove</button>
+          </div>
+        </div>
+        <div class="ml-auto sm:hidden">
+          <div x-data="{ currentVal: 1, minVal: 0, maxVal: 100, decimalPoints: 0, incrementAmount: 1 }" class="flex">
+  <label for="counterInput" class="text-none">Items(s)</label>
+  <div @dblclick.prevent class="flex items-center rounded overflow-hidden border border-DarkBlue30 w-fit">
+    <button @click="currentVal = Math.max(minVal, currentVal - incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="subtract">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+        <path
+          d="M12 1.00253C12 0.529142 11.6162 0.145386 11.1429 0.145386H6.85714L5.14286 0.140381L0.856727 0.144552C0.383436 0.145013 0 0.52882 0 1.00211C0 1.47573 0.383943 1.85967 0.85756 1.85967H5.14286L6.85714 1.85969L11.1429 1.85967C11.6162 1.85967 12 1.47592 12 1.00253Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+    <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
+           id="counterInput" type="text"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit max-w-[40px] text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+           readonly />
+    <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="add">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path
+          d="M12 6C12 5.52661 11.6162 5.14286 11.1429 5.14286H6.85714V0.857144C6.85714 0.383757 6.47339 0 6 0C5.52661 0 5.14286 0.383756 5.14286 0.857143V5.14286H0.857144C0.383757 5.14286 0 5.52661 0 6C0 6.47339 0.383756 6.85714 0.857143 6.85714H5.14286V11.1429C5.14286 11.6162 5.52661 12 6 12C6.47339 12 6.85714 11.6162 6.85714 11.1429V6.85714H11.1429C11.6162 6.85714 12 6.47339 12 6Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="flex items-start gap-x-4 sm:gap-x-0 w-full">
+        <div class="flex items-start gap-x-4 sm:flex-col sm:items-center sm:gap-y-4 w-full">
+          <a href="#"
+             class="overflow-hidden flex items-center justify-center rounded border border-primary min-w-[123px] w-[123px] h-[123px] sm:w-full">
+            <img width="104" class="max-w-full" src="img/image-2.png" alt="Product Image">
+          </a>
+          <div class="flex flex-col items-start gap-y-4 w-full">
+            <a href="#" class="font-semibold block text-DarkBlue100 text-Top3">
+              Cardura
+              <span class="block text-base font-normal text-DarkBlue100">(Doxazosin Mesylate)</span>
+            </a>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-h11 leading-7 line-through">$ 39.00 USD</span>
+              <span class="font-semibold text-primary leading-[130%]">$ 39.00 USD</span>
+            </div>
+            <div class="minsm:hidden">
+              <div x-data="{ currentVal: 1, minVal: 0, maxVal: 100, decimalPoints: 0, incrementAmount: 1 }" class="flex">
+  <label for="counterInput" class="text-none">Items(s)</label>
+  <div @dblclick.prevent class="flex items-center rounded overflow-hidden border border-DarkBlue30 w-fit">
+    <button @click="currentVal = Math.max(minVal, currentVal - incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="subtract">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+        <path
+          d="M12 1.00253C12 0.529142 11.6162 0.145386 11.1429 0.145386H6.85714L5.14286 0.140381L0.856727 0.144552C0.383436 0.145013 0 0.52882 0 1.00211C0 1.47573 0.383943 1.85967 0.85756 1.85967H5.14286L6.85714 1.85969L11.1429 1.85967C11.6162 1.85967 12 1.47592 12 1.00253Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+    <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
+           id="counterInput" type="text"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit max-w-[40px] text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+           readonly />
+    <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="add">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path
+          d="M12 6C12 5.52661 11.6162 5.14286 11.1429 5.14286H6.85714V0.857144C6.85714 0.383757 6.47339 0 6 0C5.52661 0 5.14286 0.383756 5.14286 0.857143V5.14286H0.857144C0.383757 5.14286 0 5.52661 0 6C0 6.47339 0.383756 6.85714 0.857143 6.85714H5.14286V11.1429C5.14286 11.6162 5.52661 12 6 12C6.47339 12 6.85714 11.6162 6.85714 11.1429V6.85714H11.1429C11.6162 6.85714 12 6.47339 12 6Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+            </div>
+            <button class="underline text-LightBlue100 text-body font-semibold" type="button">Remove</button>
+          </div>
+        </div>
+        <div class="ml-auto sm:hidden">
+          <div x-data="{ currentVal: 1, minVal: 0, maxVal: 100, decimalPoints: 0, incrementAmount: 1 }" class="flex">
+  <label for="counterInput" class="text-none">Items(s)</label>
+  <div @dblclick.prevent class="flex items-center rounded overflow-hidden border border-DarkBlue30 w-fit">
+    <button @click="currentVal = Math.max(minVal, currentVal - incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="subtract">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+        <path
+          d="M12 1.00253C12 0.529142 11.6162 0.145386 11.1429 0.145386H6.85714L5.14286 0.140381L0.856727 0.144552C0.383436 0.145013 0 0.52882 0 1.00211C0 1.47573 0.383943 1.85967 0.85756 1.85967H5.14286L6.85714 1.85969L11.1429 1.85967C11.6162 1.85967 12 1.47592 12 1.00253Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+    <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
+           id="counterInput" type="text"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit max-w-[40px] text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+           readonly />
+    <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="add">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path
+          d="M12 6C12 5.52661 11.6162 5.14286 11.1429 5.14286H6.85714V0.857144C6.85714 0.383757 6.47339 0 6 0C5.52661 0 5.14286 0.383756 5.14286 0.857143V5.14286H0.857144C0.383757 5.14286 0 5.52661 0 6C0 6.47339 0.383756 6.85714 0.857143 6.85714H5.14286V11.1429C5.14286 11.6162 5.52661 12 6 12C6.47339 12 6.85714 11.6162 6.85714 11.1429V6.85714H11.1429C11.6162 6.85714 12 6.47339 12 6Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="flex items-start gap-x-4 sm:gap-x-0 w-full">
+        <div class="flex items-start gap-x-4 sm:flex-col sm:items-center sm:gap-y-4 w-full">
+          <a href="#"
+             class="overflow-hidden flex items-center justify-center rounded border border-primary min-w-[123px] w-[123px] h-[123px] sm:w-full">
+            <img width="104" class="max-w-full" src="img/image-2.png" alt="Product Image">
+          </a>
+          <div class="flex flex-col items-start gap-y-4 w-full">
+            <a href="#" class="font-semibold block text-DarkBlue100 text-Top3">
+              Cardura
+              <span class="block text-base font-normal text-DarkBlue100">(Doxazosin Mesylate)</span>
+            </a>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-h11 leading-7 line-through">$ 39.00 USD</span>
+              <span class="font-semibold text-primary leading-[130%]">$ 39.00 USD</span>
+            </div>
+            <div class="minsm:hidden">
+              <div x-data="{ currentVal: 1, minVal: 0, maxVal: 100, decimalPoints: 0, incrementAmount: 1 }" class="flex">
+  <label for="counterInput" class="text-none">Items(s)</label>
+  <div @dblclick.prevent class="flex items-center rounded overflow-hidden border border-DarkBlue30 w-fit">
+    <button @click="currentVal = Math.max(minVal, currentVal - incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="subtract">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+        <path
+          d="M12 1.00253C12 0.529142 11.6162 0.145386 11.1429 0.145386H6.85714L5.14286 0.140381L0.856727 0.144552C0.383436 0.145013 0 0.52882 0 1.00211C0 1.47573 0.383943 1.85967 0.85756 1.85967H5.14286L6.85714 1.85969L11.1429 1.85967C11.6162 1.85967 12 1.47592 12 1.00253Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+    <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
+           id="counterInput" type="text"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit max-w-[40px] text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+           readonly />
+    <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="add">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path
+          d="M12 6C12 5.52661 11.6162 5.14286 11.1429 5.14286H6.85714V0.857144C6.85714 0.383757 6.47339 0 6 0C5.52661 0 5.14286 0.383756 5.14286 0.857143V5.14286H0.857144C0.383757 5.14286 0 5.52661 0 6C0 6.47339 0.383756 6.85714 0.857143 6.85714H5.14286V11.1429C5.14286 11.6162 5.52661 12 6 12C6.47339 12 6.85714 11.6162 6.85714 11.1429V6.85714H11.1429C11.6162 6.85714 12 6.47339 12 6Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+            </div>
+            <button class="underline text-LightBlue100 text-body font-semibold" type="button">Remove</button>
+          </div>
+        </div>
+        <div class="ml-auto sm:hidden">
+          <div x-data="{ currentVal: 1, minVal: 0, maxVal: 100, decimalPoints: 0, incrementAmount: 1 }" class="flex">
+  <label for="counterInput" class="text-none">Items(s)</label>
+  <div @dblclick.prevent class="flex items-center rounded overflow-hidden border border-DarkBlue30 w-fit">
+    <button @click="currentVal = Math.max(minVal, currentVal - incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="subtract">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+        <path
+          d="M12 1.00253C12 0.529142 11.6162 0.145386 11.1429 0.145386H6.85714L5.14286 0.140381L0.856727 0.144552C0.383436 0.145013 0 0.52882 0 1.00211C0 1.47573 0.383943 1.85967 0.85756 1.85967H5.14286L6.85714 1.85969L11.1429 1.85967C11.6162 1.85967 12 1.47592 12 1.00253Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+    <input x-model="currentVal.toFixed(decimalPoints)" size="2" oninput="this.size=Math.max(this.value.length, 10)"
+           id="counterInput" type="text"
+           class="border-x-none h-[40px] lg:h-[36px] w-fit max-w-[40px] text-base bg-inherit text-DarkBlue100 font-medium rounded-none px-0 border-none text-center focus-visible:z-10 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+           readonly />
+    <button @click="currentVal = Math.min(maxVal, currentVal + incrementAmount)"
+            class="flex h-[40px] lg:h-[36px] items-center justify-center  px-3 py-2 focus:outline-none focus:border-0 focus-visible:outline-none focus-visible:outline-0 focus-visible:outline-offset-0"
+            aria-label="add">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path
+          d="M12 6C12 5.52661 11.6162 5.14286 11.1429 5.14286H6.85714V0.857144C6.85714 0.383757 6.47339 0 6 0C5.52661 0 5.14286 0.383756 5.14286 0.857143V5.14286H0.857144C0.383757 5.14286 0 5.52661 0 6C0 6.47339 0.383756 6.85714 0.857143 6.85714H5.14286V11.1429C5.14286 11.6162 5.52661 12 6 12C6.47339 12 6.85714 11.6162 6.85714 11.1429V6.85714H11.1429C11.6162 6.85714 12 6.47339 12 6Z"
+          fill="#1B3C74" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-primary flex flex-col pt-6 mt-auto">
+    <div class="flex items-center justify-between gap-x-2 mb-5">
+      <span class="text-base text-DarkBlue100 font-medium">Subtotal</span>
+      <span class="text-base text-DarkBlue100 font-semibold">$ 39.00 USD</span>
+    </div>
+    <button class="button w-full" type="button" id="openModal" aria-label="Make a Request">
+      <span>Make a Request</span>
+    </button>
+  </div>
+</div>
+<div id="wishlist-bg" class="fixed w-screen h-screen top-0 left-0 z-[98] bg-DarkBlue20 hidden"></div>
+  <footer class="w-full mt-auto overflow-hidden bg-DarkBlue100 pt-16 pb-10 text-white shadow-3xl">
+  <div class="container">
+    <div class="row gap-x-6 pb-12 relative lg:gap-x-0 lg:gap-y-14">
+      <div class="col-span-4 lg:col-span-12 relative z-1">
+        <div class="flex flex-col max-w-[265px] lg:max-w-full lg:items-center">
+          <a href="index.html">
+            <img width="227" src="img/profarma-logo-white.svg" alt="Profarma + Direct Logo" class="block mb-5">
+          </a>
+          <p class="text-body text-white">From wellness tips to expert advice,
+            we're here to support your journey to
+            a healthier you.</p>
+          <ul class="flex items-center gap-x-4 mt-8">
+            <li class="flex items-center justify-center">
+              <a
+                class="text-none flex items-center justify-center w-10 h-10 min-w-10 rounded-full border border-white transition-all hover:border-Yellow group"
+                href="#" target="blank">
+                Facebook
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <mask id="mask0_313_1035" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                        width="16" height="16">
+                    <path d="M16 0H0V16H16V0Z" fill="white" />
+                  </mask>
+                  <g mask="url(#mask0_313_1035)">
+                    <path class="group-hover:fill-Yellow transition-all" fill-rule="evenodd" clip-rule="evenodd"
+                          d="M5.92101 15.7984C5.92101 15.9097 6.01132 16 6.12257 16H8.99538C9.10663 16 9.19667 15.9097 9.19667 15.7984V7.93688H11.2795C11.3839 7.93688 11.471 7.85656 11.4801 7.7525L11.6804 5.38375C11.6901 5.26625 11.5976 5.16531 11.4795 5.16531H9.19667V3.485C9.19667 3.09094 9.51597 2.77156 9.90977 2.77156H11.5148C11.6264 2.77156 11.7164 2.68125 11.7164 2.57V0.201562C11.7164 0.090312 11.6264 0 11.5148 0H8.80289C7.21132 0 5.92101 1.29 5.92101 2.88156V5.16531H4.48476C4.37351 5.16531 4.2832 5.25563 4.2832 5.36688V7.73531C4.2832 7.84688 4.37351 7.93688 4.48476 7.93688H5.92101V15.7984Z"
+                          fill="white" />
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="flex items-center justify-center">
+              <a
+                class="text-none flex items-center justify-center w-10 h-10 min-w-10 rounded-full border border-white transition-all hover:border-Yellow group"
+                href="#" target="blank">
+                Twitter
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <mask id="mask0_313_1042" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                        width="16" height="16">
+                    <path d="M16 0H0V16H16V0Z" fill="white" />
+                  </mask>
+                  <g mask="url(#mask0_313_1042)">
+                    <path class="group-hover:fill-Yellow transition-all"
+                          d="M5.21202 14.007C10.8727 14.007 13.9683 9.31732 13.9683 5.25075C13.9683 5.11755 13.9655 4.98491 13.9596 4.853C14.5604 4.41856 15.0826 3.87642 15.4947 3.25935C14.9433 3.50454 14.3498 3.66938 13.7274 3.74396C14.3627 3.36282 14.8505 2.76014 15.0806 2.0417C14.486 2.39422 13.8275 2.65034 13.1264 2.78867C12.5649 2.19049 11.7653 1.81641 10.8799 1.81641C9.18056 1.81641 7.80226 3.19458 7.80226 4.89346C7.80226 5.13507 7.82931 5.36991 7.88206 5.5952C5.3243 5.4665 3.05614 4.24197 1.53844 2.37982C1.27426 2.83454 1.12179 3.36291 1.12179 3.92669C1.12179 4.99426 1.66513 5.93699 2.49126 6.4883C1.98637 6.4728 1.51211 6.33419 1.09749 6.10349C1.09703 6.11642 1.09703 6.12898 1.09703 6.14274C1.09703 7.63321 2.15781 8.87768 3.56618 9.15963C3.30749 9.22994 3.03532 9.2679 2.75462 9.2679C2.55666 9.2679 2.36366 9.24843 2.17616 9.21234C2.56794 10.4352 3.70414 11.325 5.05113 11.3499C3.99777 12.1755 2.67087 12.6673 1.22875 12.6673C0.980709 12.6673 0.735518 12.6531 0.494629 12.6246C1.85666 13.4976 3.47389 14.007 5.21202 14.007Z"
+                          fill="white" />
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="flex items-center justify-center">
+              <a
+                class="text-none flex items-center justify-center w-10 h-10 min-w-10 rounded-full border border-white transition-all hover:border-Yellow group"
+                href="#" target="blank">
+                Linkedin
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <mask id="mask0_313_1049" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                        width="16" height="16">
+                    <path d="M16 0H0V16H16V0Z" fill="white" />
+                  </mask>
+                  <g mask="url(#mask0_313_1049)">
+                    <path class="group-hover:fill-Yellow transition-all"
+                          d="M2.31076 0.8125C1.21085 0.8125 0.491699 1.53476 0.491699 2.48407C0.491699 3.41242 1.18943 4.15527 2.26856 4.15527H2.28943C3.41086 4.15527 4.10877 3.41242 4.10877 2.48407C4.0878 1.53476 3.41086 0.8125 2.31076 0.8125Z"
+                          fill="white" />
+                    <path class="group-hover:fill-Yellow transition-all"
+                          d="M0.682617 5.47607H3.89814V15.1501H0.682617V5.47607Z" fill="white" />
+                    <path class="group-hover:fill-Yellow transition-all"
+                          d="M11.7902 5.24951C10.0556 5.24951 8.89237 6.87952 8.89237 6.87952V5.47656H5.67676V15.1506H8.89219V9.74829C8.89219 9.45902 8.91315 9.17027 8.99811 8.96345C9.23058 8.38593 9.75958 7.78763 10.6479 7.78763C11.8115 7.78763 12.2768 8.67478 12.2768 9.97529V15.1506H15.4921V9.60368C15.4921 6.63224 13.9056 5.24951 11.7902 5.24951Z"
+                          fill="white" />
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="flex items-center justify-center">
+              <a
+                class="text-none flex items-center justify-center w-10 h-10 min-w-10 rounded-full border border-white transition-all hover:border-Yellow group"
+                href="#" target="blank">
+                Instagram
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <mask id="mask0_313_1058" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1"
+                        width="16" height="16">
+                    <path d="M17 1H1V17H17V1Z" fill="white" />
+                  </mask>
+                  <g mask="url(#mask0_313_1058)">
+                    <path class="group-hover:fill-Yellow transition-all"
+                          d="M16.9836 5.70405C16.9461 4.8539 16.8086 4.26944 16.6117 3.76299C16.4085 3.22541 16.096 2.74412 15.6865 2.34401C15.2864 1.93768 14.8019 1.62195 14.2706 1.42196C13.7612 1.22502 13.1798 1.08754 12.3296 1.05006C11.4731 1.0094 11.2012 1 9.0289 1C6.8566 1 6.5847 1.0094 5.73138 1.04688C4.88124 1.08437 4.29678 1.22197 3.79046 1.41878C3.25275 1.62195 2.77146 1.93451 2.37136 2.34401C1.96503 2.74412 1.64942 3.22859 1.4493 3.75994C1.25237 4.26944 1.11489 4.85073 1.0774 5.70087C1.03674 6.55736 1.02734 6.82927 1.02734 9.00156C1.02734 11.1739 1.03674 11.4458 1.07423 12.2991C1.11171 13.1492 1.24931 13.7337 1.44625 14.2401C1.64942 14.7777 1.96503 15.259 2.37136 15.6591C2.77146 16.0655 3.25593 16.3812 3.78728 16.5812C4.29678 16.7781 4.87807 16.9156 5.72833 16.9531C6.58152 16.9907 6.85355 17 9.02585 17C11.1982 17 11.4701 16.9907 12.3234 16.9531C13.1735 16.9156 13.758 16.7781 14.2643 16.5812C15.3396 16.1654 16.1898 15.3153 16.6055 14.2401C16.8023 13.7306 16.9399 13.1492 16.9774 12.2991C17.0149 11.4458 17.0243 11.1739 17.0243 9.00156C17.0243 6.82927 17.0211 6.55736 16.9836 5.70405ZM15.5428 12.2366C15.5083 13.018 15.3771 13.4399 15.2677 13.7212C14.9988 14.4183 14.4456 14.9715 13.7486 15.2403C13.4673 15.3497 13.0423 15.481 12.2639 15.5153C11.42 15.5529 11.1669 15.5622 9.03207 15.5622C6.89726 15.5622 6.64098 15.5529 5.80012 15.5153C5.01872 15.481 4.59676 15.3497 4.31546 15.2403C3.96859 15.1121 3.65286 14.909 3.39658 14.6433C3.1309 14.3839 2.92774 14.0713 2.79954 13.7244C2.69015 13.4431 2.55889 13.018 2.52459 12.2398C2.48698 11.3958 2.4777 11.1426 2.4777 9.00779C2.4777 6.87298 2.48698 6.6167 2.52459 5.77596C2.55889 4.99456 2.69015 4.5726 2.79954 4.29129C2.92774 3.9443 3.1309 3.62869 3.39976 3.37229C3.65908 3.10661 3.97164 2.90345 4.31863 2.77537C4.59994 2.66598 5.02507 2.53473 5.8033 2.50029C6.64721 2.46281 6.90043 2.45341 9.03513 2.45341C11.1732 2.45341 11.4263 2.46281 12.2671 2.50029C13.0485 2.53473 13.4705 2.66598 13.7518 2.77537C14.0986 2.90345 14.4144 3.10661 14.6707 3.37229C14.9363 3.63174 15.1395 3.9443 15.2677 4.29129C15.3771 4.5726 15.5083 4.99761 15.5428 5.77596C15.5803 6.61987 15.5897 6.87298 15.5897 9.00779C15.5897 11.1426 15.5803 11.3927 15.5428 12.2366Z"
+                          fill="white" />
+                    <path class="group-hover:fill-Yellow transition-all"
+                          d="M9.02913 4.89111C6.76001 4.89111 4.91895 6.73205 4.91895 9.00129C4.91895 11.2705 6.76001 13.1115 9.02913 13.1115C11.2984 13.1115 13.1393 11.2705 13.1393 9.00129C13.1393 6.73205 11.2984 4.89111 9.02913 4.89111ZM9.02913 11.6675C7.55704 11.6675 6.36296 10.4735 6.36296 9.00129C6.36296 7.52908 7.55704 6.33512 9.02913 6.33512C10.5014 6.33512 11.6953 7.52908 11.6953 9.00129C11.6953 10.4735 10.5014 11.6675 9.02913 11.6675Z"
+                          fill="white" />
+                    <path class="group-hover:fill-Yellow transition-all"
+                          d="M14.2615 4.72907C14.2615 5.25896 13.8319 5.68861 13.3019 5.68861C12.772 5.68861 12.3423 5.25896 12.3423 4.72907C12.3423 4.19906 12.772 3.76953 13.3019 3.76953C13.8319 3.76953 14.2615 4.19906 14.2615 4.72907Z"
+                          fill="white" />
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-span-8 lg:col-span-12 relative z-1">
+        <div class="flex items-start justify-between gap-x-3 md:flex-col md:gap-x-0 md:gap-y-8">
+          <div class="flex flex-col flex-1">
+            <span class="mb-5 block font-semibold text-Top1">Navigate</span>
+            <ul class="flex flex-col gap-y-3">
+              <li class="flex items-center">
+                <a class="text-white text-base hover:text-Yellow transition-colors"
+                   href="Brand-Shop-Page.html">Brands</a>
+              </li>
+              <!--              <li class="flex items-center">-->
+              <!--                <a class="text-white text-base hover:text-Yellow transition-colors" href="#">Manufacturers</a>-->
+              <!--              </li>-->
+              <li class="flex items-center">
+                <a class="text-white text-base hover:text-Yellow transition-colors" href="Categories-Shop-Page.html">Categories</a>
+              </li>
+              <li class="flex items-center">
+                <a class="text-white text-base hover:text-Yellow transition-colors" href="About-us.html">About Us</a>
+              </li>
+              <li class="flex items-center">
+                <a class="text-white text-base hover:text-Yellow transition-colors" href="contact-us.html">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col flex-1">
+            <span class="mb-5 block font-semibold text-Top1">Legal</span>
+            <ul class="flex flex-col gap-y-3">
+              <li class="flex items-center">
+                <a class="text-white text-base hover:text-Yellow transition-colors" href="#">Shipping</a>
+              </li>
+              <li class="flex items-center">
+                <a class="text-white text-base hover:text-Yellow transition-colors"
+                   href="Terms&Conditions.html">Terms</a>
+              </li>
+              <li class="flex items-center">
+                <a class="text-white text-base hover:text-Yellow transition-colors" href="#">Privacy</a>
+              </li>
+              <li class="flex items-center">
+                <a class="text-white text-base hover:text-Yellow transition-colors" href="#">Policy</a>
+              </li>
+              <li class="flex items-center">
+                <a class="text-white text-base hover:text-Yellow transition-colors" href="FAQs.html">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col flex-1">
+            <span class="mb-5 block font-semibold text-Top1">Contact</span>
+            <ul class="flex flex-col gap-y-3">
+              <li class="flex items-center gap-x-3 py-1">
+                <i class="calling-small-white"></i>
+                <a class="text-white text-base hover:text-Yellow transition-colors" href="tel:+16467559735">+1 646 755
+                  9735</a>
+              </li>
+              <li class="flex items-center gap-x-3 py-1">
+                <i class="Mail-white-icon-2"></i>
+                <a class="text-white text-base hover:text-Yellow transition-colors"
+                   href="mailto:info@profarma-direct.com">info@profarma-direct.com</a>
+              </li>
+              <li class="flex items-center gap-x-3 py-1">
+                <i class="Clock-white-icon"></i>
+                <span class="text-white text-base">9:00 - 18:00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <i class="absolute bottom-0 right-0 highlighter-shape"></i>
+    </div>
+    <div class="flex items-center justify-center mt-8 pt-5 border-t border-white w-full">
+      <span>© 2024 All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+</main>
+
+<script src="./js/scripts.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('data', () => ({
+        }))
+    })
+</script>
+</body>
+
+</html>

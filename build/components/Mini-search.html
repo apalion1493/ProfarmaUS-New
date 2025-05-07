@@ -1,0 +1,8 @@
+<div x-data="{search: ''}" class="flex flex-col w-full">
+  <label class="border border-DarkBlue20 rounded-lg h-[52px] flex items-center justify-between px-5">
+    <input placeholder="Search..." x-model="search" type="search"
+           class="text-base p-0 w-full border-none focus:outline-none focus:ring-0 focus:border-0">
+    <i class="Search-black-32 ml-1"></i>
+  </label>
+  <button class="button categories mt-2" type="button" x-show="search.trim() !== ''">Apply</button>
+</div>

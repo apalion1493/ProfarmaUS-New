@@ -16,20 +16,40 @@
   </div>
   <div class="pt-6 text-Text-color text-content">
     <div x-show="selectedTab === 'tab1'" id="tabPanel1" role="tabpanel" aria-label="tab1">
-      <p>Cardura is a medication used to treat high blood pressure, benign prostatic hyperplasia (BPH), and other
-        conditions. It belongs to a class of drugs called alpha-adrenergic blockers, which work by relaxing the
-        muscles in the bladder and prostate. This helps to reduce symptoms of BPH such as difficulty urinating,
-        weak stream, and the need to urinate frequently or urgently. Cardura helps to lower high blood pressure
-        by relaxing the blood vessels, allowing blood to flow more easily. It can also be used to treat
-        Raynaud’s phenomenon, a condition in which certain areas of the body, usually the fingers and toes,
-        become cold and numb due to a decrease in blood flow. Cardura is available as a tablet and should be
-        taken with meals.
-        Common side effects include dizziness, headache, tiredness, and diarrhea. Make sure to talk to your
-        doctor or pharmacist before taking Cardura.</p>
+      <div class="flex flex-col gap-y-4">
+        <p>Cardura is used to treat hypertension (high blood pressure) and to improve symptoms of benign prostatic
+          hyperplasia (enlarged prostate).</p>
+        <p>Cardura is used to treat hypertension (high blood pressure) and to improve symptoms of benign prostatic
+          hyperplasia (enlarged prostate).</p>
+        <p>Cardura is used to treat hypertension (high blood pressure) and to improve symptoms of benign prostatic
+          hyperplasia (enlarged prostate).</p>
+      </div>
     </div>
     <div x-show="selectedTab === 'tab2'" id="tabPanel2" role="tabpanel" aria-label="tab2">
-      <p>Cardura is used to treat hypertension (high blood pressure) and to improve symptoms of benign prostatic
-        hyperplasia (enlarged prostate).</p>
+      <div class="flex flex-col gap-y-4">
+        <p>Cardura is used to treat hypertension (high blood pressure) and to improve symptoms of benign prostatic
+          hyperplasia (enlarged prostate).</p>
+        <div x-data="{ isExpanded: false }" class="rounded-lg border border-DarkBlue20 px-5 py-4 md:p-4 bg-White2">
+          <button id="controlsAccordionItem3" type="button"
+                  class="flex w-full items-center justify-between gap-4 text-left text-Top3 md:text-Top3 font-medium text-DarkBlue100"
+                  aria-controls="accordionItem3" @click="isExpanded = ! isExpanded"
+                  :aria-expanded="isExpanded ? 'true' : 'false'">
+            How fast will I get the products?
+            <svg :class="isExpanded  ?  'rotate-180'  :  ''" xmlns="http://www.w3.org/2000/svg" width="20" height="12"
+                 viewBox="0 0 20 12" fill="none">
+              <path d="M2 2L10 10L18 2" stroke="#1B3C74" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div x-cloak x-show="isExpanded" id="accordionItem3" role="region" aria-labelledby="controlsAccordionItem3"
+               x-collapse>
+            <div class="mt-3">
+              <p class="text-Top3">After adding your selections to the cart and filling in your personal information, you will
+                receive an email
+                requesting further details to complete your account setup, enabling you to place an order with us.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

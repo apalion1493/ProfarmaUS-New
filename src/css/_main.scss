@@ -480,3 +480,11 @@
 .checkbox-style:checked {
   background: white !important;
 }
+
+.searchResultBlock {
+  @apply absolute left-0 top-16 z-[31] hidden w-full overflow-hidden;
+}
+
+.searchResultBlock.show {
+  @apply flex;
+}

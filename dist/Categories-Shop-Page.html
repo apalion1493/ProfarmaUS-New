@@ -31,7 +31,6 @@
                 <div class="container px-0 mx-auto flex justify-center items-center gap-x-8 w-full text-h8">
                   <a href="Brand-Shop-Page.html"
                      class="py-2 text-center text-DarkBlue100 hover:text-LightBlue100 transition-colors text-base lg:text-body2">Brands</a>
-                  <!--                                <a href="#" class="py-2 text-center text-DarkBlue100 hover:text-LightBlue100 transition-colors text-base lg:text-body2">Manufacturers</a>-->
                   <button @click="dropdownOpen = !dropdownOpen"
                           class="inline-flex items-center py-2 text-center text-DarkBlue100 hover:text-LightBlue100 transition-colors text-base lg:text-body2"
                           :class="dropdownOpen ? 'text-LightBlue100' : ''"
@@ -63,6 +62,17 @@
       </svg>
     </button>
   </form>
+  <div class="searchResultBlock  bg-white rounded-lg border border-primary p-5 flex-col items-start"> <!--show-->
+    <div class='flex flex-col gap-4'>
+      <a href='#' class='flex items-center underline text-black-1 hover:text-primary'>
+        <div
+          class='mr-4 flex justify-center items-center border border-primary rounded overflow-hidden w-20 min-w-[80px] min-h-[60px]'>
+          <img class="w-full h-full object-contain" src="" alt="">
+        </div>
+        <span>Juviderm Ultra 3 (2*1ml)</span>
+      </a>
+    </div>
+  </div>
 </div>
 
                 <button id="search-button"
@@ -263,6 +273,17 @@
       </svg>
     </button>
   </form>
+  <div class="searchResultBlock  bg-white rounded-lg border border-primary p-5 flex-col items-start"> <!--show-->
+    <div class='flex flex-col gap-4'>
+      <a href='#' class='flex items-center underline text-black-1 hover:text-primary'>
+        <div
+          class='mr-4 flex justify-center items-center border border-primary rounded overflow-hidden w-20 min-w-[80px] min-h-[60px]'>
+          <img class="w-full h-full object-contain" src="" alt="">
+        </div>
+        <span>Juviderm Ultra 3 (2*1ml)</span>
+      </a>
+    </div>
+  </div>
 </div>
         </div>
       </div>
@@ -1175,7 +1196,7 @@
               </div>
               <div class="col-span-4 xl:col-span-6 md:col-span-12">
                 <div
-  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
   <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
     <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
       <img
@@ -1186,8 +1207,7 @@
 
       <button
         type="button"
-        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
-        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        class="absolute transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
         @click.stop.prevent="isFavorite = !isFavorite"
       >
         <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1222,7 +1242,7 @@
               </div>
               <div class="col-span-4 xl:col-span-6 md:col-span-12">
                 <div
-  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
   <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
     <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
       <img
@@ -1233,8 +1253,7 @@
 
       <button
         type="button"
-        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
-        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        class="absolute transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
         @click.stop.prevent="isFavorite = !isFavorite"
       >
         <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1269,7 +1288,7 @@
               </div>
               <div class="col-span-4 xl:col-span-6 md:col-span-12">
                 <div
-  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
   <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
     <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
       <img
@@ -1280,8 +1299,7 @@
 
       <button
         type="button"
-        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
-        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        class="absolute transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
         @click.stop.prevent="isFavorite = !isFavorite"
       >
         <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1316,7 +1334,7 @@
               </div>
               <div class="col-span-4 xl:col-span-6 md:col-span-12">
                 <div
-  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
   <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
     <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
       <img
@@ -1327,8 +1345,7 @@
 
       <button
         type="button"
-        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
-        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        class="absolute transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
         @click.stop.prevent="isFavorite = !isFavorite"
       >
         <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1363,7 +1380,7 @@
               </div>
               <div class="col-span-4 xl:col-span-6 md:col-span-12">
                 <div
-  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
   <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
     <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
       <img
@@ -1374,8 +1391,7 @@
 
       <button
         type="button"
-        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
-        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        class="absolute transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
         @click.stop.prevent="isFavorite = !isFavorite"
       >
         <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1410,7 +1426,7 @@
               </div>
               <div class="col-span-4 xl:col-span-6 md:col-span-12">
                 <div
-  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
   <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
     <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
       <img
@@ -1421,8 +1437,7 @@
 
       <button
         type="button"
-        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
-        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        class="absolute transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
         @click.stop.prevent="isFavorite = !isFavorite"
       >
         <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1457,7 +1472,7 @@
               </div>
               <div class="col-span-4 xl:col-span-6 md:col-span-12">
                 <div
-  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
   <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
     <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
       <img
@@ -1468,8 +1483,7 @@
 
       <button
         type="button"
-        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
-        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        class="absolute transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
         @click.stop.prevent="isFavorite = !isFavorite"
       >
         <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1504,7 +1518,7 @@
               </div>
               <div class="col-span-4 xl:col-span-6 md:col-span-12">
                 <div
-  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
   <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
     <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
       <img
@@ -1515,8 +1529,7 @@
 
       <button
         type="button"
-        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
-        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        class="absolute transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
         @click.stop.prevent="isFavorite = !isFavorite"
       >
         <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1551,7 +1564,7 @@
               </div>
               <div class="col-span-4 xl:col-span-6 md:col-span-12">
                 <div
-  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
   <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
     <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
       <img
@@ -1562,8 +1575,7 @@
 
       <button
         type="button"
-        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
-        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        class="absolute transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
         @click.stop.prevent="isFavorite = !isFavorite"
       >
         <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1598,7 +1610,7 @@
               </div>
               <div class="col-span-4 xl:col-span-6 md:col-span-12">
                 <div
-  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
   <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
     <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
       <img
@@ -1609,8 +1621,7 @@
 
       <button
         type="button"
-        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
-        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        class="absolute transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
         @click.stop.prevent="isFavorite = !isFavorite"
       >
         <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1645,7 +1656,7 @@
               </div>
               <div class="col-span-4 xl:col-span-6 md:col-span-12">
                 <div
-  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
   <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
     <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
       <img
@@ -1656,8 +1667,7 @@
 
       <button
         type="button"
-        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
-        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        class="absolute transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
         @click.stop.prevent="isFavorite = !isFavorite"
       >
         <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1692,7 +1702,7 @@
               </div>
               <div class="col-span-4 xl:col-span-6 md:col-span-12">
                 <div
-  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
   <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
     <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
       <img
@@ -1703,8 +1713,7 @@
 
       <button
         type="button"
-        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
-        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        class="absolute transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
         @click.stop.prevent="isFavorite = !isFavorite"
       >
         <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1739,7 +1748,7 @@
               </div>
               <div class="col-span-4 xl:col-span-6 md:col-span-12">
                 <div
-  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
   <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
     <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
       <img
@@ -1750,8 +1759,7 @@
 
       <button
         type="button"
-        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
-        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        class="absolute transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
         @click.stop.prevent="isFavorite = !isFavorite"
       >
         <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

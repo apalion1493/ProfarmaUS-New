@@ -50,32 +50,12 @@
                   </li>
                 </ol>
               </nav>
-              @@include('components/Category-elem.html', {
-              'title': '-10% Sale',
-              'styleCategoryElem': 'mb-4',
-              })
               <h1 class="text-h2 font-semibold mb-8 md:text-h4">Cardura <span
                 class="text-h2-5 md:text-h5 font-normal">(Doxazosin Mesylate)</span></h1>
               <div class="flex items-center justify-between gap-x-2 mb-8 md:flex-col md:gap-x-0 md:gap-y-4 md:items-start">
                 <div class="inline-flex items-center gap-x-1">
-                  <span class="line-through text-Top3 text-Text-color">$ 49.00 USD</span>
                   <span class="text-Top1 text-LightBlue100 font-semibold">$ 39.00 USD</span>
                 </div>
-
-                <ul class="flex items-center gap-x-2 my-5 md:mt-0">
-                  <li>
-                    @@include('components/Info-elem.html', {
-                    'Style': '',
-                    'Text': '20 tabs',
-                    })
-                  </li>
-                  <li>
-                    @@include('components/Info-elem.html', {
-                    'Style': '',
-                    'Text': '2 mg',
-                    })
-                  </li>
-                </ul>
               </div>
               <div
                 class="flex items-center justify-between gap-x-2 px-5 py-4 border border-DarkBlue10 mb-10 rounded-lg bg-White2 lg:flex-col lg:gap-y-4 lg:gap-x-0 lg:items-start">
@@ -90,21 +70,8 @@
                 'title': 'Add to wishlist',
                 })
               </div>
-              <div class="flex flex-col mb-10 ">
-                <h4 class="text-Top1 font-medium mb-4 text-DarkBlue100">Ingredients:</h4>
-                <div class="text-content">
-                  <ul class="flex flex-col gap-2 pl-5 ">
-                    <li>
-                      <p class="leading-[130%]">Active ingredient: Doxazosin</p>
-                    </li>
-                    <li>
-                      <p class="leading-[130%]">Prebiotic Fiber</p>
-                    </li>
-                    <li>
-                      <p class="leading-[130%]">Probiotic</p>
-                    </li>
-                  </ul>
-                </div>
+              <div class="flex items-center w-fit mb-10 p-4 bg-LightBlue10 rounded-lg">
+                <p class="text-Top3 font-medium text-DarkBlue100">Manufacturer: <a class="text-LightBlue100 uppercase" href="#">PFIZER</a></p>
               </div>
               @@include('components/Tabs.html')
             </div>

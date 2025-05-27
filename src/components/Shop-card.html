@@ -1,40 +1,45 @@
 <div
-  class="flex flex-col max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
-  <a class="w-full" href="Product-card.html">
-    <div class="flex items-center justify-center pb-6 border-b border-LightBlue30 w-full min-h-[196px] h-[196px]">
-      <img class="object-cover" src="img/image-2.png" alt="">
+  class="flex flex-col group max-w-full items-center py-6 px-5 rounded-lg shadow-4xl transition-all hover:shadow-5xl hover:border-LightBlue80 border border-LightBlue30">
+  <a class="w-full" href="Product-card.html" x-data="{ isFavorite: false }">
+    <div class="relative flex items-center justify-center w-full min-h-[172px] h-[172px]">
+      <img
+        class="object-contain h-full w-full flex items-center justify-center"
+        src="img/image-2.png"
+        alt=""
+      />
+
+      <button
+        type="button"
+        class="absolute group-hover:opacity-100 transition-all top-0 right-0 z-10 border border-LightBlue100 rounded-full flex items-center justify-center w-[46px] h-[46px] bg-white"
+        :class="isFavorite ? 'opacity-100' : 'opacity-0'"
+        @click.stop.prevent="isFavorite = !isFavorite"
+      >
+        <svg :class="isFavorite ? 'fill-LightBlue100' : 'fill-white'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_543_110)">
+            <path d="M12 21.5C12 21.5 1 15.4545 1 8.32955C1 6.78345 1.60175 5.30069 2.67287 4.20743C3.74399 3.11418 5.19674 2.5 6.71154 2.5C9.10087 2.5 11.1475 3.82892 12 5.95455C12.8525 3.82892 14.8991 2.5 17.2885 2.5C18.8033 2.5 20.256 3.11418 21.3271 4.20743C22.3983 5.30069 23 6.78345 23 8.32955C23 15.4545 12 21.5 12 21.5Z" stroke="#2490EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_543_110">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
     </div>
+    <div class="border-b border-LightBlue30 w-full flex my-6"></div>
     <div class="mt-6 flex flex-col text-DarkBlue100">
       <span class="text-Top1 font-semibold">Cardura</span>
       <p class="text-base text-DarkBlue100">(Doxazosin Mesylate)</p>
-      <ul class="flex items-center gap-x-2 my-5">
-        <li>
-          @@include('Info-elem.html', {
-          'Style': '',
-          'Text': '20 tabs',
-          })
-        </li>
-        <li>
-          @@include('Info-elem.html', {
-          'Style': '',
-          'Text': '2 mg',
-          })
-        </li>
-        <!--        <li>-->
-        <!--          @@include('Info-elem.html', {-->
-        <!--          'Style': 'medium',-->
-        <!--          'Text': '2 mg',-->
-        <!--          })-->
-        <!--        </li>-->
-      </ul>
-      <div class="flex items-center gap-x-1">
-        <span class="text-body2 text-Text-color line-through">$ 39.00 USD</span>
+      <div class="flex items-center gap-x-1 mt-4">
         <span class="text-base font-semibold">$ 35.00 USD</span>
       </div>
     </div>
   </a>
-  @@include('Add-btn.html', {
+
+  @@include('button-icon.html', {
   'style': 'mt-[32px] ml-auto',
+  'type': 'button',
+  'ariaLabel': 'View product button',
   'title': 'Add to wishlist',
   })
 </div>
